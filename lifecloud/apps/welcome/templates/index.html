@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% load tz %}
+{% load i18n %}
+{% load l10n %}
+{% block content %}
+
+<head>
+  <link rel="stylesheet" href="../../static/css/signin.css">
+</head>
+
+<body>
+  <div class="welcometabs container-fluid nosidepad">
+    <ul class="nav nav-tabs">
+      <li role="presentation" class="lead col-md-4 text-center"><a class="lefttab" href="#">Register</a></li>
+      <li role="presentation" class="lead col-md-4 text-center active"><a class="activetab"href="#">Welcome</a></li>
+      <li role="presentation" class="lead col-md-4 text-center"><a class="righttab" href="#">Forgot</a></li>
+    </ul>
+  </div>
+  <div class="welcomeforms container-fluid">
+    <form class="form-signin" role="form" method="POST">
+    <input type="hidden" name="form_type" value="login">
+      {% csrf_token %}
+      {{ loginform.as_p }}
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" value="remember-me"> Remember me
+        </label>
+      </div>
+      <button href="" class="btn btn-lg btn-primary btn-block" name="login" type="submit">Log In</button>
+    </form>
+
+    <form class="inactivate-form form-signin" role="form" method="POST">
+    <input type="hidden" name="form_type" value="registration">
+      {% csrf_token %}
+      {{ registerform.as_p }}
+      <button href="" class="btn btn-lg btn-primary btn-block" name="registration" type="submit">Submit</button>
+    </form>
+
+    <form class="inactivate-form form-signin" role="form" method="POST">
+    <input type="hidden" name="form_type" value="forgot">
+      {% csrf_token %}
+      {{ forgotform.as_p }}
+      <button href="" class="btn btn-lg btn-primary btn-block" name="forgot" type="submit">Send</button>
+    </form>
+
+  </div> <!-- /container -->
+</body>
+{% endblock %}

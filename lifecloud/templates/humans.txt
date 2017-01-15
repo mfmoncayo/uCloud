@@ -1,0 +1,15 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Michael Moncayo -- Developer -- @mfmoncayo
+
+# THANKS
+
+    To my friends and family for helping shape me into the man I've become.
+
+# TECHNOLOGY COLOPHON
+    Django
+    HTML5, CSS3
+    jQuery, Bootstrap
