@@ -15,6 +15,9 @@ import django.contrib.auth
 
 from django.core.exceptions import ImproperlyConfigured
 
+# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
 def get_env_variable(var_name):
     try:
         return os.environ[var_name]
@@ -55,6 +58,22 @@ ROOT_URLCONF = 'lifecloud.urls'
 
 WSGI_APPLICATION = 'lifecloud.wsgi.application'
 
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [os.path.join(BASE_DIR, "../templates")],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+            'debug': DEBUG,
+        },
+    },
+]
 
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
@@ -104,3 +123,11 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+STATIC_ROOT = os.path.join(BASE_DIR, '../staticfiles')
+STATIC_URL = '/static/'
+
+#Extra places for collectstatic to find static files.
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, '../static'),
+]
