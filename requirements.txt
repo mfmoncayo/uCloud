@@ -2,4 +2,4 @@ dj-database-url==0.4.1
 Django==1.10.4
 gunicorn==19.6.0
 psycopg2==2.6.2
--e git+ssh://git@github.com/montebond/pyp#egg=custom-user
+-e git+ssh://git@github.com/montebond/pyp/custom-user#egg=custom-user
