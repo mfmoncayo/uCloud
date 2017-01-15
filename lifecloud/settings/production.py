@@ -1,7 +1,9 @@
 # -*- coding: utf-8 -*-
 from .base import *
 
+ALLOWED_HOSTS = ['lifecloud.herokuapp.com']
+
 # Required function for Heroku to parse the DB variables
 DATABASES['default'] =  dj_database_url.config()
 
-ALLOWED_HOSTS = [lifecloud.herokuapp.com]
+SECURE_PROXY_SSL_HEADER = (‘HTTP_X_FORWARDED_PROTO’, ‘https’)
