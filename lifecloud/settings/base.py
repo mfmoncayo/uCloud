@@ -24,9 +24,6 @@ def get_env_variable(var_name):
 
 SECRET_KEY = get_env_variable('SECRET_KEY')
 
-# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
