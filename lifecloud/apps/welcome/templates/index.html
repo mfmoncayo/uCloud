@@ -6,18 +6,19 @@
 
 <head>
   <link rel="stylesheet" href="../../static/css/signin.css">
+  <script src="../../static/js/signin.js"></script>
 </head>
 
 <body>
-  <div class="welcometabs container-fluid nosidepad">
+  <div class="welcomeTabs container-fluid noSidePad">
     <ul class="nav nav-tabs">
-      <li role="presentation" class="lead col-md-4 text-center"><a class="lefttab" href="#">Register</a></li>
-      <li role="presentation" class="lead col-md-4 text-center active"><a class="activetab"href="#">Welcome</a></li>
-      <li role="presentation" class="lead col-md-4 text-center"><a class="righttab" href="#">Forgot</a></li>
+      <li role="presentation" id="leftTab" class="lead col-md-4 text-center"><a class="leftTab">Register</a></li>
+      <li role="presentation" id="middleTab" class="lead col-md-4 text-center active"><a class="middleTab currentTab">Welcome</a></li>
+      <li role="presentation" id="rightTab" class="lead col-md-4 text-center"><a class="rightTab">Forgot</a></li>
     </ul>
   </div>
-  <div class="welcomeforms container-fluid">
-    <form class="form-signin" role="form" method="POST">
+  <div class="welcomeForms container-fluid">
+    <form id="loginForm" class="form-signin" role="form" method="POST">
     <input type="hidden" name="form_type" value="login">
       {% csrf_token %}
       {{ loginform.as_p }}
@@ -29,14 +30,14 @@
       <button href="" class="btn btn-lg btn-primary btn-block" name="login" type="submit">Log In</button>
     </form>
 
-    <form class="inactivate-form form-signin" role="form" method="POST">
+    <form id="registerForm" class="inactivateForm form-signin" role="form" method="POST">
     <input type="hidden" name="form_type" value="registration">
       {% csrf_token %}
       {{ registerform.as_p }}
       <button href="" class="btn btn-lg btn-primary btn-block" name="registration" type="submit">Submit</button>
     </form>
 
-    <form class="inactivate-form form-signin" role="form" method="POST">
+    <form id="forgotForm" class="inactivateForm form-signin" role="form" method="POST">
     <input type="hidden" name="form_type" value="forgot">
       {% csrf_token %}
       {{ forgotform.as_p }}

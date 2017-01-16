@@ -4,33 +4,39 @@ body {
   background-color: #eee;
 }
 
-.welcometabs {
+.welcomeTabs {
   background-color: #FFF;
 }
 
-.nosidepad {
+.noSidePad {
   padding-top: 10px;
   padding-left: 0px;
   padding-right: 0px;
 }
 
-.lefttab {
+.leftTab {
+  cursor: pointer;
   margin-left: 120px;
 }
 
-.righttab {
+.middleTab {
+  cursor: pointer;
+}
+
+.currentTab {
+  background-color: #eee;
+}
+
+.rightTab {
+  cursor: pointer;
   margin-right: 120px;
 }
 
-.activetab {
+.welcomeForms {
   background-color: #eee;
 }
 
-.welcomeforms {
-  background-color: #eee;
-}
-
-.inactivate-form {
+.inactivateForm {
   display: none;
 }
 
