@@ -1,17 +1,37 @@
 body {
   padding-top: 0px;
-  padding-bottom: 40px;
-  background-color: #eee;
+  padding-bottom: 0px;
+  margin: 0px;
+  height: 100%;
+  background-color: #FFF;
 }
 
 .welcomeTabs {
   background-color: #FFF;
 }
 
+.top {
+  padding-top: 100px;
+}
+
 .noSidePad {
-  padding-top: 10px;
   padding-left: 0px;
   padding-right: 0px;
+}
+
+.noPad {
+  padding-top: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+}
+
+.bdrop {
+  background-image: url("../images/beach-03.jpg");
+}
+
+.blank {
+  background-color: transparent;
 }
 
 .leftTab {

@@ -4,44 +4,42 @@
 {% load l10n %}
 {% block content %}
 
-<head>
-  <link rel="stylesheet" href="../../static/css/signin.css">
-  <script src="../../static/js/signin.js"></script>
-</head>
+    <div class="site-wrapper">
 
-<body>
-  <div class="welcomeTabs container-fluid noSidePad">
-    <ul class="nav nav-tabs">
-      <li role="presentation" id="leftTab" class="lead col-md-4 text-center"><a class="leftTab">Register</a></li>
-      <li role="presentation" id="middleTab" class="lead col-md-4 text-center active"><a class="middleTab currentTab">Welcome</a></li>
-      <li role="presentation" id="rightTab" class="lead col-md-4 text-center"><a class="rightTab">Forgot</a></li>
-    </ul>
-  </div>
-  <div class="welcomeForms container-fluid">
-    <form id="loginForm" class="form-signin" role="form" method="POST">
-    <input type="hidden" name="form_type" value="login">
-      {% csrf_token %}
-      {{ loginform.as_p }}
-      <div class="checkbox">
-        <label>
-          <input type="checkbox" value="remember-me"> Remember me
-        </label>
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+          <div class="masthead clearfix">
+            <div class="inner">
+              <h3 class="masthead-brand">Cover</h3>
+              <nav>
+                <ul class="nav masthead-nav">
+                  <li class="active"><a href="#">Home</a></li>
+                  <li><a href="#">Features</a></li>
+                  <li><a href="#">Contact</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+
+          <div class="inner cover">
+            <h1 class="cover-heading">Cover your page.</h1>
+            <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
+            <p class="lead">
+              <a href="#" class="btn btn-lg btn-default">Learn more</a>
+            </p>
+          </div>
+
+          <div class="mastfoot">
+            <div class="inner">
+              <p>Cover template for <a href="http://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+            </div>
+          </div>
+
+        </div>
+
       </div>
-      <button href="" class="btn btn-lg btn-primary btn-block" name="login" type="submit">Log In</button>
-    </form>
 
-    <form id="registerForm" class="inactivateForm form-signin" role="form" method="POST">
-    <input type="hidden" name="form_type" value="registration">
-      {% csrf_token %}
-      {{ registerform.as_p }}
-      <button href="" class="btn btn-lg btn-primary btn-block" name="registration" type="submit">Submit</button>
-    </form>
-
-    <form id="forgotForm" class="inactivateForm form-signin" role="form" method="POST">
-    <input type="hidden" name="form_type" value="forgot">
-      {% csrf_token %}
-      {{ forgotform.as_p }}
-      <button href="" class="btn btn-lg btn-primary btn-block" name="forgot" type="submit">Send</button>
-    </form>
-  </div> <!-- /container -->
+    </div>
 {% endblock %}
