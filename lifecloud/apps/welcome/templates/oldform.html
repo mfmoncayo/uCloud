@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% load tz %}
+{% load i18n %}
+{% load l10n %}
+{% block content %}
+<head>
+  <link rel="stylesheet" href="../../static/css/signin.css">
+  <script src="../../static/js/signin.js"></script>
+</head>
+  <div class="container-fluid">
+    <div class="row noSidePad top">
+      <div class="col-md-12 noPad"></div>
+    </div>
+    <div class="row noSidePad">
+      <div class="col-md-2 noPad"></div>
+      <div class="col-md-8 noPad bdrop">
+        <div class="welcomeTabs container-fluid blank">
+          <ul class="nav nav-tabs blank">
+            <li role="presentation" id="leftTab" class="lead col-md-4 text-center"><a class="leftTab">Register</a></li>
+            <li role="presentation" id="middleTab" class="lead col-md-4 text-center active blank"><a class="middleTab currentTab blank">Welcome</a></li>
+            <li role="presentation" id="rightTab" class="lead col-md-4 text-center"><a class="rightTab">Forgot</a></li>
+          </ul>
+        </div>
+        <div class="welcomeForms container-fluid blank">
+          <form id="loginForm" class="form-signin" role="form" method="POST">
+            {% csrf_token %}
+            {{ loginform.as_p }}
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" value="remember-me">Remember me</input>
+              </label>
+            </div>
+            <button href="" class="btn btn-lg btn-primary btn-block" name="login" type="submit">Log In</button>
+          </form>
+
+          <form id="registerForm" class="inactivateForm form-signin" role="form" method="POST">
+            {% csrf_token %}
+            {{ registerform.as_p }}
+            <button href="" class="btn btn-lg btn-primary btn-block" name="registration" type="submit">Submit</button>
+          </form>
+
+          <form id="forgotForm" class="inactivateForm form-signin" role="form" method="POST">
+            {% csrf_token %}
+            {{ forgotform.as_p }}
+            <button href="" class="btn btn-lg btn-primary btn-block" name="forgot" type="submit">Send</button>
+          </form>
+        </div> <!-- /container -->
+      </div>
+      <div class="col-md-2 noPad"></div>
+    </div>
+  </div>
+{% endblock %}
