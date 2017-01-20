@@ -3,11 +3,22 @@ body {
   padding-bottom: 0px;
   margin: 0px;
   height: 100%;
-  background-color: #FFF;
+  background-image: url("../images/beaches.jpg");
+  overflow:hidden;
+  background-size: cover;
+}
+
+.inactiveMain > .hoverMain:hover,
+.inactiveMain > .hoverMain:focus {
+  color:#FFF;
+}
+
+#blank {
+  background-color: transparent;
 }
 
 .welcomeTabs {
-  background-color: #FFF;
+  background-color: #aaa;
 }
 
 .top {
@@ -27,36 +38,77 @@ body {
 }
 
 .bdrop {
-  background-image: url("../images/beach-03.jpg");
+  box-shadow: 0 30px 50px rgba(0,0,0,.5);
+  background-color: #d8d8d8;
+}
+
+#transparentContainer {
+margin-right: -1px;
 }
 
 .blank {
   background-color: transparent;
 }
 
-.leftTab {
-  cursor: pointer;
-  margin-left: 120px;
+.enterHolder {
+  border-bottom: 0px;
+  border-top: 0px;
+  border-right: 0px;
+  border-left: 0px;
 }
 
-.middleTab {
-  cursor: pointer;
+.enterTabs {
+  border-bottom: 0px;
+  border-top: 0px;
+  border-right: 0px;
+  border-left: 0px;
 }
 
-.currentTab {
-  background-color: #eee;
+.enterLinks {
+  text-align:center;
+  color:#000;
+  border-bottom: 0px;
+  border-top: 0px;
+  border-right: 0px;
+  border-left: 0px;
 }
 
-.rightTab {
+#currentTab {
+  background-color:transparent;
+  cursor: default;
+  font-weight: bold;
+  padding-left: 0px;
+  padding-right: 0px;
+  color:#FFF;
+  text-shadow: 0 5px 10px rgba(0,0,0,.9);
+}
+
+.inactiveTab {
+  background-color:#aaa;
   cursor: pointer;
-  margin-right: 120px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.nav > li > a:hover,
+.nav > li > a:focus {
+  text-decoration: none;
+  background-color: #aaa;
+  margin:0px;
 }
 
 .welcomeForms {
-  background-color: #eee;
+  margin-top:65px;
+  margin-bottom:65px;
+  background-color: transparent;
 }
 
-.inactivateForm {
+.containerForms {
+  width:100%;
+  height:300px;
+}
+
+.inactiveForm {
   display: none;
 }
 

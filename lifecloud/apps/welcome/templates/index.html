@@ -2,6 +2,17 @@
 {% load tz %}
 {% load i18n %}
 {% load l10n %}
+
+{% block head_title %}
+Lifecloud
+{% endblock %}
+
+{% block head_css %}
+<link rel="stylesheet" href="../static/css/cover.css">
+<link rel="stylesheet" href="../static/css/signin.css">
+<script src="../static/js/signin.js"></script>
+{% endblock %}
+
 {% block content %}
 
     <div class="site-wrapper">
@@ -12,28 +23,60 @@
 
           <div class="masthead clearfix">
             <div class="inner">
-              <h3 class="masthead-brand">Cover</h3>
+              <h3 class="masthead-brand">Lifecloud</h3>
               <nav>
                 <ul class="nav masthead-nav">
-                  <li class="active"><a href="#">Home</a></li>
-                  <li><a href="#">Features</a></li>
-                  <li><a href="#">Contact</a></li>
+                  <li class="active"><a id="blank" class="hoverMain" href="#">Home</a></li>
+                  <li class="inactiveMain"><a id="blank" class="hoverMain" href="#">Mission</a></li>
+                  <li class="inactiveMain"><a id="blank" class="hoverMain" href="#">Contact</a></li>
                 </ul>
               </nav>
             </div>
           </div>
 
-          <div class="inner cover">
-            <h1 class="cover-heading">Cover your page.</h1>
-            <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
-            <p class="lead">
-              <a href="#" class="btn btn-lg btn-default">Learn more</a>
-            </p>
+          <div class="row noSidePad">
+            <div class="col-md-3 noPad"></div>
+            <div class="col-md-6 noPad bdrop">
+              <div class="welcomeTabs container-fluid blank noPad" id="transparentContainer">
+                <ul class="nav nav-tabs blank enterHolder">
+                  <li role="presentation" id="leftTab" class="lead col-md-4 enterTabs inactiveTab"><a class="enterLinks">Register</a></li>
+                  <li role="presentation" id="middleTab" class="lead col-md-4 enterTabs active"><a id="currentTab" class="enterLinks">Welcome</a></li>
+                  <li role="presentation" id="rightTab" class="lead col-md-4 enterTabs inactiveTab"><a class="enterLinks">Forgot</a></li>
+                </ul>
+              </div>
+              <div class="welcomeForms container-fluid blank noPad">
+                <div class="containerForms">
+                  <form id="loginForm" class="form-signin" role="form" method="POST">
+                    {% csrf_token %}
+                    {{ loginform.as_p }}
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox" value="remember-me">Remember me</input>
+                      </label>
+                    </div>
+                    <button href="" class="btn btn-lg btn-primary btn-block" name="login" type="submit">Log In</button>
+                  </form>
+
+                  <form id="registerForm" class="inactiveForm form-signin" role="form" method="POST">
+                    {% csrf_token %}
+                    {{ registerform.as_p }}
+                    <button href="" class="btn btn-lg btn-primary btn-block" name="registration" type="submit">Submit</button>
+                  </form>
+
+                  <form id="forgotForm" class="inactiveForm form-signin" role="form" method="POST">
+                    {% csrf_token %}
+                    {{ forgotform.as_p }}
+                    <button href="" class="btn btn-lg btn-primary btn-block" name="forgot" type="submit">Send</button>
+                  </form>
+                </div>
+              </div> <!-- /container -->
+            </div>
+            <div class="col-md-3 noPad"></div>
           </div>
 
           <div class="mastfoot">
             <div class="inner">
-              <p>Cover template for <a href="http://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+              <p>(C) 2017 Lifecloud</p>
             </div>
           </div>
 
