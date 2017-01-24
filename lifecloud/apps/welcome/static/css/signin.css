@@ -8,6 +8,10 @@ body {
   background-size: cover;
 }
 
+.activeMain {
+  cursor: default;
+}
+
 .inactiveMain > .hoverMain:hover,
 .inactiveMain > .hoverMain:focus {
   color:#FFF;
