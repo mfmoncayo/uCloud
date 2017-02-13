@@ -1,0 +1,40 @@
+body {
+  background-image: url("../images/financeBack.aa12afceb978.png");
+  background-position: center bottom;
+}
+
+.finLeft {
+  color:#FFF;
+  text-align:left;
+  margin: 0px;
+  text-shadow: 0 5px 10px rgba(0,0,0,.9);
+  font-weight:bold;
+}
+
+.finCenter {
+  color:#FFF;
+  text-align:center;
+  margin: 0px;
+  text-shadow: 0 5px 10px rgba(0,0,0,.9);
+  font-weight:bold;
+}
+
+.finRight {
+  color:#FFF;
+  text-align:right;
+  margin: 0px;
+  text-shadow: 0 5px 10px rgba(0,0,0,.9);
+  font-weight:bold;
+}
+
+.finBar {
+  height:1%;
+  min-height:6px;
+  width:83%;
+  min-width:830px;
+  margin-top:2%;
+  margin-left:5%;
+  margin-right: 5%;
+  border-radius: 0px 0px 0px 0px;
+  border-top: 3px solid black;
+}

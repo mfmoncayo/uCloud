@@ -1,208 +1,204 @@
-html {
-  height:100%;
-  width:100%;
-}
-
-body {
-  padding-top: 0px;
-  padding-bottom: 0px;
-  margin: 0px;
-  height: 100%;
+  /*body {
   background-image: url("../images/ny.jpg");
-  overflow:hidden;
-  background-size: cover;
-}
+  }*/
 
-.full {
-  height:100%;
-  width:100%;
-  min-height:600px;
-  min-width:1000px;
-}
+  body,html,.row-offcanvas {
+    height:100%;
+    background-color: rgba(200, 200, 200, .8);
+  }
 
-.noPad {
-  padding-top: 0px;
-  padding-left: 0px;
-  padding-right: 0px;
-  padding-bottom: 0px;
-}
+  body {
+    padding-top: 130px;
 
-.noMargin {
-  margin-top: 0px;
-  margin-left: 0px;
-  margin-right: 0px;
-  margin-bottom: 0px;
-}
+  }
 
-.float {
-  float:left;
-}
+  .floatNav {
+    position:fixed;
+    top: 60px;
+    left:20px;
+    right:20px;
+    z-index: 1030;
+  }
 
-.naviBar {
-  background-color:rgba(33,33,33,.8);
-  height:7%;
-  min-height:30px;
-  width:93%;
-  min-width:930px;
-  border-radius: 0px 0px 0px 0px;
-}
+  .floatMain {
+    overflow:hidden;
+    z-index: 1029;
+  }
 
-.citiBar {
-  height:5%;
-  min-height:30px;
-  width:93%;
-  min-width:930px;
-  border-radius: 0px 0px 0px 0px;
-}
+  .floatContent {
+    overflow:auto;
+    z-index: 1029;
+  }
 
-.noRadius {
-  border-radius: 0px 0px 0px 0px;
-}
+  .floatSide {
+    top: 130px;
+  }
 
-.navLeft {
-  color:#FFF;
-  text-align:left;
-  margin: 0px;
-  font-size:15px;
-  text-shadow: 0 5px 10px rgba(0,0,0,.9);
-  font-weight:bold;
-}
+  .headCategory {
+    color:rgba(255, 255, 255, .5);
+    border-color:#292b2c !important;
+    background-color:#292b2c !important;
+  }
 
-.navLogo {
-  color:#FFF;
-  text-align:center;
-  margin: 0px;
-  font-size:15px;
-  text-shadow: 0 5px 10px rgba(0,0,0,.9);
-  font-weight:bold;
-}
+  .headCategory:hover {
+    color:rgba(255, 255, 255, .8);
+    border-color:#292b2c !important;
+    background-color:#292b2c !important;
+  }
 
-.logo {
-  max-height:100%;
-  max-width:100%;
-  display:block;
-  margin:auto;
-  cursor:pointer;
-}
+  .itemText {
+    color:rgba(10, 10, 10, .8);
+  }
 
-.explore {
-  max-height:100%;
-  max-width:100%;
-  display:block;
-  margin:auto;
-  padding-top:5px;
-  cursor:pointer;
-}
+  .itemText:hover {
+    color:rgba(10, 10, 10, .8);
+    background-color:#eceeef;
+  }
 
-.exploreCategories {
-  color:#222;
-  text-align:center;
-  margin: 0px;
-  font-size:15px;
-  text-shadow: 0 5px 10px rgba(0,0,0,.9);
-  font-weight:bold;
-}
+  .linkText {
+    color:rgba(10, 10, 10, .5);
+  }
 
-.navRight {
-  color:#FFF;
-  text-align:right;
-  margin: 0px;
-  font-size:15px;
-  text-shadow: 0 5px 10px rgba(0,0,0,.9);
-  font-weight:bold;
-}
+  .linkText:hover {
+    color:rgba(10, 10, 10, 1);
+  }
 
-.centerText {
-  margin: 1% 0%;
-  padding-top:5px;
-}
+  .sideMenu {
+    padding-left:8px;
+  }
 
-.sideColumn {
-  height:100%;
-  min-height:600px;
-  width:7%;
-  min-width:70px;
-  opacity: 0.8;
-}
+  .iconSpace {
+    margin-right:5px;
+  }
 
-.profPic {
-  height: 15%;
-  min-height: 90px;
-  width:100%;
-  min-width:70px;
-  color:#FFF;
-}
+  .logo {
+    min-width:35px;
+    max-width:20%;
+    display:block;
+    margin:auto;
+    cursor:pointer;
+  }
 
-.pixholder {
-  max-height:100%;
-  max-width:100%;
-  display:block;
-  margin:auto;
-  border-radius:50%;
-  position: relative;
-  z-index: 1;
-}
+  .explore {
+    max-height:100%;
+    max-width:100%;
+    display:block;
+    margin:auto;
+    cursor:pointer;
+  }
 
-.pix {
-  position: relative;
-  z-index: 2;
-  top: -79.5%;
-  padding-top:10%;
-  padding-bottom:10%;
-  padding-right:11%;
-  padding-left:11%;
-  max-height:100%;
-  max-width:100%;
-  display:block;
-  margin:auto;
-  border-radius:50%;
-}
+  .exploreIcon {
+    max-width:100%;
+    display:block;
+    margin:auto;
+    display: inline-block;
+    padding-top: .425rem;
+    padding-bottom: .425rem;
+  }
 
-.appsColumn {
-  height: 70%;
-  min-height: 420px;
-  width:100%;
-  min-width:70px;
-  color:#FFF;
-}
+  .profile {
+    min-width:35px;
+    max-width:20%;
+    border-radius:50%;
+    float:right;
+    display:block;
+    cursor:pointer;
+  }
 
-.optionsColumn {
-  height: 7.5%;
-  min-height: 45px;
-  width:100%;
-  min-width:70px;
-  color:#FFF;
-}
+  .profile:hover {
+    box-shadow: 0px 0px 5px #888888;
+  }
 
-.black {
-  background-color:#222;
-}
+  .iconColor {
+    color:rgba(255, 255, 255, .5);
+  }
 
-.appsholder {
-  float:left;
-  height:25%;
-  width:100%;
-}
+  .iconColor:hover {
+    color:rgba(255, 255, 255, .8);
+  }
 
-.apps {
-  max-height:100%;
-  max-width:100%;
-  display:block;
-  margin:auto;
-  padding:5%;
-  cursor:pointer;
-}
+  /* Off Canvas */
+    @media screen and (min-width: 500px) {
+      .col-sm-2 {
+        max-width:30%;
+      }
 
-.white {
-  background-color:white;
-}
+      .row-offcanvas {
+        position: relative;
+        -webkit-transition: all 0.4s ease-out;
+        -moz-transition: all 0.4s ease-out;
+        transition: all 0.4s ease-out;
+      }
 
-.grey {
-  background-color:#aaa;
-}
+      .row-offcanvas-right {
+        right: 0;
+      }
 
-.exploreBar {
-  background-image:none;
-  background-color:transparent;
-  border:0px;
-}
+      .row-offcanvas-left {
+        left: 0;
+      }
+
+      .row-offcanvas-left
+      #sidebarLeft {
+        left: -35%;
+      }
+
+      .row-offcanvas-left.active {
+        left: 35%;
+      }
+
+      .row-offcanvas-right
+      #sidebarRight {
+        right: -35%;
+      }
+
+      .row-offcanvas-right.active {
+        right: 35%;
+      }
+
+      .sidebar-offcanvas {
+        position: absolute;
+        top: 0;
+        width: 50%;
+        margin-left: 10px;
+      }
+      #offcanvasleft,#offcanvasright{margin-top:10px;}
+
+  @media screen and (min-width: 800px) {
+    .col-sm-2 {
+      max-width:16.66667%;
+    }
+
+    .row-offcanvas {
+      position: relative;
+      -webkit-transition: all 0.4s ease-out;
+      -moz-transition: all 0.4s ease-out;
+      transition: all 0.4s ease-out;
+    }
+
+    .row-offcanvas-left
+    #sidebarLeft {
+      left: -20%;
+    }
+
+    .row-offcanvas-left.active {
+      left: 20%;
+    }
+
+    .row-offcanvas-right
+    #sidebarRight {
+      right: -20%;
+    }
+
+    .row-offcanvas-right.active {
+      right: 20%;
+    }
+
+    .sidebar-offcanvas {
+      position: absolute;
+      top: 0;
+      width: 50%;
+      margin-left: 10px;
+    }
+    #offcanvasleft,#offcanvasright{margin-top:10px;}
+  }

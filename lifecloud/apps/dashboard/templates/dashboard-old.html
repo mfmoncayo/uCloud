@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load l10n %}
+{% load tz %}
+
+{% block head_title %}
+Lifecloud
+{% endblock %}
+
+{% block head_css %}
+<link rel="stylesheet" href="../static/css/dashboard.css">
+<link rel="stylesheet" href="../static/dist/css/main.css">
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid full noPad noMargin">
+  <div class="noPad sideColumn float noMargin">
+    {% include "lifecloud/sidebar.html" %}
+  </div>
+  <div class="noPad naviBar float noMargin centerDiv">
+    {% include "lifecloud/nav.html" %}
+  </div>
+  <div class="noPad citiBar float noMargin centerDiv">
+    {% include "lifecloud/explore.html" %}
+  </div>
+</div>
+{% endblock %}
