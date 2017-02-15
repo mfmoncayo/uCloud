@@ -1,17 +1,20 @@
 {% block navbar %}
-        <div class="col-md-4 centerText">
-          <p class="navLeft">Fri, Jan 20th</p>
-        </div>
-        <div class="col-md-1">
-        </div>
-        <div class="col-md-1">
-          <a href="../dashboard"><img class="logo" src="../../static/dist/images/logo.png" /></a>
-        </div>
-        <div class="col-md-1">
-        </div>
-        <div class="col-md-3">
-        </div>
-        <div class="col-md-2 centerText">
-          <p class="navRight"> 42 cloudy</p>
-        </div><!--/.navbar-collapse -->
+<nav class="navbar fixed-top navbar-inverse bg-inverse">
+
+  <div class="row justify-content-start">
+
+    <div class="col-5">
+      <span class="navbar-text iconColor">Fri, Jan 20</span>
+    </div>
+
+    <div class="col-2">
+      <a href="../dashboard"><img class="logo" src="../../static/dist/images/logo.png"alt=""></a>
+    </div>
+
+    <div class="col-5 text-right">
+      <span class="navbar-text iconColor">42 <i class="fa fa-cloud fa-fw" aria-hidden="true"></i></span>
+    </div>
+
+  </div>
+</nav>
 {% endblock %}

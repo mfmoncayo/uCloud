@@ -1,19 +1,67 @@
-{% block explore %}
-        <div class="col-md-1">
+{% block navbar %}
+<div class="floatNav">
+  <nav class="navbar navbar-inverse bg-inverse">
+    <div class="container">
+      <div class="row justify-content-start">
+        <div class="col-5">
+          <div class="btn-group">
+            <span class="navbar-text iconColor dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Chicago, IL</span>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">New York, NY</a>
+              <a class="dropdown-item" href="#">Los Angeles, CA</a>
+              <a class="dropdown-item" href="#">Houston, TX</a>
+              <div class="dropdown-divider"></div>
+              <form class="form-inline">
+                <div class="input-group correctExplore">
+                  <input type="text" class="form-control" placeholder="Explore" aria-describedby="basic-addon1">
+                  <span class="input-group-addon" id="basic-addon1"><i class="fa fa-location-arrow" aria-hidden="true"></i></span>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
-        <div class="col-md-2 centerText">
-          <p class="navLeft">Chicago, IL, USA</p>
+
+        <div class="col-2">
+          <button class="navbar-toggler explore" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+              <span class="exploreIcon iconColor"><i class="fa fa-bars fa-1x" aria-hidden="true"></i></span>
+          </button>
         </div>
-        <div class="col-md-2">
+
+        <div class="col-5 text-right">
+          <div class="btn-group">
+            <span class="navbar-text iconColor" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-globe fa-2x" aria-hidden="true"></i></span>
+            <div class="dropdown-menu dropdown-menu-right">
+              <a class="dropdown-item" href="#">New York, NY</a>
+              <a class="dropdown-item" href="#">Los Angeles, CA</a>
+              <a class="dropdown-item" href="#">Houston, TX</a>
+              <div class="dropdown-divider"></div>
+              <form class="form-inline">
+                <div class="input-group correctExplore">
+                  <input type="text" class="form-control" placeholder="Explore" aria-describedby="basic-addon1">
+                  <span class="input-group-addon" id="basic-addon1"><i class="fa fa-location-arrow" aria-hidden="true"></i></span>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
-        <div class="col-md-1">
-          <img class="explore" src="../../static/dist/images/explore.png" />
-        </div>
-        <div class="col-md-3">
-        </div>
-        <div class="col-md-2 centerText">
-          <p class="navRight">World</p>
-        </div>
-        <div class="col-md-1">
-        </div>
+      </div>
+      <div class="navbar-collapse collapse" id="collapsingNavbar">
+        <ul class="nav justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link iconColor" href="#">Active</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link iconColor" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link iconColor" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
 {% endblock %}

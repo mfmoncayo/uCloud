@@ -1,4 +1,23 @@
-    <footer>
-        <p>&copy; Company 2015</p>
-    </footer>
-</div> <!-- /container -->
+{% block navbar %}
+<nav class="navbar floatFoot fixed-bottom navbar-inverse bg-inverse">
+  <div class="row justify-content-start">
+
+    <div class="col-1">
+      <a class="btn btn-default btn-sm iconColor" data-toggle="settings" href="#"><i class="fa fa-angle-double-left fa-2x"></i></a>
+    </div>
+
+    <div class="col-1">
+      <a class="btn btn-default btn-sm iconColor" data-toggle="settings" href="#"><i class="fa fa-cog fa-2x"></i></a>
+    </div>
+
+    <div class="col-8 text-center">
+      <span class="navbar-text iconColor">@mfmoncayo</span>
+    </div>
+
+    <div class="col-2">
+      <img class="profile" data-toggle="profile" src="../../static/dist/images/profpic.jpg"alt="">
+    </div>
+
+  </div>
+</nav>
+{% endblock %}
