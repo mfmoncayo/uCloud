@@ -50,6 +50,12 @@ header{
   padding-top: .425rem;
   padding-bottom: .425rem;
 }
+
+.exploreBtn {
+  background:inherit;
+  border:0px;
+}
+
 .itemText {
   color:rgba(10, 10, 10, .8);
 }
