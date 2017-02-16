@@ -94,6 +94,15 @@
     margin-left:-15px;
   }
 
+  .linkFix {
+    margin-left:-10px;
+  }
+
+  .profFix {
+    margin-right:25px;
+    margin-left:-25px;
+  }
+
   #offcanvasleft,#offcanvasright{margin-top:10px;}
 }
 
@@ -105,6 +114,14 @@
     .footerFix {
       margin-left:-8px;
     }
+
+    .linkFix {
+      margin-left:0px;
+    }
+
+    .profFix {
+      margin-right:20px;
+    }
   }
 
   @media screen and (min-width: 440px) {
@@ -114,6 +131,10 @@
 
     .footerFix {
       margin-left:0px;
+    }
+
+    .profFix {
+      margin-right:15px;
     }
   }
 
