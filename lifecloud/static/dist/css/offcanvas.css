@@ -14,6 +14,10 @@
   padding-left:8px;
 }
 
+.sideTopic2 {
+  padding-left:70px;
+}
+
 .centerSide {
   margin:auto;
 }
@@ -37,6 +41,11 @@
     z-index: 1030;
   }
 
+  .row-offcanvas2 {
+    position: relative;
+    z-index: 1029;
+  }
+
   .row-offcanvas-left {
     left: 0;
   }
@@ -52,6 +61,11 @@
     transition:all .6s linear;
   }
 
+  .preL2 {
+    left:0%;
+    margin-left:1%;
+  }
+
   .postL {
     left: 0%;
   }
@@ -62,6 +76,13 @@
     margin-top:170px;
   }
 
+  .row-offcanvas-left
+  #sidebarLeft2 {
+    position:fixed;
+    margin-top:210px;
+    margin-left:130px;
+  }
+
   .preR {
     right: -45%;
     -webkit-transition:all .6s linear;
@@ -69,14 +90,29 @@
     transition:all .6s linear;
   }
 
+  .preR {
+    right: 0%;
+  }
+
+  .preR2 {
+    right: 0%;
+    margin-right: .25%;
+  }
+
   .postR {
     right: 0%;
   }
 
   .row-offcanvas-right
+  #sidebarRight2 {
+    position:fixed;
+    margin-top:370px;
+  }
+
+  .row-offcanvas-right
   #sidebarRight {
     position:fixed;
-    margin-top:170px;
+    margin-top:220px;
   }
 
   .sidebar-offcanvas {
@@ -168,6 +204,11 @@
       z-index: 1030;
     }
 
+    .row-offcanvas2 {
+      position: relative;
+      z-index: 1029;
+    }
+
     .row-offcanvas-left {
       left: 0;
     }
@@ -193,11 +234,22 @@
       margin-top:170px;
     }
 
+    .row-offcanvas-left
+    #sidebarLeft2 {
+      position:fixed;
+      margin-top:210px;
+    }
+
     .preR {
       right: -30%;
       -webkit-transition:all .6s linear;
       -moz-transition:all .6s linear;
       transition:all .6s linear;
+    }
+
+    .preR2 {
+      right: 0%;
+      margin-right: .25%;
     }
 
     .postR {
@@ -208,6 +260,12 @@
     #sidebarRight {
       position:fixed;
       margin-top:170px;
+    }
+
+    .row-offcanvas-right
+    #sidebarRight2 {
+      position:fixed;
+      margin-top:370px;
     }
 
     .sidebar-offcanvas {
@@ -242,6 +300,17 @@
       margin-top:170px;
     }
 
+    .row-offcanvas-left
+    #sidebarLeft2 {
+      position:fixed;
+      margin-top:210px;
+    }
+
+    #leftArrow {
+      margin-top:175px;
+      margin-left:-130px;
+    }
+
     .preL {
       left: -20%;
       -webkit-transition:all .6s linear;
@@ -259,11 +328,22 @@
       margin-top:170px;
     }
 
+    .row-offcanvas-right
+    #sidebarRight2 {
+      position:fixed;
+      margin-top:370px;
+    }
+
     .preR {
       right: -20%;
       -webkit-transition:all .6s linear;
       -moz-transition:all .6s linear;
       transition:all .6s linear;
+    }
+
+    .preR2 {
+      right: 0%;
+      margin-right: .25%;
     }
 
     .postR {

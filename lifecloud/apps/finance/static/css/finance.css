@@ -1,5 +1,4 @@
 body {
-  background-image: url("../images/financeBack2.png");
   background-position: center bottom;
 }
 
@@ -62,4 +61,102 @@ body {
 
 .borderWhite {
   border: 1px solid white;
+}
+
+.float {
+  float:left;
+}
+
+.navbar .nav > li > .dropdown-menu::after,
+.navbar .nav > li > .dropdown-menu::before {
+  display:none;
+}
+
+.correctSecNav {
+  margin-left:25px;
+}
+
+.appCenterCorrect {
+  margin-left:30px;
+}
+
+.formFix {
+  background:inherit;
+}
+
+.btnFix {
+  margin-top:-20px;
+}
+
+#clearColor {
+  background-color:transparent;
+}
+
+#leftColumn {
+  height: 95%;
+  overflow: auto;
+  box-sizing: border-box;
+}
+
+  .planCollapseHead {
+    background-color:#222;
+    border-radius: 4px 4px 0px 0px;
+  }
+
+  .collapseAdmin {
+    padding: .75rem 1.25rem;
+    margin-bottom: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, .125);
+    font-size:1.2rem;
+    font-weight:normal;
+  }
+
+  .planCollapseFoot {
+    background-color:#222;
+    border-radius: 0px 0px 4px 4px;
+  }
+
+  .FixCollapseItem {
+    padding:.25rem;
+    background-color:#dcdcdc;
+  }
+
+  .FixCollapseItem2 {
+    padding:0rem;
+    border:none;
+  }
+
+  .fixATag {
+    border:none;
+    margin-bottom:-1px;
+    border-radius:0px;
+  }
+
+  .financebanner {
+    background-image: url("../../static/dist/images/porsche.jpeg");
+    background-position: center bottom;
+    background-size: 100% 100%;
+    border-radius: 5px;
+    border:2px solid black;
+    margin-top:3px;
+    max-width:700px;
+  }
+
+  .noRadius {
+    border-radius:0px;
+  }
+
+  .middleLC {
+    background-color:grey;
+    height:75%;
+  }
+
+  .bottomLC {
+    background-color:black;
+    height:15%;
+  }
+
+.rightColumn {
+  background-color:blue;
+  height:100%;
 }
