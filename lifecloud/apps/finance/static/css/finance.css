@@ -133,7 +133,7 @@ body {
   }
 
   .financebanner {
-    background-image: url("");
+    background-image: url("../images/porsche.jpeg");
     background-position: center bottom;
     background-size: 100% 100%;
     border-radius: 5px;
