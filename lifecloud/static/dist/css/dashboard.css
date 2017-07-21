@@ -29,14 +29,6 @@ header{
   z-index: 1030;
 }
 
-.floatNav2 {
-  position: fixed;
-  margin-top:155px;
-  left:20px;
-  right:20px;
-  z-index: 1029;
-}
-
 .explore {
   max-height:100%;
   max-width:100%;
@@ -48,56 +40,6 @@ header{
 .correctExplore {
   padding-left:10px;
   padding-right:10px;
-}
-
-.dropdown-toggle::after {
-    display:none
-}
-
-.containerWFix {
-    width:auto;
-}
-
-.clickable {
-  cursor:pointer;
-}
-
-.navDrop {
-  font-size: 1.2rem;
-  margin-top: -1px;
-}
-
-.utilDrop {
-  font-size: 1.2rem;
-  margin-top: -1px;
-}
-
-.innerGroupr {
-  margin-right: 25px;
-}
-
-.innerGroupl {
-  margin-left: -25px;
-}
-
-.blackBack {
-  background-color: #222;
-}
-
-.blackFont {
-  color:#222;
-}
-
-.topSpace {
- padding-top: 5px;
-}
-
-.greyBack {
-  background-color: #777;
-}
-
-.lightgreyBack {
-  background-color: #bbb;
 }
 
 .exploreIcon {
@@ -112,19 +54,6 @@ header{
 .exploreBtn {
   background:inherit;
   border:0px;
-}
-
-.addNew {
-  margin-left:35%;
-  margin-right:35%;
-}
-
-.exploreRight {
-  display:none;
-}
-
-.exploreRight2 {
-  display:block;
 }
 
 .itemText {
@@ -144,24 +73,11 @@ header{
   color:rgba(10, 10, 10, 1);
 }
 
-.content3 {
-    position:relative;
-    height: 96.5%;
-    width:100%; /* Sizing - any length */
-    -moz-box-sizing:border-box;
-    -webkit-box-sizing:border-box;
-    -o-box-sizing:border-box;
-    -ms-box-sizing:border-box;
-    box-sizing:border-box;
-    z-index: 1029;
-    overflow:hidden;
-}
-
 .content {
     position:relative;
     height: 96.5%;
     width:100%; /* Sizing - any length */
-    padding:210px 0 30px 0; /* Header height and footer height */
+    padding:130px 0 30px 0; /* Header height and footer height */
     margin:0 auto 0 auto; /* Center content */
     -moz-box-sizing:border-box;
     -webkit-box-sizing:border-box;
@@ -177,134 +93,13 @@ header{
     min-width: 300px;
     padding-left: 50px;
     padding-right: 50px;
-    z-index:1031;
     overflow:auto;
     -moz-box-sizing:border-box;
     -webkit-box-sizing:border-box;
     -o-box-sizing:border-box;
     -ms-box-sizing:border-box;
     box-sizing:border-box;
-}
-
-.content2 {
-    position:relative;
-    background-color: rgba(255, 255, 255, .5);
-    height: 96.5%;
-    min-height: 320px;
-    max-height: 320px;
-    width:100%; /* Sizing - any length */
-    margin:0 auto 0 auto; /* Center content */
-    -moz-box-sizing:border-box;
-    -webkit-box-sizing:border-box;
-    -o-box-sizing:border-box;
-    -ms-box-sizing:border-box;
-    box-sizing:border-box;
-    z-index: 1029;
-    overflow:scroll;
-}
-
-#scrollable3 {
-    height: 70%;
-    overflow:auto;
-    -moz-box-sizing:border-box;
-    -webkit-box-sizing:border-box;
-    -o-box-sizing:border-box;
-    -ms-box-sizing:border-box;
-    box-sizing:border-box;
-}
-
-#scrollable4 {
-  height: 100%;
-  min-width: 300px;
-  padding-left: 50px;
-  padding-right: 50px;
-  z-index:1031;
-  overflow:auto;
-  -moz-box-sizing:border-box;
-  -webkit-box-sizing:border-box;
-  -o-box-sizing:border-box;
-  -ms-box-sizing:border-box;
-  box-sizing:border-box;
-}
-
-.fixed {
-  position:fixed;
-}
-
-.whiteText {
-  color:#FFFFFF;
-}
-
-.textFixer {
-  color:#222;
-}
-
-.textFixer2 {
-  margin-top:120px;
-  margin-left:0px;
-}
-
-.textFixer3 {
-  margin-left:-100px;
-}
-
-.containerTwo {
-    width: 420em;
-    overflow-x: auto;
-    white-space: nowrap;
-}
-
-.financeHolder {
-  float:left;
-  margin-left:20px;
-  min-height:420px;
-  min-width:680px;
-}
-
-.noDisplay {
-  display:none;
-}
-
-.display {
-  display:block;
-}
-
-.formControl {
-  margin-left:60px;
-  width:80%;
-  margin-top:40px;
-}
-
-.input-group-addon2 {
-  margin-bottom: 0;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.25;
-  color: #464a4c;
-  text-align: center;
-  background-color: #eceeef;
-  border: 1px solid rgba(0, 0, 0, .15);
-  border-radius: .25rem
-}
-
-.formArrow1 {
-  margin-left:-20px;
-}
-
-.formArrow1 {
-  margin-right:-20px;
-}
-
-.btnHolder {
-  border-radius:4px 0px 0px 4px;
-}
-
-.formBtnFix {
-  padding: .5rem .7rem;
-}
-
-.noDropPadding {
-  padding:0px;
+    padding-top: 20px;
 }
 
 .profile {

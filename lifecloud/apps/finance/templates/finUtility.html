@@ -1,25 +1,18 @@
 {% block navbar %}
 <div class="floatNav">
-  <nav class="navbar navbar bg">
-    <div class="container greyBack containerWFix">
-      <div class="row justify-content-start blackBack">
+  <nav class="navbar navbar-inverse bg-inverse">
+    <div class="container">
+      <div class="row justify-content-start">
 
         <div class="col-5">
           <div class="btn-group">
-            <a class="nav-link iconColor dropdown-toggle navDrop" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Finance</a>
-            <div class="dropdown-menu correctDrop">
-              <form class="form-inline">
+            <button class="navbar-text iconColor exploreBtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-sort-desc fa-2x" aria-hidden="true"></i></button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
               <div class="dropdown-divider"></div>
-                <div class="input-group correctExplore">
-                  <input type="text" class="form-control" placeholder="explore" aria-describedby="basic-addon1">
-                  <span class="input-group-addon" id="basic-addon1"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
-                </div>
-              </form>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Recent</a>
-              <a class="dropdown-item" href="#">History</a>
-              <a class="dropdown-item" href="#">Basics</a>
-              <a class="dropdown-item" href="#">Advanced</a>
+              <a class="dropdown-item" href="#">Separated link</a>
             </div>
           </div>
         </div>
@@ -33,115 +26,6 @@
         <div class="col-5 text-right">
           <div class="btn-group">
             <button class="navbar-text iconColor exploreBtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-bank fa-2x" aria-hidden="true"></i></button>
-              <div class="dropdown-menu dropdown-menu-right text-right">
-                <form class="form-inline">
-                  <div class="input-group correctExplore">
-                    <input type="text" class="form-control" placeholder="as of" aria-describedby="basic-addon1">
-                    <span class="input-group-addon" id="basic-addon1"><i class="fa fa-search" aria-hidden="true"></i></span>
-                  </div>
-                </form>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Plan</a>
-                <a class="dropdown-item" href="#">Today</a>
-              </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="navbar-collapse collapse" id="collapsingNavbar">
-        <ul class="nav justify-content-center correctSecNav">
-          <li class="nav-item">
-            <a class="nav-link iconColor dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Plans</a>
-            <div class="dropdown-menu correctDrop">
-              <a class="dropdown-item" href="#">Business</a>
-              <a class="dropdown-item" href="#">Personal</a>
-              <a class="dropdown-item" href="#">Home</a>
-              <a class="dropdown-item" href="#">Kids</a>
-              <div class="dropdown-divider"></div>
-              <form class="form-inline">
-                <div class="input-group correctExplore">
-                  <input type="text" class="form-control" placeholder="Add Plan" aria-describedby="basic-addon1">
-                  <span class="input-group-addon" id="basic-addon1"><i class="fa fa-plus" aria-hidden="true"></i></span>
-                </div>
-              </form>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link iconColor dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Reports</a>
-            <div class="dropdown-menu correctDrop">
-              <a class="dropdown-item" href="#">Summary</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Balance Sheet</a>
-              <a class="dropdown-item" href="#">Income Statement</a>
-              <a class="dropdown-item" href="#">Cash Flows</a>
-              <a class="dropdown-item" href="#">Retained Earnings</a>
-              <div class="dropdown-divider"></div>
-              <form class="form-inline">
-              <div class="dropdown-divider"></div>
-              <div class="dropdown-divider"></div>
-                <div class="input-group correctExplore">
-                  <input type="text" class="form-control" placeholder="add reports" aria-describedby="basic-addon1">
-                  <span class="input-group-addon" id="basic-addon1"><i class="fa fa-plus" aria-hidden="true"></i></span>
-                </div>
-              </form>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link iconColor dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Academics</a>
-            <div class="dropdown-menu correctDrop text-right">
-              <a class="dropdown-item" href="#">Accounting</a>
-              <a class="dropdown-item" href="#">Business Administration</a>
-              <a class="dropdown-item" href="#">Entrepreneurship</a>
-              <a class="dropdown-item" href="#">Finance</a>
-              <div class="dropdown-divider"></div>
-                <div class="input-group correctExplore">
-                  <input type="text" class="form-control" placeholder="research" aria-describedby="basic-addon1">
-                  <span class="input-group-addon" id="basic-addon1"><i class="fa fa-graduation-cap" aria-hidden="true"></i></span>
-                </div>
-              </form>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link iconColor dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">News</a>
-            <div class="dropdown-menu correctDrop text-right">
-              <a class="dropdown-item" href="#">Accounting</a>
-              <a class="dropdown-item" href="#">Business Administration</a>
-              <a class="dropdown-item" href="#">Entrepreneurship</a>
-              <a class="dropdown-item" href="#">Finance</a>
-              <div class="dropdown-divider"></div>
-                <div class="input-group correctExplore">
-                  <input type="text" class="form-control" placeholder="research" aria-describedby="basic-addon1">
-                  <span class="input-group-addon" id="basic-addon1"><i class="fa fa-graduation-cap" aria-hidden="true"></i></span>
-                </div>
-              </form>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="container containerWFix">
-      <div class="row">
-
-        <!-- Scrollable left column -->
-        <div class="col-sm-4 col-lg-4 topSpace">
-          <div class="btn-group">
-            <button class="navbar-text exploreBtn utilDrop blackFont" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-caret-down fa-1x" aria-hidden="true"></i></button>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Attach</a>
-              <a class="dropdown-item" href="#">Export</a>
-              <a class="dropdown-item" href="#">Print</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Share</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm-4 col-lg-4 text-center topSpace">
-        </div>
-
-        <div class="col-sm-4 col-lg-4 text-right topSpace">
-          <div class="btn-group">
-            <button class="navbar-text blackFont exploreBtn utilDrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-close fa-1x" aria-hidden="true"></i></button>
             <div class="dropdown-menu dropdown-menu-right">
               <a class="dropdown-item" href="#">Action</a>
               <a class="dropdown-item" href="#">Another action</a>
@@ -151,8 +35,44 @@
             </div>
           </div>
         </div>
-        <!-- End scrollable left column -->
       </div>
+
+      <div class="correctNav navbar-collapse collapse" id="collapsingNavbar">
+        <ul class="nav justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link iconColor dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Reports</a>
+            <div class="dropdown-menu correctDrop">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Separated link</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link iconColor dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Track</a>
+            <div class="dropdown-menu correctDrop">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Separated link</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link iconColor dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Plan</a>
+            <div class="dropdown-menu correctDrop">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Separated link</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+    </div>
   </nav>
 </div>
 {% endblock %}
