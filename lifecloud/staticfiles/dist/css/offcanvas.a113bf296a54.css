@@ -1,0 +1,280 @@
+.headCategory {
+  color:rgba(255, 255, 255, .5);
+  border-color:#292b2c !important;
+  background-color:#292b2c !important;
+}
+
+.headCategory:hover {
+  color:rgba(255, 255, 255, .8);
+  border-color:#292b2c !important;
+  background-color:#292b2c !important;
+}
+
+.sideTopic {
+  padding-left:8px;
+}
+
+.centerSide {
+  margin:auto;
+}
+
+.iconSpace {
+  margin-right:5px;
+}
+
+.iconSpace2 {
+  margin-right:15px;
+}
+
+/* Off Canvas */
+@media screen and (min-width: 100px) {
+  .col-sm-2 {
+    max-width:45%;
+  }
+
+  .row-offcanvas {
+    position: relative;
+    z-index: 1030;
+  }
+
+  .row-offcanvas-left {
+    left: 0;
+  }
+
+  .row-offcanvas-right {
+    right: 0;
+  }
+
+  .preL {
+    left: -45%;
+    -webkit-transition:all .6s linear;
+    -moz-transition:all .6s linear;
+    transition:all .6s linear;
+  }
+
+  .postL {
+    left: 0%;
+  }
+
+  .row-offcanvas-left
+  #sidebarLeft {
+    position:fixed;
+    margin-top:170px;
+  }
+
+  .preR {
+    right: -45%;
+    -webkit-transition:all .6s linear;
+    -moz-transition:all .6s linear;
+    transition:all .6s linear;
+  }
+
+  .postR {
+    right: 0%;
+  }
+
+  .row-offcanvas-right
+  #sidebarRight {
+    position:fixed;
+    margin-top:170px;
+  }
+
+  .sidebar-offcanvas {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    margin-left: 10px;
+  }
+
+  .exploreFix {
+    margin-left:-8px;
+  }
+
+  .footerFix {
+    margin-left:-15px;
+  }
+
+  .linkFix {
+    margin-left:-10px;
+  }
+
+  .profFix {
+    margin-right:25px;
+    margin-left:-25px;
+  }
+
+  #offcanvasleft,#offcanvasright{margin-top:10px;}
+}
+
+  @media screen and (min-width: 420px) {
+    .exploreFix {
+      margin-left:-6px;
+    }
+
+    .footerFix {
+      margin-left:-8px;
+    }
+
+    .linkFix {
+      margin-left:0px;
+    }
+
+    .profFix {
+      margin-right:20px;
+    }
+  }
+
+  @media screen and (min-width: 440px) {
+    .exploreFix {
+      margin-left:-4px;
+    }
+
+    .footerFix {
+      margin-left:0px;
+    }
+
+    .profFix {
+      margin-right:15px;
+    }
+  }
+
+  @media screen and (min-width: 460px) {
+    .exploreFix {
+      margin-left:-2px;
+    }
+
+    .footerFix {
+      margin-left:0px;
+    }
+  }
+
+  @media screen and (min-width: 480px) {
+    .exploreFix {
+      margin-left:0px;
+    }
+
+    .footerFix {
+      margin-left:0px;
+    }
+  }
+
+  @media screen and (min-width: 500px) {
+    .col-sm-2 {
+      max-width:27%;
+    }
+
+    .row-offcanvas {
+      position: relative;
+      z-index: 1030;
+    }
+
+    .row-offcanvas-left {
+      left: 0;
+    }
+
+    .row-offcanvas-right {
+      right: 0;
+    }
+
+    .preL {
+      left: -30%;
+      -webkit-transition:all .6s linear;
+      -moz-transition:all .6s linear;
+      transition:all .6s linear;
+    }
+
+    .postL {
+      left: 0%;
+    }
+
+    .row-offcanvas-left
+    #sidebarLeft {
+      position:fixed;
+      margin-top:170px;
+    }
+
+    .preR {
+      right: -30%;
+      -webkit-transition:all .6s linear;
+      -moz-transition:all .6s linear;
+      transition:all .6s linear;
+    }
+
+    .postR {
+      right: 0%;
+    }
+
+    .row-offcanvas-right
+    #sidebarRight {
+      position:fixed;
+      margin-top:170px;
+    }
+
+    .sidebar-offcanvas {
+      position: absolute;
+      top: 0;
+      width: 50%;
+      margin-left: 10px;
+    }
+    #offcanvasleft,#offcanvasright{margin-top:10px;}
+  }
+
+  @media screen and (min-width: 800px) {
+    .col-sm-2 {
+      max-width:16.66667%;
+    }
+
+    .row-offcanvas-left {
+      left: 0;
+    }
+
+    .row-offcanvas-right {
+      right: 0;
+    }
+
+    .row-offcanvas {
+      position: relative;
+    }
+
+    .row-offcanvas-left
+    #sidebarLeft {
+      position:fixed;
+      margin-top:170px;
+    }
+
+    .preL {
+      left: -20%;
+      -webkit-transition:all .6s linear;
+      -moz-transition:all .6s linear;
+      transition:all .6s linear;
+    }
+
+    .postL {
+      left: 0%;
+    }
+
+    .row-offcanvas-right
+    #sidebarRight {
+      position:fixed;
+      margin-top:170px;
+    }
+
+    .preR {
+      right: -20%;
+      -webkit-transition:all .6s linear;
+      -moz-transition:all .6s linear;
+      transition:all .6s linear;
+    }
+
+    .postR {
+      right: 0%;
+    }
+
+    .sidebar-offcanvas {
+      position: absolute;
+      top: 0;
+      width: 50%;
+      margin-left: 10px;
+    }
+    #offcanvasleft,#offcanvasright{margin-top:10px;}
+  }

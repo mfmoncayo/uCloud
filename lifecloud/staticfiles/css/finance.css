@@ -3,6 +3,15 @@ body {
   background-position: center bottom;
 }
 
+.correctNav {
+  margin-left:-25px;
+}
+
+.correctDrop {
+  left:auto;
+  margin-left:-50px;
+}
+
 .finLeft {
   color:#FFF;
   text-align:left;
