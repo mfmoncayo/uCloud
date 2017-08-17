@@ -23,7 +23,7 @@ Lifecloud
 
           <div class="masthead clearfix">
             <div class="inner">
-              <h3 class="masthead-brand">Lifecloud</h3>
+              <h3 class="masthead-brand">uCloud</h3>
               <nav>
                 <ul class="nav masthead-nav">
                   <li class="active"><a id="blank" class="hoverMain activeMain" href="#">Home</a></li>
@@ -40,18 +40,19 @@ Lifecloud
               <div class="welcomeTabs container-fluid blank noPad" id="transparentContainer">
                 <ul class="nav nav-tabs blank enterHolder">
                   <li role="presentation" id="leftTab" class="lead col-md-4 enterTabs inactiveTab"><a class="enterLinks">Register</a></li>
-                  <li role="presentation" id="middleTab" class="lead col-md-4 enterTabs active"><a id="currentTab" class="enterLinks">Welcome</a></li>
+                  <li role="presentation" id="middleTab" class="lead col-md-4 enterTabs active activetab"><a id="currentTab" class="enterLinks">Welcome</a></li>
                   <li role="presentation" id="rightTab" class="lead col-md-4 enterTabs inactiveTab"><a class="enterLinks">Forgot</a></li>
                 </ul>
               </div>
               <div class="welcomeForms container-fluid blank noPad">
+                {% include "ucloud/logo.html" %}
                 <div class="containerForms">
                   <form id="loginForm" class="form-signin" role="form" method="POST">
                     {% csrf_token %}
                     {{ loginform.as_p }}
                     <div class="checkbox">
                       <label>
-                        <input type="checkbox" value="remember-me">Remember me</input>
+                        <input type="checkbox" value="remember-me"> Remember me</input>
                       </label>
                     </div>
                     <button href="" class="btn btn-lg btn-primary btn-block" name="login" type="submit">Log In</button>
