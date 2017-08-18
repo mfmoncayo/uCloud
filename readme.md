@@ -1,7 +1,3 @@
-# Lifecloud
-
-Developed with your life’s path in mind.
-
 ## Features
 
 - Production-ready configuration for Static Files, Database Settings, Gunicorn, etc.
