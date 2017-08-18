@@ -1,1 +1,1 @@
-web: gunicorn lifecloud.wsgi --log-file -
+web: gunicorn ucloud.wsgi --log-file -
