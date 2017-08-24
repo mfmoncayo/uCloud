@@ -8,7 +8,17 @@ body {
   background-size: cover;
 }
 
+.narrowNav {
+  display:none;
+}
+
 @media (orientation:portrait) {
+  .normalNav {
+    display:block;
+  }
+  .narrowNav {
+    display:block;
+  }
   .tLApplet {
     top:0px;
     margin-top:20px;
