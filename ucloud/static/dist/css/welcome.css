@@ -8,6 +8,25 @@ body {
   background-size: cover;
 }
 
+@media (orientation:portrait) {
+  .tLApplet {
+    top:0px;
+    margin-top:20px;
+  }
+  .tRApplet {
+    top:0px;
+    margin-top:20px;
+  }
+  .bLApplet {
+    bottom:0px;
+    margin-bottom:20px;
+  }
+  .bRApplet {
+    bottom:0px;
+    margin-bottom:20px;
+  }
+}
+
 .activeMain {
   cursor: default;
 }
