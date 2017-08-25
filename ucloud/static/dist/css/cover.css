@@ -14,7 +14,7 @@ ul.nav a:hover {
 }
 
 ul.nav li:hover {
-  color: #c2c2c2;
+  color: #cdcdcd;
 }
 
 /* Custom default button */
@@ -70,6 +70,10 @@ body {
 /*
  * Header
  */
+ .activeApplet {
+   text-decoration: underline;
+ }
+
 .inactiveApplet {
   color: #c4c4c4;
 }
