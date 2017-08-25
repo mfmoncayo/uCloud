@@ -170,8 +170,6 @@ body {
   /* Pull out the header and footer */
   .logo2 {
     width:100%;
-    margin-left: 0px;
-    margin-right: 0px;
   }
 }
 
@@ -182,15 +180,16 @@ body {
 
 .logoheight {
   height:100%;
-  padding-left:0px;
-  padding-right:0px;
 }
 
 .logoheight2 {
   height:50%;
   width:100%;
-  margin-left: 0px;
-  margin-right: 0px;
+}
+
+.noSideMarg {
+  margin-left:0px;
+  margin-right:0px;
 }
 
 .containerForms {

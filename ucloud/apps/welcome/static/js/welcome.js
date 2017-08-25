@@ -5,16 +5,16 @@ $(document).ready(function(){
     $("#loginForm").hide();
     $("#forgotForm").hide();
 
-    $("#leftTab").addClass("active activetab");
+    $("#leftTab").addClass("active activeTab");
     $("#leftTab").removeClass("inactiveTab");
     $("#leftTab a").attr('id', 'currentTab');
 
     $("#middleTab").addClass("inactiveTab");
-    $("#middleTab").removeClass("active activetab");
+    $("#middleTab").removeClass("active activeTab");
     $("#middleTab a").removeAttr('id');
 
     $("#rightTab").addClass("inactiveTab");
-    $("#rightTab").removeClass("active activetab");
+    $("#rightTab").removeClass("active activeTab");
     $("#rightTab a").removeAttr('id');
   });
 
@@ -24,15 +24,15 @@ $(document).ready(function(){
     $("#forgotForm").hide();
 
     $("#leftTab").addClass("inactiveTab");
-    $("#leftTab").removeClass("active activetab");
+    $("#leftTab").removeClass("active activeTab");
     $("#leftTab a").removeAttr('id');
 
-    $("#middleTab").addClass("active activetab");
+    $("#middleTab").addClass("active activeTab");
     $("#middleTab").removeClass("inactiveTab");
     $("#middleTab a").attr('id', 'currentTab');
 
     $("#rightTab").addClass("inactiveTab");
-    $("#rightTab").removeClass("active activetab");
+    $("#rightTab").removeClass("active activeTab");
     $("#rightTab a").removeAttr('id');
   });
 
@@ -42,14 +42,14 @@ $(document).ready(function(){
     $("#forgotForm").show();
 
     $("#leftTab").addClass("inactiveTab");
-    $("#leftTab").removeClass("active activetab");
+    $("#leftTab").removeClass("active activeTab");
     $("#leftTab a").removeAttr('id');
 
     $("#middleTab").addClass("inactiveTab");
-    $("#middleTab").removeClass("active activetab");
+    $("#middleTab").removeClass("active activeTab");
     $("#middleTab a").removeAttr('id');
 
-    $("#rightTab").addClass("active activetab");
+    $("#rightTab").addClass("active activeTab");
     $("#rightTab").removeClass("inactiveTab");
     $("#rightTab a").attr('id', 'currentTab');
   });
