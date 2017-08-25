@@ -163,6 +163,15 @@ body {
   height:55px;
 }
 
+@media (min-width: 100px) {
+  /* Pull out the header and footer */
+  .logo2 {
+    width:100%;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+
 .logolines {
   border-bottom:1px solid;
   border-bottom-color: #979797;
@@ -174,6 +183,9 @@ body {
 
 .logoheight2 {
   height:50%;
+  width:100%;
+  margin-left: 0px;
+  margin-right: 0px;
 }
 
 .containerForms {
