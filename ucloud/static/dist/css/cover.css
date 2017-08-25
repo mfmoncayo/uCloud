@@ -139,7 +139,9 @@ body {
 
 .mastfoot {
   color: #FFF; /* IE8 proofing */
+  width:100%;
   bottom:0px;
+  position: fixed;
   margin-left: -15px;
   margin-bottom: -27px;
 }
