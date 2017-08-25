@@ -23,21 +23,25 @@ body {
   .tLApplet {
     z-index:1005;
     top:0px;
-    margin-top:-20px;
-    text-align:left;
+    position:absolute;
+    margin-left:30px;
+    left:0px;
   }
   .tRApplet {
     z-index:1005;
     top:0px;
-    margin-top:-30px;
-    text-align:right;
+    position:absolute;
+    margin-top:30px;
+    margin-right:30px;
+    right:0px;
   }
   .bLApplet {
     z-index:1005;
     bottom:0px;
     position:absolute;
     margin-bottom:20px;
-    text-align:left;
+    margin-left:30px;
+    left:0px;
   }
   .bRApplet {
     z-index:1005;
