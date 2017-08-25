@@ -165,9 +165,7 @@ body {
 }
 
 @media (min-width: 100px) {
-  /* Pull out the header and footer */
   .logo2 {
-    width:100%;
   }
 }
 
