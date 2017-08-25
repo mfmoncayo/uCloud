@@ -85,6 +85,11 @@ body {
   padding-bottom: 0px;
 }
 
+.sideMarg {
+  margin-right: 15px;
+  margin-left: 15px;
+  }
+
 .bdrop {
   box-shadow: 0 30px 50px rgba(0,0,0,.5);
   background-color: rgba(239, 230, 235, 0.6);
