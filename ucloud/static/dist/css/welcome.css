@@ -38,6 +38,7 @@ body {
   .bRApplet {
     bottom:0px;
     right:0px;
+    position:absolute;
     margin-bottom:20px;
     margin-right:30px;
   }
