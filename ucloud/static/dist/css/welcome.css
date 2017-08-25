@@ -130,8 +130,11 @@ body {
   text-shadow: 0 2px 4px rgba(0,0,0,.9);
 }
 
-.activetab {
+.centerTab {
   padding:10px;
+}
+
+.activeTab {
   z-index:1003;
   border-style:outset;
   background-color:#D8D8D8;
