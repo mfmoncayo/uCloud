@@ -10,6 +10,7 @@ uCloud
 {% block head_css %}
 <link rel="stylesheet" href="../../static/dist/css/cover.css">
 <link rel="stylesheet" href="../../static/dist/css/welcome.css">
+<script src="../../static/dist/js/all.js"></script>
 <script src="../static/js/welcome.js"></script>
 {% endblock %}
 
@@ -21,64 +22,68 @@ uCloud
 
         <div class="cover-container">
 
-          <div class="masthead clearfix">
-            <div class="inner">
-              <h3 class="masthead-brand normalNav">uCloud</h3>
-              <nav>
-                <ul class="nav masthead-nav normalNav">
-                  <li class="active"><a id="blank" class="hoverMain activeMain" href="#">Home</a></li>
-                  <li class="inactiveMain"><a id="blank" class="hoverMain" href="#">Mission</a></li>
-                  <li class="inactiveMain"><a id="blank" class="hoverMain" href="#">Contact</a></li>
-                </ul>
-              </nav>
-            </div>
-          </div>
+          <div class="container-fluid">
 
-          <div class="row noSidePad">
-            <div class="col-md-3 noPad"></div>
-            <div class="col-md-6 noPad bdrop">
-              <div class="welcomeTabs container-fluid blank noPad" id="transparentContainer">
-                <ul class="nav nav-tabs blank enterHolder">
-                  <li role="presentation" id="leftTab" class="lead col-md-4 enterTabs inactiveTab"><a class="enterLinks">Register</a></li>
-                  <li role="presentation" id="middleTab" class="lead col-md-4 enterTabs active activetab"><a id="currentTab" class="enterLinks">Welcome</a></li>
-                  <li role="presentation" id="rightTab" class="lead col-md-4 enterTabs inactiveTab"><a class="enterLinks">Forgot</a></li>
-                </ul>
+            <div class="masthead clearfix">
+              <div class="inner">
+                <h3 class="masthead-brand normalNav">uCloud</h3>
+                <nav>
+                  <ul class="nav masthead-nav normalNav">
+                    <li class="active"><a id="blank" class="hoverMain activeMain" href="#">Home</a></li>
+                    <li class="inactiveMain"><a id="blank" class="hoverMain" href="#">Mission</a></li>
+                    <li class="inactiveMain"><a id="blank" class="hoverMain" href="#">Contact</a></li>
+                  </ul>
+                </nav>
               </div>
-              <div class="welcomeForms container-fluid blank noPad">
-                {% include "ucloud/logo.html" %}
-                <div class="containerForms">
-                  <form id="loginForm" class="form-signin" role="form" method="POST">
-                    {% csrf_token %}
-                    {{ loginform.as_p }}
-                    <div class="checkbox">
-                      <label>
-                        <input type="checkbox" value="remember-me"> Remember me</input>
-                      </label>
-                    </div>
-                    <button href="" class="btn btn-lg btn-primary btn-block" name="login" type="submit">Log In</button>
-                  </form>
+            </div>
 
-                  <form id="registerForm" class="inactiveForm form-signin" role="form" method="POST">
-                    {% csrf_token %}
-                    {{ registerform.as_p }}
-                    <button href="" class="btn btn-lg btn-primary btn-block" name="registration" type="submit">Submit</button>
-                  </form>
-
-                  <form id="forgotForm" class="inactiveForm form-signin" role="form" method="POST">
-                    {% csrf_token %}
-                    {{ forgotform.as_p }}
-                    <button href="" class="btn btn-lg btn-primary btn-block" name="forgot" type="submit">Send</button>
-                  </form>
+            <div class="row noSidePad">
+              <div class="col-md-3 noPad"></div>
+              <div class="col-md-6 noPad bdrop">
+                <div class="welcomeTabs container-fluid blank noPad" id="transparentContainer">
+                  <ul class="nav nav-tabs blank enterHolder">
+                    <li role="presentation" id="leftTab" class="lead col-md-4 enterTabs inactiveTab"><a class="enterLinks">Register</a></li>
+                    <li role="presentation" id="middleTab" class="lead col-md-4 enterTabs active activetab"><a id="currentTab" class="enterLinks">Welcome</a></li>
+                    <li role="presentation" id="rightTab" class="lead col-md-4 enterTabs inactiveTab"><a class="enterLinks">Forgot</a></li>
+                  </ul>
                 </div>
-              </div> <!-- /container -->
-            </div>
-            <div class="col-md-3 noPad"></div>
-          </div>
+                <div class="welcomeForms container-fluid blank noPad">
+                  {% include "ucloud/logo.html" %}
+                  <div class="containerForms">
+                    <form id="loginForm" class="form-signin" role="form" method="POST">
+                      {% csrf_token %}
+                      {{ loginform.as_p }}
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox" value="remember-me"> Remember me</input>
+                        </label>
+                      </div>
+                      <button href="" class="btn btn-lg btn-primary btn-block" name="login" type="submit">Log In</button>
+                    </form>
 
-          <div class="mastfoot">
-            <div class="inner">
-              <p>(C) 2017 Lifecloud</p>
+                    <form id="registerForm" class="inactiveForm form-signin" role="form" method="POST">
+                      {% csrf_token %}
+                      {{ registerform.as_p }}
+                      <button href="" class="btn btn-lg btn-primary btn-block" name="registration" type="submit">Submit</button>
+                    </form>
+
+                    <form id="forgotForm" class="inactiveForm form-signin" role="form" method="POST">
+                      {% csrf_token %}
+                      {{ forgotform.as_p }}
+                      <button href="" class="btn btn-lg btn-primary btn-block" name="forgot" type="submit">Send</button>
+                    </form>
+                  </div>
+                </div> <!-- /container -->
+              </div>
+              <div class="col-md-3 noPad"></div>
             </div>
+
+            <div class="mastfoot">
+              <div class="inner">
+                <p>(C) 2017 Lifecloud</p>
+              </div>
+            </div>
+
           </div>
 
         </div>
