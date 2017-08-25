@@ -9,6 +9,14 @@ a:hover {
   color: #fff;
 }
 
+ul.nav a:hover {
+  color: transparent;
+}
+
+ul.nav li:hover {
+  color: #c2c2c2;
+}
+
 /* Custom default button */
 .btn-default,
 .btn-default:hover,
@@ -62,6 +70,10 @@ body {
 /*
  * Header
  */
+.inactiveApplet {
+  color: #c4c4c4;
+}
+
 .masthead-brand {
   margin-top: 10px;
   margin-bottom: 10px;
@@ -141,9 +153,6 @@ body {
   color: #FFF; /* IE8 proofing */
   width:100%;
   bottom:0px;
-  position: fixed;
-  margin-left: -15px;
-  margin-bottom: -27px;
 }
 
 
