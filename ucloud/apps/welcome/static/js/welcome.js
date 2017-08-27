@@ -6,9 +6,9 @@ $(document).ready(function(){
 
   $(".inactiveApplet").hover(
     function(){
-      $(".inactiveApplet").css("border-bottom","2px solid rgba(255, 243, 236, 0.25)").css("text-decoration","none");
+      $(".inactiveApplet").parent().css("border-bottom","2px solid rgba(255, 243, 236, 0.25)").css("text-decoration","none");
     }, function(){
-      $(".inactiveApplet").css("border-bottom","none");
+      $(".inactiveApplet").parent().css("border-bottom","none");
     }
   );
 
