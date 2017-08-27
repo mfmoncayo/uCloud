@@ -59,7 +59,7 @@ body {
 
 @media only screen
 and (orientation:landscape)
-and (max-width: 500px){
+and (max-width: 736px){
   .normalNav {
     display:none;
   }
