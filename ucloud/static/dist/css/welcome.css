@@ -57,6 +57,47 @@ body {
   }
 }
 
+@media (orientation:landscape) {
+  .normalNav {
+    display:none;
+  }
+  .narrowNav {
+    z-index:1005;
+    display:block;
+  }
+  .tLApplet {
+    z-index:1005;
+    top:0px;
+    position:fixed;
+    margin-left:30px;
+    left:0px;
+  }
+  .tRApplet {
+    z-index:1005;
+    top:0px;
+    position:fixed;
+    margin-top:17px;
+    margin-right:30px;
+    right:0px;
+  }
+  .bLApplet {
+    z-index:1005;
+    bottom:0px;
+    position:fixed;
+    margin-bottom:20px;
+    margin-left:30px;
+    left:0px;
+  }
+  .bRApplet {
+    z-index:1005;
+    bottom:0px;
+    right:0px;
+    position:fixed;
+    margin-bottom:20px;
+    margin-right:30px;
+  }
+}
+
 .activeMain {
   cursor: default;
 }
