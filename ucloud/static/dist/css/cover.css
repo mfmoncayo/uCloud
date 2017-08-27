@@ -71,12 +71,8 @@ body {
  * Header
  */
  .activeApplet {
-   text-decoration: underline;
+   border-bottom-color: #fff
  }
-
-.inactiveApplet {
-  color: #c4c4c4;
-}
 
 .masthead-brand {
   margin-top: 10px;
