@@ -5,7 +5,7 @@ $(document).ready(function(){
   });
 
   $(".inactiveApplet").hover(
-    function(){$(".inactiveApplet").css("border-bottom","2px solid").css("border-bottom-color","#e1e1e1");},
+    function(){$(".inactiveApplet").css("border-bottom","2px solid rgba(255, 0, 0, .5)";},
     function(){$(".inactiveApplet").css("border-bottom","none");}
   });
 
