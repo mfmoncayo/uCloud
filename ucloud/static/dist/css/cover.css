@@ -13,10 +13,6 @@ ul.nav a:hover {
   color: transparent;
 }
 
-ul.nav li:hover {
-  color: #cdcdcd;
-}
-
 /* Custom default button */
 .btn-default,
 .btn-default:hover,
@@ -75,10 +71,13 @@ body {
    border-bottom-color: #fff;
  }
 
+ .inactiveApplet:focus,
  .inactiveApplet:hover {
-   border-bottom: 2px solid;
-   border-bottom-color: #e1e1e1;
+   border-bottom-color: #a9a9a9;
+   border-bottom-color: rgba(255,255,255,.25);
  }
+
+
 
 .masthead-brand {
   margin-top: 10px;
