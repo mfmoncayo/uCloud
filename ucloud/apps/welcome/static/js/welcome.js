@@ -1,12 +1,14 @@
 $(document).ready(function(){
 
+  $(".activeApplet").css("text-decoration","none");
+  $(".inactiveApplet").css("text-decoration","none");
+
   $(".enterLinks").hover(function(){
     $(".enterLinks").css("background-color","transparent");
   });
 
   $(".inactiveApplet").hover(
     function(){
-      $(".inactiveApplet").css("text-decoration","none");
       $(this).css("border-bottom","2px solid rgba(255, 243, 236, 0.25)");
     }, function(){
       $(this).css("border-bottom","none");
