@@ -1,5 +1,9 @@
 $(document).ready(function(){
 
+  $(".enterLinks").hover(function(){
+    $(".enterLinks").css("background-color","transparent");
+  });
+
   $("#leftTab").click(function(){
     $("#registerForm").show();
     $("#loginForm").hide();
