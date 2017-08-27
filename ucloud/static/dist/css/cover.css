@@ -71,7 +71,13 @@ body {
  * Header
  */
  .activeApplet {
-   border-bottom-color: #fff
+   border-bottom: 2px solid;
+   border-bottom-color: #fff;
+ }
+
+ .inactiveApplet:hover {
+   border-bottom: 2px solid;
+   border-bottom-color: #e1e1e1;
  }
 
 .masthead-brand {
