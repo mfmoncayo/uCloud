@@ -4,6 +4,11 @@ $(document).ready(function(){
     $(".enterLinks").css("background-color","transparent");
   });
 
+  $(".inactiveApplet").hover(function(){
+    $(".inactiveApplet").css("border-bottom","2px solid");
+    $(".inactiveApplet").css("border-bottom-color","#a9a9a9");
+  });
+
   $("#leftTab").click(function(){
     $("#registerForm").show();
     $("#loginForm").hide();
