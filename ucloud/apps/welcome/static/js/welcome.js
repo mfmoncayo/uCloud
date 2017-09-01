@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+  $(document).ontouchmove(function(e){ e.preventDefault(); })
+
   $(".activeApplet").css("text-decoration","none");
   $(".inactiveApplet").css("text-decoration","none");
 
