@@ -94,5 +94,41 @@ uCloud
         <h5 class="inactiveMain bLApplet"><a id="blank" class="hoverMain inactiveApplet" href="#">Mission</a></h5>
         <h5 class="inactiveMain bRApplet"><a id="blank" class="hoverMain inactiveApplet" href="#">Contact</a></h5>
       </div>
+      <div class="col-md-12 noPad bdrop">
+        <div class="welcomeTabs container-fluid blank noPad" id="transparentContainer">
+          <ul class="nav nav-tabs blank enterHolder">
+            <li role="presentation" id="leftTab" class="lead col-md-4 enterTabs inactiveTab"><a class="enterLinks">Join</a></li>
+            <li role="presentation" id="middleTab" class="lead col-md-4 enterTabs active activetab"><a id="currentTab" class="enterLinks">Welcome</a></li>
+            <li role="presentation" id="rightTab" class="lead col-md-4 enterTabs inactiveTab"><a class="enterLinks">Reset</a></li>
+          </ul>
+        </div>
+        <div class="welcomeForms container-fluid blank noPad">
+          {% include "ucloud/logo.html" %}
+          <div class="containerForms">
+            <form id="loginForm" class="form-signin" role="form" method="POST">
+              {% csrf_token %}
+              {{ loginform.as_p }}
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" value="remember-me"> Remember me</input>
+                </label>
+              </div>
+              <button href="" class="btn btn-lg btn-primary btn-block" name="login" type="submit">Log In</button>
+            </form>
+
+            <form id="registerForm" class="inactiveForm form-signin" role="form" method="POST">
+              {% csrf_token %}
+              {{ registerform.as_p }}
+              <button href="" class="btn btn-lg btn-primary btn-block" name="registration" type="submit">Submit</button>
+            </form>
+
+            <form id="forgotForm" class="inactiveForm form-signin" role="form" method="POST">
+              {% csrf_token %}
+              {{ forgotform.as_p }}
+              <button href="" class="btn btn-lg btn-primary btn-block" name="forgot" type="submit">Send</button>
+            </form>
+          </div>
+        </div> <!-- /container -->
+      </div>
     </div>
 {% endblock %}
