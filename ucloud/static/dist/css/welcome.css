@@ -16,6 +16,10 @@ body {
   display:none;
 }
 
+.landHome {
+  display:none;
+}
+
 @media (orientation:portrait) {
   .normalNav {
     display:none;
@@ -62,6 +66,13 @@ and (orientation:landscape)
 and (max-width: 736px){
   .normalNav {
     display:none;
+  }
+  .normalHome {
+    display:none;
+  }
+  .landHome {
+    z-index:1005;
+    display:block;
   }
   .narrowNav {
     z-index:1005;
