@@ -71,7 +71,7 @@ and (max-width: 736px){
     display:none;
   }
   .landHome {
-    z-index:1005;
+    z-index:1004;
     display:block;
   }
   .narrowNav {
