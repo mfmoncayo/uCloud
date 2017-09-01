@@ -97,17 +97,17 @@ uCloud
       <div class="landHome col-md-12 noPad bdrop">
         <div class="welcomeTabs container-fluid blank noPad" id="transparentContainer">
           <ul class="nav nav-tabs blank enterHolder">
-            <li role="presentation" id="leftTab" class="lead col-md-3 enterTabs inactiveTab"></li>
-            <li role="presentation" id="leftTab" class="lead col-md-2 enterTabs inactiveTab"><a class="enterLinks">Join</a></li>
-            <li role="presentation" id="middleTab" class="lead col-md-2 enterTabs active activetab"><a id="currentTab" class="enterLinks">Welcome</a></li>
-            <li role="presentation" id="rightTab" class="lead col-md-2 enterTabs inactiveTab"><a class="enterLinks">Reset</a></li>
-            <li role="presentation" id="leftTab" class="lead col-md-3 enterTabs inactiveTab"></li>
+            <li role="presentation" class="lead col-md-3 enterTabs inactiveTab"></li>
+            <li role="presentation" id="leftTab" class="lead col-md-2 enterTabs inactiveTab leftTab"><a class="enterLinks">Join</a></li>
+            <li role="presentation" id="middleTab" class="lead col-md-2 enterTabs active activetab middleTab"><a id="currentTab" class="enterLinks">Welcome</a></li>
+            <li role="presentation" id="rightTab" class="lead col-md-2 enterTabs inactiveTab rightTab"><a class="enterLinks">Reset</a></li>
+            <li role="presentation" class="lead col-md-3 enterTabs inactiveTab"></li>
           </ul>
         </div>
         <div class="welcomeForms container-fluid blank noPad">
           {% include "ucloud/logo.html" %}
           <div class="containerForms">
-            <form id="loginForm" class="form-signin" role="form" method="POST">
+            <form id="loginForm" class="form-signin loginForm" role="form" method="POST">
               {% csrf_token %}
               {{ loginform.as_p }}
               <div class="checkbox">
@@ -118,13 +118,13 @@ uCloud
               <button href="" class="btn btn-lg btn-primary btn-block" name="login" type="submit">Log In</button>
             </form>
 
-            <form id="registerForm" class="inactiveForm form-signin" role="form" method="POST">
+            <form id="registerForm" class="inactiveForm form-signin registerForm" role="form" method="POST">
               {% csrf_token %}
               {{ registerform.as_p }}
               <button href="" class="btn btn-lg btn-primary btn-block" name="registration" type="submit">Submit</button>
             </form>
 
-            <form id="forgotForm" class="inactiveForm form-signin" role="form" method="POST">
+            <form id="forgotForm" class="inactiveForm form-signin forgotForm" role="form" method="POST">
               {% csrf_token %}
               {{ forgotform.as_p }}
               <button href="" class="btn btn-lg btn-primary btn-block" name="forgot" type="submit">Send</button>
