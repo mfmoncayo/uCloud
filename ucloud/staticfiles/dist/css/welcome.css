@@ -3,9 +3,131 @@ body {
   padding-bottom: 0px;
   margin: 0px;
   height: 100%;
+  background-color: #464646;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
   background-image: url("../images/beaches.jpg");
   overflow:hidden;
   background-size: cover;
+}
+
+.narrowNav {
+  display:none;
+}
+
+.landHome {
+  display:none;
+  height:100%;
+  width:100%;
+  position:fixed;
+}
+
+@media (orientation:portrait) {
+  .normalNav {
+    display:none;
+  }
+  .narrowNav {
+    z-index:1005;
+    display:block;
+  }
+  .tLApplet {
+    z-index:1005;
+    top:0px;
+    position:fixed;
+    margin-left:30px;
+    left:0px;
+  }
+  .tRApplet {
+    z-index:1005;
+    top:0px;
+    position:fixed;
+    margin-top:17px;
+    margin-right:30px;
+    right:0px;
+  }
+  .bLApplet {
+    z-index:1005;
+    bottom:0px;
+    position:fixed;
+    margin-bottom:20px;
+    margin-left:30px;
+    left:0px;
+  }
+  .bRApplet {
+    z-index:1005;
+    bottom:0px;
+    right:0px;
+    position:fixed;
+    margin-bottom:20px;
+    margin-right:30px;
+  }
+}
+
+@media only screen
+and (orientation:landscape)
+and (max-width: 736px){
+  .normalNav {
+    display:none;
+  }
+  .normalHome {
+    display:none;
+  }
+  .landHome {
+    z-index:1004;
+    display:block;
+  }
+  .narrowNav {
+    z-index:1005;
+    display:block;
+  }
+  .tLApplet {
+    z-index:1005;
+    top:0px;
+    position:fixed;
+    margin-left:30px;
+    left:0px;
+  }
+  .tRApplet {
+    z-index:1005;
+    top:0px;
+    position:fixed;
+    margin-top:17px;
+    margin-right:30px;
+    right:0px;
+  }
+  .bLApplet {
+    z-index:1005;
+    bottom:0px;
+    position:fixed;
+    margin-bottom:20px;
+    margin-left:30px;
+    left:0px;
+  }
+  .bRApplet {
+    z-index:1005;
+    bottom:0px;
+    right:0px;
+    position:fixed;
+    margin-bottom:20px;
+    margin-right:30px;
+  }
+}
+
+.ucloudContainer {
+  display:none;
+}
+
+.liveContainer {
+  display:block;
+}
+
+.missionContainer {
+  display:none;
+}
+
+.contactContainer {
+  display:none;
 }
 
 .activeMain {
@@ -36,13 +158,38 @@ body {
   padding-bottom: 0px;
 }
 
+.sideMarg {
+  margin-right: 15px;
+  margin-left: 15px;
+  }
+
 .bdrop {
   box-shadow: 0 30px 50px rgba(0,0,0,.5);
   background-color: rgba(239, 230, 235, 0.6);
 }
 
+.wdrop {
+  box-shadow: 0 30px 50px rgba(0,0,0,.5);
+  background-color: rgba(255, 255, 255, 0.8);
+  border:1px solid rgba(100, 100, 100, 0.6);
+  border-radius:5px;
+  padding:30px;
+}
+
+.wdropSpace {
+  margin-bottom:50px;
+}
+
+.wdropSpace2 {
+  margin-bottom:20px;
+}
+
+.dText {
+  color: rgb(0,0,0);
+  font-weight:lighter;
+}
+
 #transparentContainer {
-margin-right: -1px;
 }
 
 .blank {
@@ -61,7 +208,7 @@ margin-right: -1px;
   border-top: 0px;
   border-right: 0px;
   border-left: 0px;
-  padding-top:5px;
+  padding:10px;
 }
 
 .enterLinks {
@@ -79,14 +226,24 @@ margin-right: -1px;
   padding-left: 0px;
   padding-right: 0px;
   color:#FFF;
-  text-shadow: 0 5px 5px rgba(0,0,0,.9);
+  text-shadow: 0 2px 4px rgba(0,0,0,.9);
+}
+
+.centerTab {
+  padding:10px;
+}
+
+.activeTab {
+  z-index:1003;
+  border-style:outset;
+  background-color:#D8D8D8;
+  box-shadow: 0 0px 15px rgba(0,0,0,.5);
 }
 
 .inactiveTab {
-  background-color:#aaa;
+  background-color:#9B9B9B;
+  padding:10px;
   cursor: pointer;
-  padding-left: 0px;
-  padding-right: 0px;
 }
 
 .nav > li > a:hover,
@@ -102,9 +259,41 @@ margin-right: -1px;
   background-color: transparent;
 }
 
+.logo2 {
+  height:55px;
+}
+
+@media (min-width: 100px) {
+  .logo2 {
+  }
+}
+
+.logolines {
+  border-bottom:1px solid;
+  border-bottom-color: #979797;
+}
+
+.logoheight {
+  height:100%;
+}
+
+.logoheight2 {
+  height:50%;
+  width:100%;
+}
+
+.logoSpace {
+  margin: 20px;
+  margin-bottom: 30px;
+}
+
+.noSideMarg {
+  margin-left:0px;
+  margin-right:0px;
+}
+
 .containerForms {
   width:100%;
-  height:300px;
 }
 
 .inactiveForm {
@@ -138,13 +327,37 @@ margin-right: -1px;
 .form-signin label[for="inputWelcome"] {
   display:none;
 }
-.form-signin input[type="email"] {
-  margin-bottom: -1px;
+
+.email1 {
+  border-top-left-radius: 10;
+  border-top-right-radius: 10;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
-.form-signin input[type="password"] {
-  margin-bottom: 10px;
+.email2 {
+  margin-bottom:20px;
+  border-top-left-radius: 10;
+  border-top-right-radius: 10;
+  border-bottom-right-radius: 10;
+  border-bottom-left-radius: 10;
+}
+
+.password1 {
+  margin-top:-1px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+  border-bottom-right-radius: 10;
+  border-bottom-left-radius: 10;
+}
+.password2 {
+  border-top-left-radius: 10;
+  border-top-right-radius: 10;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.password3 {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 10;
+  border-bottom-left-radius: 10;
 }

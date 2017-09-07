@@ -1,7 +1,5 @@
 $(document).ready(function(){
 
-  $(document).ontouchmove(function(e){ e.preventDefault(); })
-
   $(".activeApplet").css("text-decoration","none");
   $(".inactiveApplet").css("text-decoration","none");
 
@@ -16,6 +14,34 @@ $(document).ready(function(){
       $(this).css("border-bottom","none");
     }
   );
+
+  $(".ucloudContainer").click(function(){
+    $(".ucloudContainer").show();
+    $(".liveContainer").hide();
+    $(".missionContainer").hide();
+    $(".contactContainer").hide();
+  });
+
+  $(".liveContainer").click(function(){
+    $(".ucloudContainer").hide();
+    $(".liveContainer").show();
+    $(".missionContainer").hide();
+    $(".contactContainer").hide();
+  });
+
+  $(".missionContainer").click(function(){
+    $(".ucloudContainer").hide();
+    $(".liveContainer").hide();
+    $(".missionContainer").show();
+    $(".contactContainer").hide();
+  });
+
+  $(".contactContainer").click(function(){
+    $(".ucloudContainer").shidehow();
+    $(".liveContainer").hide();
+    $(".missionContainer").hide();
+    $(".contactContainer").show();
+  });
 
   $(".leftTab").click(function(){
     $(".registerForm").show();

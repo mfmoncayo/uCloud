@@ -35,12 +35,13 @@ DEBUG = True
 
 INSTALLED_APPS = [
     'custom_user',
+    'leaflet',
     'ucloud.apps.welcome',
-    'ucloud.apps.dashboard',
+    'ucloud.apps.discover',
     'ucloud.apps.finance',
     'ucloud.apps.education',
     'ucloud.apps.health',
-    'ucloud.apps.schedule',
+    'ucloud.apps.journey',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

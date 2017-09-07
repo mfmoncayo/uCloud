@@ -39,47 +39,112 @@ uCloud
             <div class="row sideMarg">
               <div class="col-md-3 noPad"></div>
               <div class="col-md-6 noPad bdrop">
-                <div class="welcomeTabs container-fluid blank noPad" id="transparentContainer">
-                  <ul class="nav nav-tabs blank enterHolder">
-                    <li role="presentation" class="lead col-md-4 enterTabs inactiveTab leftTab"><a class="enterLinks">Join</a></li>
-                    <li role="presentation" class="lead col-md-4 enterTabs active activeTab centerTab middleTab"><a id="currentTab" class="enterLinks">Welcome</a></li>
-                    <li role="presentation" class="lead col-md-4 enterTabs inactiveTab rightTab"><a class="enterLinks">Reset</a></li>
-                  </ul>
-                </div>
-                <div class="welcomeForms container-fluid blank noPad">
-                  {% include "ucloud/logo.html" %}
-                  <div class="containerForms">
-                    <form class="form-signin loginForm" role="form" method="POST">
-                      {% csrf_token %}
-                      {{ loginform.as_p }}
-                      <div class="checkbox">
-                        <label>
-                          <input type="checkbox" value="remember-me"> Remember me</input>
-                        </label>
+                <div class="ucloudContainer welcomeForms">
+                    <div class="container-fluid blank noPad">
+                      <h3>Why Join?</h3>
+                      <div class="logoSpace">
+                      {% include "ucloud/logo.html" %}
                       </div>
-                      <button href="" class="btn btn-lg btn-primary btn-block" name="login" type="submit">Log In</button>
-                    </form>
+                      <div class="row wdropSpace">
+                        <div class="col-md-3 noPad"></div>
+                        <div class="col-md-6 noPad wdrop">
+                          <p class="dText">Guidance shouldn't be for the wealthy and educated.</p><br /><p class="dText">Join today and start planning your life with the help of private weath experts.</p>
+                        </div>
+                        <div class="col-md-3 noPad"></div>
+                      </div>
+                    </div>
+                </div>
+                <div class="liveContainer">
+                    <div class="welcomeTabs container-fluid blank noPad" id="transparentContainer">
+                      <ul class="nav nav-tabs blank enterHolder">
+                        <li role="presentation" class="lead col-md-4 enterTabs inactiveTab leftTab"><a class="enterLinks">Join</a></li>
+                        <li role="presentation" class="lead col-md-4 enterTabs active activeTab centerTab middleTab"><a id="currentTab" class="enterLinks">Welcome</a></li>
+                        <li role="presentation" class="lead col-md-4 enterTabs inactiveTab rightTab"><a class="enterLinks">Reset</a></li>
+                      </ul>
+                    </div>
+                    <div class="welcomeForms container-fluid blank noPad">
+                      <div class="logoSpace">
+                      {% include "ucloud/logo.html" %}
+                      </div>
+                      <div class="containerForms">
+                        <form class="form-signin loginForm" role="form" method="POST">
+                          {% csrf_token %}
+                          {{ loginform.as_p }}
+                          <div class="checkbox">
+                            <label>
+                              <input type="checkbox" value="remember-me"> Remember me</input>
+                            </label>
+                          </div>
+                          <button href="" class="btn btn-lg btn-primary btn-block" name="login" type="submit">Log In</button>
+                        </form>
 
-                    <form class="inactiveForm form-signin registerForm" role="form" method="POST">
-                      {% csrf_token %}
-                      {{ registerform.as_p }}
-                      <button href="" class="btn btn-lg btn-primary btn-block" name="registration" type="submit">Submit</button>
-                    </form>
+                        <form class="inactiveForm form-signin registerForm" role="form" method="POST">
+                          {% csrf_token %}
+                          {{ registerform.as_p }}
+                          <button href="" class="btn btn-lg btn-primary btn-block" name="registration" type="submit">Submit</button>
+                        </form>
 
-                    <form class="inactiveForm form-signin forgotForm" role="form" method="POST">
-                      {% csrf_token %}
-                      {{ forgotform.as_p }}
-                      <button href="" class="btn btn-lg btn-primary btn-block" name="forgot" type="submit">Send</button>
-                    </form>
+                        <form class="inactiveForm form-signin forgotForm" role="form" method="POST">
+                          {% csrf_token %}
+                          {{ forgotform.as_p }}
+                          <button href="" class="btn btn-lg btn-primary btn-block" name="forgot" type="submit">Send</button>
+                        </form>
+                      </div>
+                    </div> <!-- /container -->
+                </div>
+                <div class="missionContainer welcomeForms">
+                  <div class="container-fluid blank noPad">
+                    <h3>Direction</h3>
+                    <div class="logoSpace">
+                    {% include "ucloud/logo.html" %}
+                    </div>
+                    <div class="row wdropSpace">
+                      <div class="col-md-3 noPad"></div>
+                      <div class="col-md-6 noPad wdrop">
+                        <p class="dText">With the uCloud, you can focus on the more important things in life than maintaining an excel budget.</p><br /><p class="dText">Our mission is simple, to provide life-projection tools for free. Always.</p><br /><p class="dText">Everyone should have financial guidance, no matter their financial position.</p>
+                      </div>
+                      <div class="col-md-3 noPad"></div>
+                    </div>
                   </div>
-                </div> <!-- /container -->
+                </div>
+                <div class="contactContainer welcomeForms">
+                  <div class="container-fluid blank noPad">
+                    <h3>Feedback</h3>
+                    <div class="logoSpace">
+                    {% include "ucloud/logo.html" %}
+                    </div>
+                    <div class="row wdropSpace2">
+                      <div class="col-md-3 noPad"></div>
+                      <div class="col-md-6 noPad">
+                        <p class="dText">Please leave your comments in the box below:</p>
+                      </div>
+                      <div class="col-md-3 noPad"></div>
+                    </div>
+                    <div class="row wdropSpace">
+                      <div class="col-md-2 noPad"></div>
+                      <div class="col-md-8 noPad wdrop">
+                        <input class="dText" placeholder="Add your comments here.">
+                      </input>
+                      </div>
+                      <div class="col-md-2 noPad"></div>
+                    </div>
+                    <div class="row wdropSpace2">
+                      <div class="col-md-3 noPad"></div>
+                      <div class="col-md-6 noPad">
+                        <button href="" class="btn btn-lg btn-primary btn-block" name="login" type="submit">Send</button>
+                      </div>
+                      <div class="col-md-3 noPad"></div>
+                    </div>
+
+                  </div>
+                </div>
               </div>
               <div class="col-md-3 noPad"></div>
             </div>
 
             <div class="mastfoot">
               <div class="inner">
-                <p>(C) 2017 Lifecloud</p>
+                <p>(C) 2017 uCloud</p>
               </div>
             </div>
 
@@ -97,18 +162,19 @@ uCloud
       <div class="landHome col-md-12 noPad">
         <div class="welcomeTabs container-fluid blank noPad" id="transparentContainer">
           <ul class="nav nav-tabs blank enterHolder">
-            <li role="presentation" class="lead col-md-3 enterTabs inactiveTab"></li>
+            <li role="presentation" class="lead col-md-3 enterTabs"></li>
             <li role="presentation" class="lead col-md-2 enterTabs inactiveTab leftTab"><a class="enterLinks">Join</a></li>
-            <li role="presentation" class="lead col-md-2 enterTabs active activetab middleTab"><a id="currentTab" class="enterLinks">Welcome</a></li>
+            <li role="presentation" class="lead col-md-2 enterTabs active activeTab centerTab middleTab"><a id="currentTab" class="enterLinks">Welcome</a></li>
             <li role="presentation" class="lead col-md-2 enterTabs inactiveTab rightTab"><a class="enterLinks">Reset</a></li>
-            <li role="presentation" class="lead col-md-3 enterTabs inactiveTab"></li>
+            <li role="presentation" class="lead col-md-3 enterTabs"></li>
           </ul>
         </div>
         <div class="welcomeForms container-fluid blank noPad">
-          {% include "ucloud/logo.html" %}
+
           <div class="row sideMarg">
             <div class="col-md-3 noPad"></div>
             <div class="col-md-6 noPad bdrop">
+              {% include "ucloud/logo.html" %}
               <div class="containerForms">
                 <form id="loginForm" class="form-signin loginForm" role="form" method="POST">
                   {% csrf_token %}

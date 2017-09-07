@@ -114,6 +114,22 @@ and (max-width: 736px){
   }
 }
 
+.ucloudContainer {
+  display:none;
+}
+
+.liveContainer {
+  display:block;
+}
+
+.missionContainer {
+  display:none;
+}
+
+.contactContainer {
+  display:none;
+}
+
 .activeMain {
   cursor: default;
 }
@@ -150,6 +166,27 @@ and (max-width: 736px){
 .bdrop {
   box-shadow: 0 30px 50px rgba(0,0,0,.5);
   background-color: rgba(239, 230, 235, 0.6);
+}
+
+.wdrop {
+  box-shadow: 0 30px 50px rgba(0,0,0,.5);
+  background-color: rgba(255, 255, 255, 0.8);
+  border:1px solid rgba(100, 100, 100, 0.6);
+  border-radius:5px;
+  padding:30px;
+}
+
+.wdropSpace {
+  margin-bottom:50px;
+}
+
+.wdropSpace2 {
+  margin-bottom:20px;
+}
+
+.dText {
+  color: rgb(0,0,0);
+  font-weight:lighter;
 }
 
 #transparentContainer {
@@ -243,6 +280,11 @@ and (max-width: 736px){
 .logoheight2 {
   height:50%;
   width:100%;
+}
+
+.logoSpace {
+  margin: 20px;
+  margin-bottom: 30px;
 }
 
 .noSideMarg {

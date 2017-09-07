@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load l10n %}
+{% load tz %}
+
+{% block head_title %}
+uCloud
+{% endblock %}
+
+{% block head_css %}
+<link rel="stylesheet" href="../static/css/journey.css">
+<link rel="stylesheet" href="../../static/dist/css/dashboard.css">
+<link rel="stylesheet" href="../../static/dist/css/offcanvas.css">
+<script src="https://use.fontawesome.com/7a4ad4218b.js"></script>
+<script src="../../static/dist/js/offcanvas.js"></script>
+<script src="../../static/dist/js/dashboard.js"></script>
+{% endblock %}
+
+{% block content %}
+  {% include "ucloud/nav.html" %}
+  {% include "ucloud/explore.html" %}
+
+  <div class="content">
+
+    {% include "ucloud/sideleft.html" %}
+
+    <!-- Scrollable div with main content -->
+    <div id="scrollable2">
+
+      <!-- Containing column -->
+      <div class="col-xs-12 col-sm-12">
+
+          <!-- Full width Jumbotron -->
+          <div class="jumbotron">
+              <h1>Hello, world!</h1>
+              <p>This is an example to show the potential of an offcanvas layout pattern in Bootstrap. Try some responsive-range viewport sizes to see it in action.</p>
+          </div>
+          <!-- End Jumbotron -->
+
+          <!-- Full width row -->
+          <div class="row">
+
+              <div class="col-6 col-sm-6 col-lg-4">
+                  <h2>Heading</h2>
+                  <p>Bootstrap is a front-end framework that uses CSS and JavaScript to facilitate responsive Web design. Bootply is a playground for Bootstrap that enables developers and designers to test, prototype and create mockups using Bootstrap
+                      friendly HTML, CSS and Javascript.</p>
+                  <p><a class="btn btn-default linkText" href="#">View details »</a></p>
+              </div>
+
+              <div class="col-sm-6 col-lg-4">
+                  <h2>Heading</h2>
+                  <p>Bootply is a playground for Bootstrap that enables developers and designers to test, prototype and create mockups using Bootstrap friendly HTML, CSS and Javascript. Bootstrap is a front-end framework that uses CSS and JavaScript
+                      to facilitate responsive Web design. </p>
+                  <p><a class="btn btn-default linkText" href="#">View details »</a></p>
+              </div>
+
+              <div class="col-sm-6 col-lg-4">
+                  <h2>Heading</h2>
+                  <p>Bootstrap is a front-end framework that uses CSS and JavaScript to facilitate responsive Web design. Bootply is a playground for Bootstrap that enables developers and designers to test, prototype and create mockups using Bootstrap
+                      friendly HTML, CSS and Javascript.</p>
+                  <p><a class="btn btn-default linkText" href="#">View details »</a></p>
+              </div>
+
+              <div class="col-6 col-sm-6 col-lg-4">
+                  <h2>Heading</h2>
+                  <p>Bootstrap is a front-end framework that uses CSS and JavaScript to facilitate responsive Web design. Bootply is a playground for Bootstrap that enables developers and designers to test, prototype and create mockups using Bootstrap
+                      friendly HTML, CSS and Javascript.</p>
+                  <p><a class="btn btn-default linkText" href="#">View details »</a></p>
+              </div>
+
+              <div class="col-sm-6 col-lg-4">
+                  <h2>Heading</h2>
+                  <p>Bootply is a playground for Bootstrap that enables developers and designers to test, prototype and create mockups using Bootstrap friendly HTML, CSS and Javascript. Bootstrap is a front-end framework that uses CSS and JavaScript
+                      to facilitate responsive Web design. </p>
+                  <p><a class="btn btn-default linkText" href="#">View details »</a></p>
+              </div>
+
+              <div class="col-sm-6 col-lg-4">
+                  <h2>Heading</h2>
+                  <p>Bootstrap is a front-end framework that uses CSS and JavaScript to facilitate responsive Web design. Bootply is a playground for Bootstrap that enables developers and designers to test, prototype and create mockups using Bootstrap
+                      friendly HTML, CSS and Javascript.</p>
+                  <p><a class="btn btn-default linkText" href="#">View details »</a></p>
+              </div>
+
+          </div>
+          <!-- End row -->
+
+      </div>
+      <!-- End containing column -->
+
+    </div>
+    <!-- End scrollable main content -->
+
+    {% include "ucloud/sideright.html" %}
+
+  </div>
+  {% include "ucloud/footer.html" %}
+{% endblock %}
