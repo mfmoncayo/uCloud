@@ -36,10 +36,42 @@ header{
 .floatNav {
   position:fixed;
   border-radius:40px;
-  top: 20px;
+  top: 25px;
   left:20px;
   right:20px;
   z-index: 1030;
+}
+
+.floatNav2 {
+  position:fixed;
+  border-radius:40px;
+  top: 0px;
+  left:20px;
+  right:20px;
+  z-index: 1030;
+}
+
+.nav-tabs {
+  border-bottom: 2px solid rgba(0,0,0,.8);
+}
+
+.nav-link.active {
+  background:rgba (0,0,0,.4);
+  border-color: rgba (0,0,0,.4);
+}
+
+
+.nav-link.specialTabs {
+  padding: 0px 10px 0px 10px;
+  margin-top:-5px;
+  margin-left:3px;
+}
+
+.nav-item.specialTabs {
+  margin-left:10px;
+}
+
+.tabColorActive {
 }
 
 .floatFoot2 {
@@ -55,13 +87,17 @@ header{
   border-radius:40px;
 }
 
+.noDisplaySubNav {
+  display:none;
+}
+
 .collapseNavFix {
   background:none;
   box-shadow:none;
 }
 
 .rightCircle {
-  margin-left:70px;
+  margin-left:60px;
 }
 
 .footerBtn {
@@ -70,19 +106,34 @@ header{
 }
 
 .footerWidthLeft2 {
-  width:12%;
-  margin-right:4%;
+  width:14%;
+  flex: 0 0 14%;
+  margin-right: 2.6667%;
+  margin-left:16px;
+}
+
+.footerWidthCenter2 {
+  margin-left:-16px;
+}
+
+.footerWidthCenter3 {
+  margin-left:16px;
 }
 
 .footerWidthRight2 {
   width: 3%;
   flex: 0 0 3%;
+  margin-left: 4%;
+}
+
+.footerWidthRight3 {
+  width: 11%;
+  flex: 0 0 11%;
+  margin-left: 3.6667%;
 }
 
 .profFix {
-  margin-top:3%;
-  height: 35px;
-  width: 35px;
+  width: 50px;
   padding: 0px;
 }
 
@@ -104,6 +155,12 @@ header{
   display:block;
   margin:auto;
   cursor:pointer;
+  border:none;
+  margin-top:5px;
+}
+
+.btnMargTop {
+  margin-top:5px;
 }
 
 .correctExplore {
@@ -121,8 +178,35 @@ header{
 }
 
 .exploreBtn {
-  background:inherit;
   border:0px;
+}
+
+.logoHeight {
+  height:55px;
+}
+
+.exploreBtnLeft {
+  border:0px;
+  padding:13px;
+  margin-top:-2px;
+}
+
+.exploreBtnCenter {
+  margin-top:2px;
+}
+
+.exploreBtnRight {
+  border:0px;
+  padding:13px;
+  margin-top:-5px;
+}
+
+.transparent {
+  background:transparent;
+}
+
+.btnPad {
+  padding: 5px 6px 5px 6px;
 }
 
 .itemText {
@@ -183,6 +267,7 @@ header{
   min-width:35px;
   max-width:20%;
   border-radius:50%;
+  border:2px solid rgba(0,0,0,.3);
   float:right;
   display:block;
   cursor:pointer;

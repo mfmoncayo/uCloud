@@ -11,13 +11,19 @@ uCloud
 {% block head_css %}
 {% leaflet_js %}
 {% leaflet_css %}
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"
+   integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ=="
+   crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"
+ integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
+ crossorigin=""></script>
 <script src="https://use.fontawesome.com/7a4ad4218b.js"></script>
 <link rel="stylesheet" href="../../static/dist/css/discover.css">
 <link rel="stylesheet" href="../../static/dist/css/offcanvas.css">
 <script src="../../static/dist/js/offcanvas.js"></script>
 <script src="../../static/dist/js/discover.js"></script>
 <link rel="stylesheet" href="../../static/dist/css/leaflet.zoomhome.css"/>
-<script src="../../static/dist/js/leaflet.zoomhome.min.js"></script>
+<script src="../../static/dist/js/leaflet.zoomhome.js"></script>
 {% endblock %}
 
 
@@ -27,6 +33,7 @@ uCloud
 <div id="mapid">
 </div>
 
+  {% include "ucloud/nav-tabs.html" %}
   {% include "ucloud/explore.html" %}
 
   <div class="container-fluid">
@@ -45,7 +52,7 @@ uCloud
 
 
         // load a tile layer
-        L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+        L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/navigation-preview-day-v2/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWZtb25jYXlvIiwiYSI6ImNqN2NxajNhZjAxMzQyd28yOGR1cmxnN2gifQ.jMwpSYwVgU7Jha1bUYYK6g', {
             attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(map);
 
@@ -55,6 +62,9 @@ uCloud
 
           var zoomHome = L.Control.zoomHome();
           zoomHome.addTo(map);
+
+          var zoomHome2 = L.Control.zoomHome2();
+          zoomHome2.addTo(map);
         </script>
       </div>
 
