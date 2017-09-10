@@ -36,6 +36,7 @@ DEBUG = True
 INSTALLED_APPS = [
     'custom_user',
     'leaflet',
+    'django_hosts',
     'ucloud.apps.welcome',
     'ucloud.apps.discover',
     'ucloud.apps.finance',
@@ -52,6 +53,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'django_hosts.middleware.HostsRequestMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -61,9 +63,13 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django_hosts.middleware.HostsResponseMiddleware',
 ]
 
 ROOT_URLCONF = 'ucloud.urls'
+ROOT_HOSTCONF = 'ucloud.hosts'
+DEFAULT_HOST = 'www'
+DEFAULT_REDIRECT_URL = '127.0.0.1:8000'
 
 WSGI_APPLICATION = 'ucloud.wsgi.application'
 
@@ -126,7 +132,15 @@ AUTH_PASSWORD_VALIDATORS = [
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # Allow all host headers
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = [
+                '127.0.0.1',
+                'www.ucloud.live',
+                'ucloud.live',
+                'discover.ucloud.live',
+                'health.ucloud.live',
+                'education.ucloud.live',
+                'finance.ucloud.live',
+                ]
 
 LANGUAGE_CODE = 'en-us'
 

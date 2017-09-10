@@ -13,12 +13,20 @@ header{
     opacity:.8;
 }
 
-.bg-inverse2 {
-  background-color:rgba(0,0,0,.4);
-}
-
 #mapid {
   height:100%;
+}
+
+.layer1 {
+  z-index:990;
+}
+
+.layer2 {
+  z-index:980;
+}
+
+.bg-inverse2 {
+  background-color:rgba(0,0,0,.4);
 }
 
 .fixLocation {
@@ -39,7 +47,6 @@ header{
   top: 25px;
   left:20px;
   right:20px;
-  z-index: 1030;
 }
 
 .floatNav2 {
@@ -48,7 +55,6 @@ header{
   top: 0px;
   left:20px;
   right:20px;
-  z-index: 1030;
 }
 
 .nav-tabs {

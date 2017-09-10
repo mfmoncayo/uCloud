@@ -41,12 +41,13 @@ $(".tabColorActive").css("color","rgba(255,255,255,.8)");
       $(".noDisplaySubNav").css('display','block');
       $(".collapseNavFix").addClass('hoveringBtn');
       $(".collapseNavFix").css('background-color','rgba(0,0,0,.4)');
-      $(".collapseNavFix").css('transition','.5s linear');
+      $(".collapseNavFix").css('transition','.05s linear');
       $(".collapseNavFix").css('box-shadow','0px 0px 5px #888888');
       $(".collapseNavFixLeft").attr('class', 'col-4 fixLeft');
     }
     else {
       $(".fixLeft").attr('class', 'col-4 collapseNavFixLeft');
+      $(".noDisplaySubNav").css('display','none');
       $(".collapseNavFix").css('background','none');
       $(".collapseNavFix").css('box-shadow','none');
       $(".collapseNavFix").removeClass('hoveringBtn');
