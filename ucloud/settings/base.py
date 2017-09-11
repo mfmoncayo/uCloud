@@ -138,7 +138,6 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # Allow all host headers
 ALLOWED_HOSTS = [
-                '127.0.0.1',
                 'www.ucloud.live',
                 'ucloud.live',
                 'discover.ucloud.live',
