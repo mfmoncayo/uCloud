@@ -4,5 +4,5 @@ gunicorn==19.6.0
 psycopg2==2.6.2
 whitenoise==3.2
 django-leaflet==0.22.0
-django-hosts==2.0
+django-subdomains==2.1.0
 -e git+http://git@github.com/montebond/pyp#egg=pyp

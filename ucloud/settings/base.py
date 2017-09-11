@@ -36,7 +36,7 @@ DEBUG = True
 INSTALLED_APPS = [
     'custom_user',
     'leaflet',
-    'django_hosts',
+    'subdomains',
     'ucloud.apps.welcome',
     'ucloud.apps.discover',
     'ucloud.apps.finance',
@@ -48,28 +48,33 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'django.contrib.sites',
     'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
 ]
 
-MIDDLEWARE = [
-    'django_hosts.middleware.HostsRequestMiddleware',
+SITE_ID = 1
+
+MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'subdomains.middleware.SubdomainURLRoutingMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'django_hosts.middleware.HostsResponseMiddleware',
 ]
 
 ROOT_URLCONF = 'ucloud.urls'
-ROOT_HOSTCONF = 'ucloud.hosts'
-DEFAULT_HOST = 'www'
-DEFAULT_REDIRECT_URL = '127.0.0.1:8000'
+
+SUBDOMAIN_URLCONFS = {
+    None: 'ucloud.urls',
+    'www': 'ucloud.urls',
+    'discover': 'ucloud.apps.discover.urls',
+}
 
 WSGI_APPLICATION = 'ucloud.wsgi.application'
 
