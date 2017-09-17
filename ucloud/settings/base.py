@@ -72,7 +72,6 @@ MIDDLEWARE_CLASSES = [
 ROOT_URLCONF = 'ucloud.urls'
 ROOT_HOSTCONF =  'ucloud.hosts'
 DEFAULT_HOST = 'www'
-DEFAULT_REDIRECT_URL = "http://www.ucloud.live"
 
 WSGI_APPLICATION = 'ucloud.wsgi.application'
 
