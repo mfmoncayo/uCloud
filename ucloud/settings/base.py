@@ -139,7 +139,7 @@ ALLOWED_HOSTS = [
                 '127.0.0.1',
                 'www.ucloud.live',
                 'ucloud.live',
-                'ucloud-live.herokuapp.com'
+                'ucloud-live.herokuapp.com',
                 'discover.ucloud.live',
                 'health.ucloud.live',
                 'education.ucloud.live',
