@@ -36,7 +36,7 @@ DEBUG = True
 INSTALLED_APPS = [
     'custom_user',
     'leaflet',
-    'subdomains',
+    'django_hosts',
     'ucloud.apps.welcome',
     'ucloud.apps.discover',
     'ucloud.apps.finance',
@@ -56,25 +56,23 @@ INSTALLED_APPS = [
 SITE_ID = 1
 
 MIDDLEWARE_CLASSES = [
+    'django_hosts.middleware.HostsRequestMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'subdomains.middleware.SubdomainURLRoutingMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django_hosts.middleware.HostsResponseMiddleware',
 ]
 
 ROOT_URLCONF = 'ucloud.urls'
-
-SUBDOMAIN_URLCONFS = {
-    None: 'ucloud.urls',
-    'www': 'ucloud.urls',
-    'discover': 'ucloud.apps.discover.urls',
-}
+ROOT_HOSTCONF =  'ucloud.hosts'
+DEFAULT_HOST = 'www'
+DEFAULT_REDIRECT_URL = "ucloud.live"
 
 WSGI_APPLICATION = 'ucloud.wsgi.application'
 
@@ -138,6 +136,7 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # Allow all host headers
 ALLOWED_HOSTS = [
+                '127.0.0.1',
                 'www.ucloud.live',
                 'ucloud.live',
                 'discover.ucloud.live',

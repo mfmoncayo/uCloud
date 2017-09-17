@@ -12,9 +12,9 @@
     L.Control.ZoomHome = L.Control.Zoom.extend({
         options: {
             position: 'bottomright',
-            zoomInText: '+',
+            zoomInIcon: 'plus',
             zoomInTitle: 'Zoom in',
-            zoomOutText: '-',
+            zoomOutIcon: 'minus',
             zoomOutTitle: 'Zoom out',
             zoomHomeIcon: 'home',
             zoomHomeTitle: 'Home',
@@ -34,12 +34,16 @@
                 options.homeZoom = map.getZoom();
             }
 
-            this._zoomInButton = this._createButton(options.zoomInText, options.zoomInTitle,
+            var zoomInText = '<i class="fa fa-' + options.zoomInIcon + '" style="line-height:1.65;"></i>';
+            this._zoomInButton = this._createButton(zoomInText, options.zoomInTitle,
                 controlName + '-in', container, this._zoomIn.bind(this));
+
             var zoomHomeText = '<i class="fa fa-' + options.zoomHomeIcon + '" style="line-height:1.65;"></i>';
             this._zoomHomeButton = this._createButton(zoomHomeText, options.zoomHomeTitle,
                 controlName + '-home', container, this._zoomHome.bind(this));
-            this._zoomOutButton = this._createButton(options.zoomOutText, options.zoomOutTitle,
+
+            var zoomOutText = '<i class="fa fa-' + options.zoomOutIcon + '" style="line-height:1.65;"></i>';
+            this._zoomOutButton = this._createButton(zoomOutText, options.zoomOutTitle,
                 controlName + '-out', container, this._zoomOut.bind(this));
 
             this._updateDisabled();
@@ -65,8 +69,8 @@
             zoomInTitle: 'New Cloud',
             zoomCloudIcon: 'cloud',
             zoomCloudTitle: 'New Cloud',
-            zoomOutText: '/',
-            zoomOutTitle: 'Close Cloud',
+            zoomCloseIcon: 'times',
+            zoomCloseTitle: 'Close Cloud',
             zoomHomeIcon: 'star',
             zoomHomeTitle: 'Save Cloud',
             homeCoordinates: null,
@@ -91,8 +95,9 @@
             var zoomHomeText = '<i class="fa fa-' + options.zoomHomeIcon + '" style="line-height:1.65;"></i>';
             this._zoomHomeButton = this._createButton(zoomHomeText, options.zoomHomeTitle,
                 controlName + '-home', container, this._zoomHome2.bind(this));
-            this._zoomOutButton = this._createButton(options.zoomOutText, options.zoomOutTitle,
-                controlName + '-out', container, this._zoomOut.bind(this));
+            var zoomCloseText = '<i class="fa fa-' + options.zoomCloseIcon + '" style="line-height:1.65;"></i>';
+            this._zoomOutButton = this._createButton(zoomCloseText, options.zoomCloseTitle,
+                controlName + '-in', container, this._zoomOut.bind(this));
 
             this._updateDisabled();
             map.on('zoomend zoomlevelschange', this._updateDisabled, this);

@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load hosts %}
 {% load i18n %}
 {% load l10n %}
 {% load tz %}
@@ -24,13 +25,79 @@ uCloud
 <script src="../../static/dist/js/discover.js"></script>
 <link rel="stylesheet" href="../../static/dist/css/leaflet.zoomhome.css"/>
 <script src="../../static/dist/js/leaflet.zoomhome.js"></script>
+<script src="http://www.webglearth.com/v2/api.js"></script>
+
 {% endblock %}
 
 
 
 {% block content %}
 
+<div id='earth_div2' class="geoLocation hoveringBtn">
+</div>
+
 <div id='mapid'>
+</div>
+
+<div class="worldView dead">
+  <div class="container-fluid leftSide noPad left">
+    <div class="row noMarg cino">
+      <div class="col-12 worldTitle">
+        <div class="currentPath hoveringBtn iconColor">
+          <h2 class="wactTitle"><center>World</center></h2>
+        </div>
+      </div>
+      <div class="col-12 realglobe">
+      </div>
+      <div class="col-12 realTopics">
+        <div class="subTopics topTopic hoveringBtn iconColor">
+          <i class="fal fa-play fa-2x fixLocation2 left"></i><h4 class="rightBumper">Play</h4>
+        </div>
+        <div class="subTopics hoveringBtn iconColor">
+          <i class="fal fa-shopping-bag fa-2x fixLocation2 left"></i><h4 class="rightBumper">Shop</h4>
+        </div>
+        <div class="subTopics hoveringBtn iconColor">
+          <i class="fal fa-newspaper fa-2x fixLocation2 left"></i><h4 class="rightBumper">Live</h4>
+        </div>
+        <div class="subTopics bottomTopic hoveringBtn iconColor">
+          <i class="fal fa-book fa-2x fixLocation2 left"></i><h4 class="rightBumper">Learn</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid centerSide pad20 left">
+    <div class="row noMarg cino centerFeed round20">
+      <div class="col-12 worldTitle topFeed">
+        <div class="currentTopic iconColorActive">
+          <h2 class="wactTitle"><center>Live</center></h2>
+        </div>
+      </div>
+      <div class="col-12 realglobe">
+      </div>
+      <div class="col-12 realTopics bottomFeed">
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid rightSide noPad left">
+    <div class="row noMarg cino">
+      <div class="col-12 topicTime">
+        <div class="currentPath hoveringBtn iconColor">
+          <h2 class="wactTitle"><center>Upcoming</center></h2>
+        </div>
+      </div>
+      <div class="col-12 topicBumper">
+      </div>
+      <div class="col-12 topicTime">
+        <div class="currentPath hoveringBtn iconColor">
+          <h2 class="wactTitle"><center>Established</center></h2>
+        </div>
+      </div>
+      <div class="col-12 topicBumper">
+      </div>
+    </div>
+  </div>
 </div>
 
   {% include "ucloud/nav-tabs.html" %}
@@ -45,6 +112,12 @@ uCloud
 
       <div class="col-md-10">
 
+        <script>
+          function initialize() {
+            var earth = new WE.map('earth_div2');
+            WE.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(earth);
+          }
+        </script>
 
         <script>
         // initialize the map

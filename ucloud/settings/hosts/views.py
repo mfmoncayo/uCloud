@@ -1,7 +1,7 @@
 from django.conf import settings
 from django.http import HttpResponseRedirect
 
-DEFAULT_REDIRECT_URL = getattr(settings, "DEFAULT_REDIRECT_URL", "127.0.0.1:8000")
+DEFAULT_REDIRECT_URL = getattr(settings, "DEFAULT_REDIRECT_URL", "ucloud.live")
 
 def wildcard_redirect(request, path=None):
     new_url = DEFAULT_REDIRECT_URL
