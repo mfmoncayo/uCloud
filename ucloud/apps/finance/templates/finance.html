@@ -1,473 +1,119 @@
 {% extends "base.html" %}
+{% load hosts %}
 {% load i18n %}
 {% load l10n %}
 {% load tz %}
+{% load leaflet_tags %}
 
 {% block head_title %}
 uCloud
 {% endblock %}
 
 {% block head_css %}
-<link rel="stylesheet" href="../static/css/finance.css">
-<link rel="stylesheet" href="../../static/dist/css/dashboard.css">
-<link rel="stylesheet" href="../../static/dist/css/offcanvas.css">
+{% leaflet_js %}
+{% leaflet_css %}
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"
+   integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ=="
+   crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"
+ integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
+ crossorigin=""></script>
 <script src="https://use.fontawesome.com/7a4ad4218b.js"></script>
+<link rel="stylesheet" href="../../static/dist/css/ucloud.css">
+<link rel="stylesheet" href="../../static/dist/css/offcanvas.css">
+<link rel="stylesheet" href="../static/css/finance.css">
 <script src="../../static/dist/js/offcanvas.js"></script>
-<script src="../../static/dist/js/dashboard.js"></script>
+<script src="../../static/dist/js/ucloud.js"></script>
+<script src="../static/js/finance.js"></script>
+<link rel="stylesheet" href="../../static/dist/css/leaflet.zoomhome.css"/>
+<script src="../../static/dist/js/leaflet.zoomhome.js"></script>
 {% endblock %}
 
+
+
 {% block content %}
-  {% include "ucloud/nav.html" %}
-  {% include "finUtility.html" %}
 
-  <div class="floatNav2">
-  <div class="container">
+<body><img class="cino financeBanner"></img></body>
+
+<div class="financeView layer4">
+
+  <div class="cino">
+    <div id="carouselExampleIndicators" class="carousel slide h100" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner cino d-block">
+          <div class="carousel-item active cino item">
+            <div class="cino">
+              <img class="financeBanner2 cino d-block"></img>
+              <div class="finTitleContainer d-block">
+                <div class="financeTitle">
+                  Guidance
+                </div>
+              </div>
+
+              <div class="finMessageContainer w100 container-fluid d-block">
+                <div class="row">
+                  <div class="col-md-5">
+                    <div class="financeMessageLeft">
+                      Powered by the Universe
+                    </div>
+                  </div>
+
+                  <div class="col-md-4">
+                  </div>
+
+                  <div class="col-md-3">
+                    <div class="financeMessageRight">
+                      <button type="button" class="btn btn-secondary">Start Now</button>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item cino item">
+            <img class="d-block w-100" src="..." alt="Second slide">
+          </div>
+          <div class="carousel-item cino item">
+            <img class="d-block w-100" src="..." alt="Third slide">
+          </div>
+        </div>
+        <a class="carousel-control-prev w05" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next w05" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+    </div>
+  </div>
+
+</div>
+
+  {% include "finTabs.html" %}
+  {% include "finExplore.html" %}
+
+  <div class="container-fluid layer3">
+    <div class="topSpace"></div>
     <div class="row">
-      <div class="col-sm-4 col-lg-4 topSpace">
-        <div class="btn-group">
-          <button class="navbar-text blackFont exploreBtn utilDrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-undo fa-1x" aria-hidden="true"></i></button>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Separated link</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-sm-4 col-lg-4 text-center topSpace">
-        <div class="btn-group">
-          <button class="navbar-text blackFont exploreBtn utilDrop appCenterCorrect" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-circle-o fa-1x" aria-hidden="true"></i></button>
-          <div class="dropdown-menu dropdown-menu-right">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Separated link</a>
-          </div>
-        </div>
-        <div class="btn-group">
-          <button class="navbar-text blackFont exploreBtn utilDrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-circle fa-1x" aria-hidden="true"></i></button>
-          <div class="dropdown-menu dropdown-menu-right">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Separated link</a>
-          </div>
-        </div>
-        <div class="btn-group">
-          <button class="navbar-text blackFont exploreBtn utilDrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-circle-o fa-1x" aria-hidden="true"></i></button>
-          <div class="dropdown-menu dropdown-menu-right">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Separated link</a>
-          </div>
-        </div>
-        <div class="btn-group">
-          <button class="navbar-text blackFont exploreBtn utilDrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-plus fa-1x" aria-hidden="true"></i></button>
-          <div class="dropdown-menu dropdown-menu-right">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Separated link</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-sm-4 col-lg-4 text-right topSpace">
-        <div class="btn-group">
-          <button class="navbar-text blackFont exploreBtn utilDrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-repeat fa-1x" aria-hidden="true"></i></button>
-          <div class="dropdown-menu dropdown-menu-right">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Separated link</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  </div>
-
-  <div class="content">
-
     {% include "ucloud/sideleft.html" %}
-
-    <!-- Left arrow -->
-    <div class="row-offcanvas2 row-offcanvas-left">
-      <div class="col-xs-6 col-sm-2 sidebar-offcanvas preL3" id="sidebarLeft2" role="navigation">
-        <div class="list-group">
-          <span><i class="fa fa-chevron-left fa-1x" id="leftArrow" aria-hidden="true"></i></span>
-        </div>
+      <div class="col-md-1">
       </div>
-    </div>
 
-    <!-- Left side bar -->
-    <div class="row-offcanvas2 row-offcanvas-left">
-      <div class="col-xs-6 col-sm-2 sidebar-offcanvas preL2" id="sidebarLeft2" role="navigation">
-        <div class="list-group">
-          <div id="accordion" role="tablist" aria-multiselectable="true">
-            <div class="card planCollapseHead">
-              <div class="collapseAdmin iconColor nav-link" role="tab" id="headingOne">
-                <span data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                  Plans
-                </span>
-              </div>
-            </div>
-            <div class="content2">
-              <div id="scrollable3">
-                <div class="card clickable noRadius">
-                  <div class="card-header FixCollapseItem2" role="tab" id="headingTwo">
-                    <span class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                      <a href="#" class="list-group-item itemText text-center fixATag"><i class="fa fa-user fa-fw" aria-hidden="true"></i><span class="iconSpace2">Personal</span></a>
-                    </span>
-                  </div>
-                  <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
-                    <div class="card-block FixCollapseItem">
-                      <div class="card-header FixCollapseItem2" role="tab" id="headingTwo">
-                        <span class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                          Income
-                        </span>
-                      </div>
-                    </div>
-                    <div class="card-block FixCollapseItem">
-                      <div class="card-header FixCollapseItem2" role="tab" id="headingTwo">
-                        <span class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                          Assets
-                        </span>
-                      </div>
-                    </div>
-                    <div class="card-block FixCollapseItem">
-                      <div class="card-header FixCollapseItem2" role="tab" id="headingTwo">
-                        <span class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                          Liabilities
-                        </span>
-                      </div>
-                    </div>
-                    <div class="card-block FixCollapseItem">
-                      <div class="planCollapseFoot text-center" role="tab" id="headingTwo">
-                        <span class="iconColor" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Add Report</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="card clickable noRadius">
-                  <div class="card-header FixCollapseItem2" role="tab" id="headingThree">
-                    <span class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                      <a href="#" class="list-group-item itemText text-center fixATag"><i class="fa fa-building fa-fw" aria-hidden="true"></i><span>Business</span></a>
-                    </span>
-                  </div>
-                  <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree">
-                    <div class="card-block FixCollapseItem">
-                      <div class="card-header FixCollapseItem2" role="tab" id="headingThree">
-                        <span class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                          Income
-                        </span>
-                      </div>
-                    </div>
-                    <div class="card-block FixCollapseItem">
-                      <div class="card-header FixCollapseItem2" role="tab" id="headingThree">
-                        <span class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                          Assets
-                        </span>
-                      </div>
-                    </div>
-                    <div class="card-block FixCollapseItem">
-                      <div class="card-header FixCollapseItem2" role="tab" id="headingThree">
-                        <span class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                          Liabilities
-                        </span>
-                      </div>
-                    </div>
-                    <div class="card-block FixCollapseItem">
-                      <div class="planCollapseFoot text-center" role="tab" id="headingTwo">
-                        <span class="iconColor" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Add Report</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="card clickable noRadius">
-                  <div class="card-header FixCollapseItem2" role="tab" id="headingFour">
-                    <span class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                      <a href="#" class="list-group-item itemText text-center fixATag"><i class="fa fa-users fa-fw" aria-hidden="true"></i><span class="iconSpace2">Family</span></a>
-                    </span>
-                  </div>
-                  <div id="collapseFour" class="collapse" role="tabpanel" aria-labelledby="headingFour">
-                    <div class="card-block FixCollapseItem">
-                      <div class="card-header FixCollapseItem2" role="tab" id="headingFour">
-                        <span class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                          Income
-                        </span>
-                      </div>
-                    </div>
-                    <div class="card-block FixCollapseItem">
-                      <div class="card-header FixCollapseItem2" role="tab" id="headingFour">
-                        <span class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                          Assets
-                        </span>
-                      </div>
-                    </div>
-                    <div class="card-block FixCollapseItem">
-                      <div class="card-header FixCollapseItem2" role="tab" id="headingFour">
-                        <span class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                          Liabilities
-                        </span>
-                      </div>
-                    </div>
-                    <div class="card-block FixCollapseItem">
-                      <div class="planCollapseFoot text-center" role="tab" id="headingTwo">
-                        <span class="iconColor" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Add Report</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="card clickable noRadius">
-                  <div class="card-header FixCollapseItem2" role="tab" id="headingFive">
-                    <span class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                      <a href="#" class="list-group-item itemText text-center fixATag"><i class="fa fa-child fa-fw" aria-hidden="true"></i><span>Children</span></a>
-                    </span>
-                  </div>
-                  <div id="collapseFive" class="collapse" role="tabpanel" aria-labelledby="headingFive">
-                    <div class="card-block FixCollapseItem">
-                      <div class="card-header FixCollapseItem2" role="tab" id="headingFive">
-                        <span class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                          Income
-                        </span>
-                      </div>
-                    </div>
-                    <div class="card-block FixCollapseItem">
-                      <div class="card-header FixCollapseItem2" role="tab" id="headingFive">
-                        <span class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                          Assets
-                        </span>
-                      </div>
-                    </div>
-                    <div class="card-block FixCollapseItem">
-                      <div class="card-header FixCollapseItem2" role="tab" id="headingFive">
-                        <span class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                          Liabilities
-                        </span>
-                      </div>
-                    </div>
-                    <div class="card-block FixCollapseItem">
-                      <div class="planCollapseFoot text-center" role="tab" id="headingFive">
-                        <span class="iconColor" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Add Report</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="card planCollapseFoot clickable">
-              <div class="collapseAdmin iconColor nav-link text-center" role="tab" id="headingSix">
-                <span data-parent="#accordion" href="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
-                  <i class="fa fa-plus fa-1x" aria-hidden="true"></i>
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div class="col-md-10">
       </div>
-    </div>
 
-    <!-- Scrollable div with main content -->
-    <div id="scrollable2">
-
-      <!-- End scrollable main content -->
-      <div class="row">
-      <div class="col-4 col-md-4"></div>
-      <div class="col-8 col-md-8">
-        <!--<div class="containerTwo"> -->
-          <div class="row financebanner financeHolder">
-            <div class="col-12 col-lg-12">
-              <div id="carouselExampleIndicators" class="carousel slide" data-interval="false">
-                <ol class="carousel-indicators">
-                  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                </ol>
-                <div class="carousel-inner" role="listbox" data-interval="false">
-                  <div class="carousel-item active">
-                    <div class="container formControl">
-                      <div class="row">
-                        <h2 class="whiteText textFixer">Plan today</h2>
-                        <br />
-                        <br />
-                        <br />
-                        <br />
-                        <br />
-                        <br />
-                      </div>
-                      <h4 class="whiteText text-right textFixer2"> ...for tomorrow's adventures</h4>
-                      <p class="text-right"><a class="btn btn-secondary text-right textFixer3" href="#carouselExampleIndicators" role="button" data-slide="next">Start Now &raquo;</a></p>
-                    </div>
-                  </div>
-                  <div class="carousel-item content3">
-                    <div class="container formControl" id="scrollable4">
-                      <div class="row">
-                        <h2 class="whiteText textFixer">New Plan</h2>
-                        <br />
-                      </div>
-                      <br />
-                      <div class="input-group">
-                        <div class="input-group-btn">
-                          <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fa fa-user" aria-hidden="true"></i>
-                          </button>
-                          <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#"><i class="fa fa-home" aria-hidden="true"></i></a>
-                            <a class="dropdown-item" href="#"><i class="fa fa-building" aria-hidden="true"></i></a>
-                            <a class="dropdown-item" href="#"><i class="fa fa-users" aria-hidden="true"></i></a>
-                            <a class="dropdown-item" href="#"><i class="fa fa-child" aria-hidden="true"></i></a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#"><i class="fa fa-bank" aria-hidden="true"></i></a>
-                          </div>
-                        </div>
-                        <input type="text" class="form-control" placeholder="Plan Name" aria-label="Text input with dropdown button">
-                      </div>
-                      <br />
-                      <h5 class="whiteText">Add Accounts</h5>
-                      <div class="input-group">
-                        <div class="input-group-btn">
-                          <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fa fa-bank" aria-hidden="true"></i>
-                          </button>
-                          <div class="dropdown-menu noDropPadding">
-                            <div class="input-group">
-                              <span class="input-group-addon">
-                                <input type="radio" aria-label="Radio button for following text input">
-                              </span>
-                              <input type="text" class="form-control" placeholder="Checking" aria-label="Text input with radio button">
-                            </div>
-                            <div class="input-group">
-                              <span class="input-group-addon">
-                                <input type="radio" aria-label="Radio button for following text input">
-                              </span>
-                              <input type="text" class="form-control" placeholder="Savings" aria-label="Text input with radio button">
-                            </div>
-                          </div>
-                        </div>
-                        <input type="text" class="form-control" placeholder="Account Name" aria-label="Text input with dropdown button">
-                      </div>
-                      <div class="input-group date" data-provide="datepicker">
-                        <div class="input-group-btn">
-                          <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fa fa-calendar" aria-hidden="true"></i>
-                          </button>
-                        </div>
-                        <input type="text" class="form-control" placeholder="Start Date" aria-label="Text input with dropdown button">
-                      </div>
-                      <div class="input-group">
-                        <div class="input-group-btn">
-                          <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fa fa-money" aria-hidden="true"></i>
-                          </button>
-                          <div class="dropdown-menu noDropPadding">
-                          </div>
-                        </div>
-                        <input type="text" class="form-control" placeholder="Beginning Balance" aria-label="Text input with dropdown button">
-                      </div>
-                      <br />
-                      <br />
-                      <div class="input-group">
-                        <div class="input-group-btn">
-                          <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fa fa-money" aria-hidden="true"></i>
-                          </button>
-                          <div class="dropdown-menu noDropPadding">
-                          </div>
-                        </div>
-                        <input type="text" class="form-control" placeholder="Beginning Balance" aria-label="Text input with dropdown button">
-                      </div>
-                      <br />
-                      <br />
-                      <div class="input-group">
-                        <div class="input-group-btn">
-                          <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fa fa-money" aria-hidden="true"></i>
-                          </button>
-                          <div class="dropdown-menu noDropPadding">
-                          </div>
-                        </div>
-                        <input type="text" class="form-control" placeholder="Beginning Balance" aria-label="Text input with dropdown button">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <div class="container formControl">
-                      <div class="row">
-                        <h2 class="whiteText textFixer">New Plan</h2>
-                        <br />
-                        <br />
-                      </div>
-                      <div class="input-group">
-                        <span class="input-group-addon" id="basic-addon1"><i class="fa fa-address-card-o" aria-hidden="true"></i></span>
-                        <input type="text" class="form-control" placeholder="Name" aria-describedby="basic-addon1">
-                      </div>
-                      <br />
-                      <br />
-                      <div class="input-group">
-                        <span class="input-group-addon" id="basic-addon1"><i class="fa fa-address-card-o" aria-hidden="true"></i></span>
-                        <input type="text" class="form-control" placeholder="Name" aria-describedby="basic-addon1">
-                      </div>
-                      <br />
-                      <br />
-                      <div class="input-group">
-                        <span class="input-group-addon" id="basic-addon1"><i class="fa fa-address-card-o" aria-hidden="true"></i></span>
-                        <input type="text" class="form-control" placeholder="Name" aria-describedby="basic-addon1">
-                      </div>
-                      <br />
-                      <br />
-                      <div class="input-group">
-                        <span class="input-group-addon" id="basic-addon1"><i class="fa fa-address-card-o" aria-hidden="true"></i></span>
-                        <input type="text" class="form-control" placeholder="Name" aria-describedby="basic-addon1">
-                      </div>
-                      <br />
-                      <br />
-                      <div class="input-group">
-                        <span class="input-group-addon" id="basic-addon1"><i class="fa fa-address-card-o" aria-hidden="true"></i></span>
-                        <input type="text" class="form-control" placeholder="Name" aria-describedby="basic-addon1">
-                      </div>
-                      <div class="input-group">
-                        <span class="input-group-addon" id="basic-addon1"><i class="fa fa-address-card-o" aria-hidden="true"></i></span>
-                        <input type="text" class="form-control" placeholder="Name" aria-describedby="basic-addon1">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <a class="carousel-control-prev formArrow1" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next formArrow2" href="#carouselExampleIndicators" role="button" data-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="sr-only">Next</span>
-                </a>
-              </div>
-            </div><!--/span-->
-          </div><!--/row-->
-        <!--</div> -->
-      </div><!--/span-->
+      <div class="col-md-1">
       </div>
 
     </div>
-
-    {% include "ucloud/sideright.html" %}
-
-    <div class="row-offcanvas row-offcanvas-right">
-      <div class="col-xs-6 col-sm-2 sidebar-offcanvas preR2 text-right" id="sidebarRight2" role="navigation">
-        <div class="list-group">
-          <span><i class="fa fa-chevron-right fa-1x" aria-hidden="true"></i></span>
-        </div>
-      </div>
-    </div>
-
+    {% include "finSideRight.html" %}
   </div>
-  {% include "ucloud/footer.html" %}
+
+  {% include "finFooter.html" %}
 {% endblock %}

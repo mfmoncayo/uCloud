@@ -42,7 +42,7 @@
 
   .row-offcanvas {
     position: relative;
-    z-index: 900;
+    z-index: 995;
   }
 
   .row-offcanvas-left {
@@ -173,7 +173,7 @@
 
     .row-offcanvas {
       position: relative;
-      z-index: 900;
+      z-index: 995;
     }
 
     .row-offcanvas-left {

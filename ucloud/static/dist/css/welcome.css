@@ -12,6 +12,10 @@ body {
   background-size: cover;
 }
 
+.welcomeInterface {
+  margin-top:15%;
+}
+
 .narrowNav {
   display:none;
 }

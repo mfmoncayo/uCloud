@@ -1,51 +1,8 @@
 {% block navbar %}
-<nav class="navbar floatFoot floatFoot2">
-  <div class="container-fluid">
+<nav class="navbar floatFoot floatFoot2 layer0">
+  <div class="container-fluid w100">
     <div class="row justify-content-start">
-
-      <div class="col-2 floatBox bg-inverse2 hoveringBtn footerWidthLeft2">
-        <button class="footerFix footerBtn btnMargTop" data-toggle="exit"><a class="btn btn-default btn-sm iconColor " href="#"><i class="fal fa-angle-double-left fa-2x"></i></a></button>
-        <button class="footerFix footerBtn btnMargTop" data-toggle="settings"><a class="btn btn-default btn-sm iconColor" href="#"><i class="fal fa-cog fa-2x"></i></a></button>
-
-        <div class="btn-group dropup">
-          <button type="button" class="btn footerFix footerBtn dropdown-toggle btnMargTop profFix" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><a class="btn btn-default btn-sm iconColor" href="#"><i><img class="profile" src="../../static/dist/images/profpic.jpg"alt=""></i></a>
-            <span class="sr-only">Toggle Dropdown</span>
-          </button>
-          <div class="dropdown-menu tabMenu2 dropupMarg">
-            <a class="dropdown-item iconColor hoveringBtn2" href="#"><center><i class="fal fa-user fa-2x"></i></center></a>
-            <a class="dropdown-item iconColor hoveringBtn2" href="#"><center><i class="fal fa-comment fa-2x"></i></center></a>
-            <a class="dropdown-item iconColor hoveringBtn2" href="#"><center><i class="fal fa-envelope fa-2x"></i></center></a>
-            <a class="dropdown-item iconColor hoveringBtn2" href="#"><center><i class="fal fa-wrench fa-2x"></i></center></a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-3 footerWidthCenter2">
-      </div>
-
-      <div class="col-2 text-center linkFix floatBox bg-inverse2 hoveringBtn">
-        <span class="navbar-text iconColor footerBtn btnMargTop">@mfmoncayo</span>
-      </div>
-
-      <div class="col-3 footerWidthCenter3">
-      </div>
-
-      <div class="col-2 floatBox bg-inverse2 hoveringBtn footerWidthRight3">
-        <button class="footerFix footerBtn btnMargTop floatRight" data-toggle="exit"><a class="btn btn-default btn-sm iconColor" href="#"><i class="fal fa-angle-double-right fa-2x"></i></a></button>
-        <button class="footerFix footerBtn btnMargTop floatRight" data-toggle="settings"><a class="btn btn-default btn-sm iconColor" href="#"><i class="fal fa-bookmark fa-2x"></i></a></button>
-        <div class="btn-group dropup floatRight btnPad2">
-          <button type="button" class="btn footerFix footerBtn dropdown-toggle btnMargTop noPad" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><a class="btn btn-default btn-sm iconColor" href="#"><i class="fal fa-map-marker fa-2x"></i></a></button>
-          <div class="dropdown-menu tabMenu2 dropupMarg2">
-            <a class="dropdown-item iconColor hoveringBtn2" href="#" data-toggle="settings"><center><i class="fal fa-play fa-2x"></i></center></a>
-            <a class="dropdown-item iconColor hoveringBtn2" href="#" data-toggle="settings"><center><i class="fal fa-shopping-bag fa-2x"></i></center></a>
-            <a class="dropdown-item iconColor hoveringBtn2" href="#" data-toggle="settings"><center><i class="fal fa-newspaper fa-2x"></i></center></a>
-            <a class="dropdown-item iconColor hoveringBtn2" href="#" data-toggle="settings"><center><i class="fal fa-book fa-2x"></i></center></a>
-          </div>
-        </div>
-
-
-      </div>
-
+      {% block navfooter %}{% endblock %}
     </div>
   </div>
 </nav>

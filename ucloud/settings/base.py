@@ -140,9 +140,10 @@ ALLOWED_HOSTS = [
                 'ucloud.live',
                 'ucloud-live.herokuapp.com',
                 'discover.ucloud.live',
+                'journey.ucloud.live',
+                'finance.ucloud.live',
                 'health.ucloud.live',
                 'education.ucloud.live',
-                'finance.ucloud.live',
                 ]
 
 LANGUAGE_CODE = 'en-us'

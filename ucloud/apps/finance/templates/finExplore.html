@@ -1,0 +1,81 @@
+{% extends "ucloud/explore.html" %}
+{% load hosts %}
+{% block navexplore %}
+      <div class="col-1 navWidthLeft3 bg-inverse2 hoveringBtn colorHolder">
+        <div class="btn-group text-right fixLocation cino">
+          <button class="navbar-text exploreBtn transparent noPad cino" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><a class="btn btn-default btn-sm iconColor noPad cino" href="#"><center><i class="fal fa-chart-line fa-2x hoveringBtn fixLocation2"></i></center></a></button>
+          <div class="dropdown-menu tabMenu4">
+            <form class="form-inline">
+              <div class="input-group correctExplore">
+                <input type="text" class="form-control transparent inputFocused" placeholder="Enter Date" aria-describedby="basic-addon1">
+                <span class="input-group-addon transparent iconColor" id="basic-addon1"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+              </div>
+            </form>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item iconColor hoveringBtn2" href="#">History</a>
+            <a class="dropdown-item iconColor hoveringBtn2" href="#">Economics</a>
+            <a class="dropdown-item iconColor hoveringBtn2" href="#">Politics</a>
+            <a class="dropdown-item iconColor hoveringBtn2" href="#">Forecast</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-4">
+      </div>
+
+      <div class="col-2 floatBox bg-inverse2 hoveringBtn logoHeight exploreBtnCenter">
+        <button class="navbar-toggler explore" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+            <img class="logo" src="../../static/dist/images/logo.png"alt="" data-toggle="collapse" data-target="#collapsingNavbar2">
+        </button>
+      </div>
+
+      <div class="col-4">
+      </div>
+
+      <div class="col-1 text-right navWidthRight2 bg-inverse2 noPad hoveringBtn">
+        <div class="btn-group cino">
+          <button class="navbar-text iconColor exploreBtn transparent noPad cino" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><a class="btn btn-default btn-sm iconColor noPad cino" href="#"><i class="fal fa-university fa-2x hoveringBtn fixLocation3"></i></a></button>
+          <div class="dropdown-menu dropdown-menu-right text-right tabMenu5">
+            <form class="form-inline">
+              <div class="input-group correctExplore">
+                <span class="input-group-addon transparent iconColor" id="basic-addon1"><i class="fa fa-chevron-left" aria-hidden="true"></i></span>
+                <input type="text" class="form-control transparent iconColor inputFocused" placeholder="Accounts" aria-describedby="basic-addon1">
+              </div>
+            </form>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item iconColor hoveringBtn2" href="#">Family</a>
+            <a class="dropdown-item iconColor hoveringBtn2" href="#">Business</a>
+            <a class="dropdown-item iconColor hoveringBtn2" href="#">Organizations</a>
+            <div class="dropdown-divider"></div>
+            <form class="form-inline">
+              <div class="input-group correctExplore">
+                <span class="input-group-addon transparent iconColor" id="basic-addon1"><i class="fa fa-plus" aria-hidden="true"></i></span>
+                <input type="text" class="form-control transparent iconColor inputFocused" placeholder="Add New" aria-describedby="basic-addon1">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-4 collapseNavFixLeft">
+      </div>
+      <div class="col-4 floatBox bg-inverse2 collapseNavFix btnMargTop hoveringBtn noDisplaySubNav">
+        <div class="navbar-collapse collapse exploreRightBtn2" id="collapsingNavbar">
+          <ul class="nav justify-content-center">
+            <li class="nav-item">
+              <a class="nav-link iconColor" href="journey.ucloud.live"><i class="fal fa-location-arrow fa-lg" title="Entertainment"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link iconColor" href="finance.ucloud.live"><i class="fal fa-credit-card fa-lg" title="Finance"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link iconColor" href="health.ucloud.live"><i class="fal fa-heartbeat fa-lg" title="Health"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link iconColor" href="education.ucloud.live"><i class="fal fa-graduation-cap fa-lg" title="Education"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-4 text-right exploreRight">
+      </div>
+{% endblock %}

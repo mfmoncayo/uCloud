@@ -1,0 +1,17 @@
+{% extends "ucloud/nav-tabs.html" %}
+{% block navtab %}
+        <ul class="nav nav-tabs">
+          <li class="nav-item">
+            <a class="nav-link specialTabs active tabColorActive" href="#">Overview</a>
+          </li>
+          <li class="nav-item dropdown navSpace">
+            <a class="nav-link specialTabs dropdown-toggle hoveringBtn tabColor tabDropdown" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Personal</a>
+              <div class="dropdown-menu tabMenu3">
+                <a class="dropdown-item tabColor tabColor2" href="#"><center><i class="fal fa-id-badge fa-2x"></i></center></a>
+                <a class="dropdown-item tabColor tabColor2" href="#"><center><i class="fal fa-handshake fa-2x"></i></center></a>
+                <a class="dropdown-item tabColor tabColor2" href="#"><center><i class="fal fa-bullseye fa-2x"></i></center></a>
+                <a class="dropdown-item tabColor tabColor2" href="#"><center><i class="fal fa-road fa-2x"></i></center></a>
+              </div>
+          </li>
+        </ul>
+{% endblock %}

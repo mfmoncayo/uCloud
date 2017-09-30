@@ -19,10 +19,10 @@ uCloud
  integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
  crossorigin=""></script>
 <script src="https://use.fontawesome.com/7a4ad4218b.js"></script>
-<link rel="stylesheet" href="../../static/dist/css/discover.css">
+<link rel="stylesheet" href="../../static/dist/css/ucloud.css">
 <link rel="stylesheet" href="../../static/dist/css/offcanvas.css">
 <script src="../../static/dist/js/offcanvas.js"></script>
-<script src="../../static/dist/js/discover.js"></script>
+<script src="../static/js/discover.js"></script>
 <link rel="stylesheet" href="../../static/dist/css/leaflet.zoomhome.css"/>
 <script src="../../static/dist/js/leaflet.zoomhome.js"></script>
 <script src="http://www.webglearth.com/v2/api.js"></script>
@@ -33,18 +33,34 @@ uCloud
 
 {% block content %}
 
-<div id='earth_div2' class="geoLocation hoveringBtn">
+<div id='earth_div2' class="top layer3 hoveringBtn">
 </div>
 
 <div id='mapid'>
 </div>
 
-<div class="worldView dead">
+<div class="worldView2 layer2 dead">
+  <div class="dropdown leadDropFix">
+    <h2 class="" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><center></center></h2>
+      <div class="dropdown-menu tabMenu5 dropFix">
+        <a class="dropdown-item tabColor tabColor2" href="#"><center><i>Africa</i></center></a>
+        <a class="dropdown-item tabColor tabColor2" href="#"><center><i>Asian</i></center></a>
+        <a class="dropdown-item tabColor tabColor2" href="#"><center><i>Australia</i></center></a>
+        <a class="dropdown-item tabColor tabColor2" href="#"><center><i>Europe</i></center></a>
+        <a class="dropdown-item tabColor tabColor2" href="#"><center><i>N. American</i></center></a>
+        <a class="dropdown-item tabColor tabColor2" href="#"><center><i>S. America</i></center></a>
+      </div>
+  </div>
+</div>
+
+<div class="worldView layer4 dead">
   <div class="container-fluid leftSide noPad left">
     <div class="row noMarg cino">
       <div class="col-12 worldTitle">
         <div class="currentPath hoveringBtn iconColor">
-          <h2 class="wactTitle"><center>World</center></h2>
+          <div class="dropdown">
+            <h2 class="wactTitle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><center>World</center></h2>
+          </div>
         </div>
       </div>
       <div class="col-12 realglobe">
@@ -100,10 +116,10 @@ uCloud
   </div>
 </div>
 
-  {% include "ucloud/nav-tabs.html" %}
-  {% include "ucloud/explore.html" %}
+  {% include "disTabs.html" %}
+  {% include "disExplore.html" %}
 
-  <div class="container-fluid">
+  <div class="container-fluid layer5">
     <div class="topSpace"></div>
     <div class="row">
     {% include "ucloud/sideleft.html" %}
@@ -145,8 +161,8 @@ uCloud
       </div>
 
     </div>
-    {% include "ucloud/sideright.html" %}
+    {% include "disSideRight.html" %}
   </div>
 
-  {% include "ucloud/footer.html" %}
+  {% include "disFooter.html" %}
 {% endblock %}

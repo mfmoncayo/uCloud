@@ -1,98 +1,139 @@
 {% extends "base.html" %}
+{% load hosts %}
 {% load i18n %}
 {% load l10n %}
 {% load tz %}
+{% load leaflet_tags %}
 
 {% block head_title %}
 uCloud
 {% endblock %}
 
 {% block head_css %}
-<link rel="stylesheet" href="../static/css/journey.css">
-<link rel="stylesheet" href="../../static/dist/css/dashboard.css">
-<link rel="stylesheet" href="../../static/dist/css/offcanvas.css">
+{% leaflet_js %}
+{% leaflet_css %}
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"
+   integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ=="
+   crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"
+ integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
+ crossorigin=""></script>
 <script src="https://use.fontawesome.com/7a4ad4218b.js"></script>
+<link rel="stylesheet" href="../../static/dist/css/discover.css">
+<link rel="stylesheet" href="../../static/dist/css/offcanvas.css">
 <script src="../../static/dist/js/offcanvas.js"></script>
-<script src="../../static/dist/js/dashboard.js"></script>
+<script src="../../static/dist/js/ucloud.js"></script>
+<link rel="stylesheet" href="../../static/dist/css/leaflet.zoomhome.css"/>
+<script src="../../static/dist/js/leaflet.zoomhome.js"></script>
+
 {% endblock %}
 
+
+
 {% block content %}
-  {% include "ucloud/nav.html" %}
+
+<div id='mapid'>
+</div>
+
+<div class="worldView2 layer2 dead">
+  <div class="dropdown leadDropFix">
+    <h2 class="" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><center></center></h2>
+      <div class="dropdown-menu tabMenu5 dropFix">
+        <a class="dropdown-item tabColor tabColor2" href="#"><center><i>Africa</i></center></a>
+        <a class="dropdown-item tabColor tabColor2" href="#"><center><i>Asian</i></center></a>
+        <a class="dropdown-item tabColor tabColor2" href="#"><center><i>Australia</i></center></a>
+        <a class="dropdown-item tabColor tabColor2" href="#"><center><i>Europe</i></center></a>
+        <a class="dropdown-item tabColor tabColor2" href="#"><center><i>N. American</i></center></a>
+        <a class="dropdown-item tabColor tabColor2" href="#"><center><i>S. America</i></center></a>
+      </div>
+  </div>
+</div>
+
+<div class="worldView layer4 dead">
+  <div class="container-fluid leftSide noPad left">
+    <div class="row noMarg cino">
+      <div class="col-12 worldTitle">
+        <div class="currentPath hoveringBtn iconColor">
+          <div class="dropdown">
+            <h2 class="wactTitle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><center>World</center></h2>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 realglobe">
+      </div>
+      <div class="col-12 realTopics">
+        <div class="subTopics topTopic hoveringBtn iconColor">
+          <i class="fal fa-play fa-2x fixLocation2 left"></i><h4 class="rightBumper">Play</h4>
+        </div>
+        <div class="subTopics hoveringBtn iconColor">
+          <i class="fal fa-shopping-bag fa-2x fixLocation2 left"></i><h4 class="rightBumper">Shop</h4>
+        </div>
+        <div class="subTopics hoveringBtn iconColor">
+          <i class="fal fa-newspaper fa-2x fixLocation2 left"></i><h4 class="rightBumper">Live</h4>
+        </div>
+        <div class="subTopics bottomTopic hoveringBtn iconColor">
+          <i class="fal fa-book fa-2x fixLocation2 left"></i><h4 class="rightBumper">Learn</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid centerSide pad20 left">
+    <div class="row noMarg cino centerFeed round20">
+      <div class="col-12 worldTitle topFeed">
+        <div class="currentTopic iconColorActive">
+          <h2 class="wactTitle"><center>Live</center></h2>
+        </div>
+      </div>
+      <div class="col-12 realglobe">
+      </div>
+      <div class="col-12 realTopics bottomFeed">
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid rightSide noPad left">
+    <div class="row noMarg cino">
+      <div class="col-12 topicTime">
+        <div class="currentPath hoveringBtn iconColor">
+          <h2 class="wactTitle"><center>Upcoming</center></h2>
+        </div>
+      </div>
+      <div class="col-12 topicBumper">
+      </div>
+      <div class="col-12 topicTime">
+        <div class="currentPath hoveringBtn iconColor">
+          <h2 class="wactTitle"><center>Established</center></h2>
+        </div>
+      </div>
+      <div class="col-12 topicBumper">
+      </div>
+    </div>
+  </div>
+</div>
+
+  {% include "ucloud/nav-tabs.html" %}
   {% include "ucloud/explore.html" %}
 
-  <div class="content">
-
+  <div class="container-fluid">
+    <div class="topSpace"></div>
+    <div class="row">
     {% include "ucloud/sideleft.html" %}
-
-    <!-- Scrollable div with main content -->
-    <div id="scrollable2">
-
-      <!-- Containing column -->
-      <div class="col-xs-12 col-sm-12">
-
-          <!-- Full width Jumbotron -->
-          <div class="jumbotron">
-              <h1>Hello, world!</h1>
-              <p>This is an example to show the potential of an offcanvas layout pattern in Bootstrap. Try some responsive-range viewport sizes to see it in action.</p>
-          </div>
-          <!-- End Jumbotron -->
-
-          <!-- Full width row -->
-          <div class="row">
-
-              <div class="col-6 col-sm-6 col-lg-4">
-                  <h2>Heading</h2>
-                  <p>Bootstrap is a front-end framework that uses CSS and JavaScript to facilitate responsive Web design. Bootply is a playground for Bootstrap that enables developers and designers to test, prototype and create mockups using Bootstrap
-                      friendly HTML, CSS and Javascript.</p>
-                  <p><a class="btn btn-default linkText" href="#">View details »</a></p>
-              </div>
-
-              <div class="col-sm-6 col-lg-4">
-                  <h2>Heading</h2>
-                  <p>Bootply is a playground for Bootstrap that enables developers and designers to test, prototype and create mockups using Bootstrap friendly HTML, CSS and Javascript. Bootstrap is a front-end framework that uses CSS and JavaScript
-                      to facilitate responsive Web design. </p>
-                  <p><a class="btn btn-default linkText" href="#">View details »</a></p>
-              </div>
-
-              <div class="col-sm-6 col-lg-4">
-                  <h2>Heading</h2>
-                  <p>Bootstrap is a front-end framework that uses CSS and JavaScript to facilitate responsive Web design. Bootply is a playground for Bootstrap that enables developers and designers to test, prototype and create mockups using Bootstrap
-                      friendly HTML, CSS and Javascript.</p>
-                  <p><a class="btn btn-default linkText" href="#">View details »</a></p>
-              </div>
-
-              <div class="col-6 col-sm-6 col-lg-4">
-                  <h2>Heading</h2>
-                  <p>Bootstrap is a front-end framework that uses CSS and JavaScript to facilitate responsive Web design. Bootply is a playground for Bootstrap that enables developers and designers to test, prototype and create mockups using Bootstrap
-                      friendly HTML, CSS and Javascript.</p>
-                  <p><a class="btn btn-default linkText" href="#">View details »</a></p>
-              </div>
-
-              <div class="col-sm-6 col-lg-4">
-                  <h2>Heading</h2>
-                  <p>Bootply is a playground for Bootstrap that enables developers and designers to test, prototype and create mockups using Bootstrap friendly HTML, CSS and Javascript. Bootstrap is a front-end framework that uses CSS and JavaScript
-                      to facilitate responsive Web design. </p>
-                  <p><a class="btn btn-default linkText" href="#">View details »</a></p>
-              </div>
-
-              <div class="col-sm-6 col-lg-4">
-                  <h2>Heading</h2>
-                  <p>Bootstrap is a front-end framework that uses CSS and JavaScript to facilitate responsive Web design. Bootply is a playground for Bootstrap that enables developers and designers to test, prototype and create mockups using Bootstrap
-                      friendly HTML, CSS and Javascript.</p>
-                  <p><a class="btn btn-default linkText" href="#">View details »</a></p>
-              </div>
-
-          </div>
-          <!-- End row -->
-
+      <div class="col-md-1">
       </div>
-      <!-- End containing column -->
+
+      <div class="col-md-10">
+
+        <script>
+        </script>
+      </div>
+
+      <div class="col-md-1">
+      </div>
 
     </div>
-    <!-- End scrollable main content -->
-
     {% include "ucloud/sideright.html" %}
-
   </div>
+
   {% include "ucloud/footer.html" %}
 {% endblock %}
