@@ -155,7 +155,6 @@ header{
 }
 
 .otherBanner {
-  background-image: url("../images/tsquare.jpg");
   background-position: center;
   background-size: 100% auto;
   filter: blur(10px);
@@ -163,7 +162,6 @@ header{
 }
 
 .otherBanner2 {
-  background-image: url("../images/stardust.png");
   opacity:.8;
   background-position: center;
   background-size: 100% auto;
