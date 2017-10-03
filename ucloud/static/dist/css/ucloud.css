@@ -70,6 +70,10 @@ header{
   height:100%;
 }
 
+.w05 {
+  width:5%;
+}
+
 .w100 {
   width:100%;
 }
@@ -136,6 +140,34 @@ header{
   opacity:0;
   -webkit-transition: opacity 600ms, visibility 600ms;
   transition: opacity 600ms, visibility 600ms;
+}
+
+.otherView {
+  top: 0px;
+  position: absolute;
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-top: 10%;
+  background: rgba(0, 0, 0, .4);
+  height: 70%;
+  width: 70%;
+  box-shadow: 0px 0px 15px #888888;
+}
+
+.otherBanner {
+  background-image: url("../images/tsquare.jpg");
+  background-position: center;
+  background-size: 100% auto;
+  filter: blur(10px);
+  -webkit-filter: blur(10px); /* Safari 6.0 - 9.0 */
+}
+
+.otherBanner2 {
+  background-image: url("../images/stardust.png");
+  opacity:.8;
+  background-position: center;
+  background-size: 100% auto;
+  position:absolute;
 }
 
 .leadDropFix {
@@ -250,6 +282,54 @@ border-radius:0px 0px 10px 10px;
 
 .fixLocation3 {
   margin-top: 10px;
+}
+
+.carousel-inner>.item{
+   /*disables white flash*/
+   -webkit-transition: -webkit-transform .5s ease-in-out;
+   -o-transition: -o-transform .5s ease-in-out;
+   transition: transform .5s ease-in-out;
+}
+
+.otherTitleContainer {
+  padding:20px 40px 0px 40px;
+}
+
+.otherTitle {
+  color:rgba(255,255,255,1);
+}
+
+.otherMessageContainer {
+  bottom:0;
+  position:absolute;
+  padding:0px 40px 40px 40px;
+}
+
+.otherDesignContainer {
+  padding:40px 40px 0px 40px;
+}
+
+.otherDesignRelatedContainer {
+  opacity:0;
+}
+
+.otherDesignSidePad {
+  padding:0px 40px 0px 40px;
+}
+
+.otherSubTitle {
+  color:rgba(255,255,255,.8);
+}
+
+.otherMessageRight {
+  float:right;
+  margin-right:25px;
+  color:rgba(255,255,255,.8);
+  font-size:2rem;
+}
+
+.otherColor {
+  color: rgba(255,255,255,.5);
 }
 
 .logo {
@@ -577,6 +657,27 @@ input[type="text"]::-webkit-input-placeholder {
 .inputFocused:focus {
   background:transparent;
   border-color:rgba(255,255,255,.4)
+}
+
+.inputFocused2:focus {
+  border-color:rgba(0,0,0,.15)
+}
+
+.inputRadiusFix {
+  border-bottom-right-radius: 0px;
+  border-top-right-radius: 0px;
+}
+
+.inputRadiusFix2 {
+  border-bottom-left-radius: 0px;
+  border-top-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-top-right-radius: 0px;
+}
+
+.inputRadiusFix3 {
+  border-bottom-left-radius: 0px;
+  border-top-left-radius: 0px;
 }
 
 .floatFoot {

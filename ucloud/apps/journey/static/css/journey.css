@@ -1,3 +1,7 @@
-body {
-  background-image: url("../images/time.jpg");
+.journeyBanner {
+  background-image: url("../images/clouds.jpg");
+}
+
+.journeyBanner2 {
+  background-image: url("../../static/dist/images/stardust.png");
 }

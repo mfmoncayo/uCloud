@@ -30,6 +30,34 @@ $(document).ready(function() {
       }
   });
 
+  $('body').on("click", ".accountDrop.dropdown-menu", function (e) {
+    $(this).parent().is(".open") && e.stopPropagation()
+  });
+
+  $(".secondDrop").click(function() {
+    if($(this).siblings(".dropdown-menu").hasClass('block')){
+      $(this).siblings(".dropdown-menu").removeClass('block');
+    }
+    else {
+      $(this).siblings(".dropdown-menu").addClass('block');
+    }
+  });
+
+  $(document).click(function(e) {
+  var target = e.target;
+    if (!$(target).is('.secondDrop') ) {
+    $(".secondDrop").siblings(".dropdown-menu").removeClass('block');
+    }
+  });
+
+  $(".radioSelect").click(function () {
+    if($(this).siblings('.radioSelectMe').find('.toggleRadio').prop("checked", true)) {
+    }
+    else {
+    $(this).siblings('.radioSelectMe').find('.toggleRadio').prop("checked", true);
+    }
+  });
+
   $(".wactTitle").click(function() {
     $(".dropFix").toggle();
   });
@@ -98,5 +126,9 @@ $(document).ready(function() {
   $(".profFix").css("margin-right","0px");
   $(".leaflet-control-attribution").css("margin-right","615px");
   $(".leaflet-left > .leaflet-control-zoomhome").css("margin-bottom","28px");
+
+  $(".secondDrop").click(function() {
+    $(this).css("display","show");
+  });
 
 });

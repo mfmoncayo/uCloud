@@ -3,21 +3,12 @@
 {% load i18n %}
 {% load l10n %}
 {% load tz %}
-{% load leaflet_tags %}
 
 {% block head_title %}
 uCloud
 {% endblock %}
 
 {% block head_css %}
-{% leaflet_js %}
-{% leaflet_css %}
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"
-   integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ=="
-   crossorigin=""/>
-<script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"
- integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
- crossorigin=""></script>
 <script src="https://use.fontawesome.com/7a4ad4218b.js"></script>
 <link rel="stylesheet" href="../../static/dist/css/ucloud.css">
 <link rel="stylesheet" href="../../static/dist/css/offcanvas.css">
@@ -25,17 +16,15 @@ uCloud
 <script src="../../static/dist/js/offcanvas.js"></script>
 <script src="../../static/dist/js/ucloud.js"></script>
 <script src="../static/js/finance.js"></script>
-<link rel="stylesheet" href="../../static/dist/css/leaflet.zoomhome.css"/>
-<script src="../../static/dist/js/leaflet.zoomhome.js"></script>
 {% endblock %}
 
 
 
 {% block content %}
 
-<body><img class="cino financeBanner"></img></body>
+<body><img class="cino otherBanner financeBanner"></img></body>
 
-<div class="financeView layer4">
+<div class="otherView layer4">
 
   <div class="cino">
     <div id="carouselExampleIndicators" class="carousel slide h100" data-ride="carousel">
@@ -43,22 +32,29 @@ uCloud
           <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          <!-- <li data-target="#carouselExampleIndicators" data-slide-to="3"></li> -->
+          <!-- <li data-target="#carouselExampleIndicators" data-slide-to="4"></li> -->
+          <!-- <li data-target="#carouselExampleIndicators" data-slide-to="5"></li> -->
         </ol>
         <div class="carousel-inner cino d-block">
           <div class="carousel-item active cino item">
             <div class="cino">
-              <img class="financeBanner2 cino d-block"></img>
-              <div class="finTitleContainer d-block">
-                <div class="financeTitle">
-                  Guidance
+              <img class="otherBanner2 financeBanner2 cino d-block"></img>
+              <div class="otherTitleContainer d-block">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="otherTitle">
+                      <h1>Guidance</h1>
+                    </div>
+                  </div>
                 </div>
               </div>
 
-              <div class="finMessageContainer w100 container-fluid d-block">
+              <div class="otherMessageContainer w100 container-fluid d-block">
                 <div class="row">
                   <div class="col-md-5">
-                    <div class="financeMessageLeft">
-                      Powered by the Universe
+                    <div class="otherSubTitle">
+                      <h2>Powered by the Universe</h2>
                     </div>
                   </div>
 
@@ -66,7 +62,7 @@ uCloud
                   </div>
 
                   <div class="col-md-3">
-                    <div class="financeMessageRight">
+                    <div class="otherMessageRight">
                       <button type="button" class="btn btn-secondary">Start Now</button>
                     </div>
                   </div>
@@ -76,10 +72,370 @@ uCloud
             </div>
           </div>
           <div class="carousel-item cino item">
-            <img class="d-block w-100" src="..." alt="Second slide">
+            <div class="cino">
+              <img class="otherBanner2 financeBanner2 cino d-block"></img>
+              <div class="otherTitleContainer d-block">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="financeTitle">
+                      <h1>Design</h1>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="otherDesignContainer container-fluid d-block">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="financeTitle text-center">
+                      <h3>Group Details</h3>
+                      <br />
+                    </div>
+                  </div>
+                  <div class="col-lg-4 pb-3">
+                    <div class="input-group">
+                      <span class="input-group-addon radioSelectMe">
+                        <input class="toggleRadio" type="radio" aria-label="Radio button for following text input" name="oneoption">
+                      </span>
+                      <input class="form-control transparent inputFocused2 radioSelect famSelect" placeholder="Family" aria-label="Family" aria-describedby="basic-addon1" readonly="readonly">
+                    </div>
+                  </div>
+                  <div class="col-lg-4 pb-3">
+                    <div class="input-group">
+                      <span class="input-group-addon radioSelectMe">
+                        <input class="toggleRadio" type="radio" aria-label="Radio button for following text input" name="oneoption">
+                      </span>
+                      <input class="form-control transparent inputFocused2 radioSelect bizSelect" placeholder="Business" aria-label="Business" aria-describedby="basic-addon1" readonly="readonly">
+                      <div class="input-group-btn">
+                        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                          <a class="dropdown-item firmSelect" href="#">Firm</a>
+                          <a class="dropdown-item employeeSelect" href="#">Employee</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 pb-3">
+                    <div class="input-group">
+                      <span class="input-group-addon radioSelectMe">
+                        <input class="toggleRadio" type="radio" aria-label="Radio button for following text input" name="oneoption">
+                      </span>
+                      <input class="form-control transparent inputFocused2 radioSelect orgSelect" placeholder="Organization" aria-label="Organization" aria-describedby="basic-addon1" readonly="readonly">
+                      <div class="input-group-btn">
+                        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                          <a class="dropdown-item groupSelect" href="#">Group</a>
+                          <a class="dropdown-item memberSelect" href="#">Member</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="otherDesignRelatedContainer container-fluid d-block otherDesignSidePad">
+                <div class="row">
+                  <div class="col-md-12 pb-2">
+                    <div class="input-group">
+                      <span class="input-group-addon" id="basic-addon1"><i class="fal fa-at" aria-hidden="true"></i></span>
+                      <input type="text" class="form-control transparent iconColor inputFocused" placeholder="Join an existing group" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+                  </div>
+                  <div class="finDesignGroupContainer1 col-md-12">
+                    <div class="col-md-6 pr-0 pl-0 left">
+                      <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1"><i class="fal fa-user-alt" aria-hidden="true"></i></span>
+                        <input type="text" class="form-control transparent inputFocused inputRadiusFix" placeholder="Personal Name" aria-label="First Name" aria-describedby="basic-addon1">
+                      </div>
+                    </div>
+                    <div class="col-md-6 pr-0 pl-0 pb-2 left">
+                      <div class="input-group">
+                        <input type="text" class="form-control transparent inputFocused inputRadiusFix3" placeholder="Family Name" aria-label="Last Name" aria-describedby="basic-addon1">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="finDesignGroupContainer2 col-md-12">
+                    <div class="col-md-10 pr-0 pl-0 left">
+                      <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1"><i class="fal fa-building" aria-hidden="true"></i></span>
+                        <input type="text" class="form-control transparent inputFocused inputRadiusFix" placeholder="Doing Business As" aria-label="Doing Business As" aria-describedby="basic-addon1">
+                      </div>
+                    </div>
+                    <div class="col-md-2 pr-0 pl-0 pb-2 left">
+                      <div class="input-group">
+                        <input type="text" class="form-control transparent inputFocused inputRadiusFix3" placeholder="Entity Type" aria-label="Entity Type" aria-describedby="basic-addon1">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="finDesignGroupContainer2a col-md-12">
+                    <div class="col-md-6 pr-0 pl-0 left">
+                      <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1"><i class="fal fa-id-badge" aria-hidden="true"></i></span>
+                        <input type="text" class="form-control transparent inputFocused inputRadiusFix" placeholder="First Name" aria-label="First Name" aria-describedby="basic-addon1">
+                      </div>
+                    </div>
+                    <div class="col-md-6 pr-0 pl-0 pb-2 left">
+                      <div class="input-group">
+                        <input type="text" class="form-control transparent inputFocused inputRadiusFix3" placeholder="Last Name" aria-label="Last Name" aria-describedby="basic-addon1">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="finDesignGroupContainer3 col-md-12">
+                    <div class="col-md-8 pr-0 pl-0 left">
+                      <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1"><i class="fal fa-sitemap" aria-hidden="true"></i></span>
+                        <input type="text" class="form-control transparent inputFocused inputRadiusFix" placeholder="Organized As" aria-label="Organized As" aria-describedby="basic-addon1">
+                      </div>
+                    </div>
+                    <div class="col-md-4 pr-0 pl-0 left pb-2">
+                      <div class="input-group">
+                        <input type="text" class="form-control transparent inputFocused inputRadiusFix3" placeholder="Organization Type" aria-label="Organization Type" aria-describedby="basic-addon1">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="finDesignGroupContainer3a col-md-12">
+                    <div class="col-md-6 pr-0 pl-0 left">
+                      <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1"><i class="fal fa-user-plus" aria-hidden="true"></i></span>
+                        <input type="text" class="form-control transparent inputFocused inputRadiusFix" placeholder="First Name" aria-label="First Name" aria-describedby="basic-addon1">
+                      </div>
+                    </div>
+                    <div class="col-md-6 pr-0 pl-0 pb-2 left">
+                      <div class="input-group">
+                        <input type="text" class="form-control transparent inputFocused inputRadiusFix3" placeholder="Last Name" aria-label="Last Name" aria-describedby="basic-addon1">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-1 pb-2">
+                  </div>
+                  <div class="col-md-3 pr-0">
+                    <div class="input-group">
+                      <span class="input-group-addon" id="basic-addon1"><i class="fal fa-location-arrow" aria-hidden="true"></i></span>
+                      <input type="text" class="form-control transparent inputFocused inputRadiusFix" placeholder="Country" aria-label="Country" aria-describedby="basic-addon1">
+                    </div>
+                  </div>
+                  <div class="col-md-4 p-0">
+                    <div class="input-group">
+                      <input type="text" class="form-control transparent inputFocused inputRadiusFix2" placeholder="City, State" aria-label="City, State" aria-describedby="basic-addon1">
+                    </div>
+                  </div>
+                  <div class="col-md-3 pl-0 pb-2">
+                    <div class="input-group">
+                      <input type="text" class="form-control transparent inputFocused inputRadiusFix3" placeholder="Town" aria-label="Town" aria-describedby="basic-addon1">
+                    </div>
+                  </div>
+                  <div class="col-md-1 pb-2">
+                  </div>
+                  <div class="col-md-3 pb-2">
+                  </div>
+                  <div class="col-md-6 pb-2 text-center otherColor">
+                    <p>Leave empty to inherit location from Group upon approval</p>
+                  </div>
+                  <div class="col-md-3 pb-2">
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="carousel-item cino item">
-            <img class="d-block w-100" src="..." alt="Third slide">
+            <div class="cino">
+              <img class="otherBanner2 financeBanner2 cino d-block"></img>
+              <div class="otherTitleContainer d-block">
+                <div class="row">
+
+                  <div class="col-md-12">
+                    <div class="otherTitle">
+                      <h1>Design</h1>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="otherDesignContainer container-fluid d-block">
+                <div class="row">
+
+                  <div class="col-md-12">
+                    <div class="otherTitle text-center">
+                      <h3 class="detailTitle"></h3>
+                      <br />
+                    </div>
+                  </div>
+
+                  <div class="finDesignDetailsContainer1 col-md-12">
+                    <div class="col-lg-3 left">
+                      <div class="input-group">
+                        <span class="input-group-addon radioSelectMe">
+                          <input class="toggleRadio" type="radio" aria-label="Radio button for following text input" name="secondoption">
+                        </span>
+                        <input class="form-control transparent inputFocused2 radioSelect breakSelect" placeholder="Break" aria-label="Break" aria-describedby="basic-addon1" readonly="readonly">
+                      </div>
+                    </div>
+                    <div class="col-lg-3 left">
+                      <div class="input-group">
+                        <span class="input-group-addon radioSelectMe">
+                          <input class="toggleRadio" type="radio" aria-label="Radio button for following text input" name="secondoption">
+                        </span>
+                        <input class="form-control transparent inputFocused2 radioSelect studentSelect" placeholder="Student" aria-label="Student" aria-describedby="basic-addon1" readonly="readonly">
+                      </div>
+                    </div>
+                    <div class="col-lg-3 left">
+                      <div class="input-group">
+                        <span class="input-group-addon radioSelectMe">
+                          <input class="toggleRadio" type="radio" aria-label="Radio button for following text input" name="secondoption">
+                        </span>
+                        <input class="form-control transparent inputFocused2 radioSelect partSelect" placeholder="Part Time" aria-label="Part Time" aria-describedby="basic-addon1" readonly="readonly">
+                      </div>
+                    </div>
+                    <div class="col-lg-3 left">
+                      <div class="input-group">
+                        <span class="input-group-addon radioSelectMe">
+                          <input class="toggleRadio" type="radio" aria-label="Radio button for following text input" name="secondoption">
+                        </span>
+                        <input class="form-control transparent inputFocused2 radioSelect fullSelect" placeholder="Full Time" aria-label="Full Time" aria-describedby="basic-addon1" readonly="readonly">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="finDesignDetailsContainer2 col-md-12">
+                    <div class="col-lg-3 left">
+                      <div class="input-group">
+                        <span class="input-group-addon radioSelectMe">
+                          <input class="toggleRadio" type="radio" aria-label="Radio button for following text input" name="secondoption">
+                        </span>
+                        <input class="form-control transparent inputFocused2 radioSelect breakSelect" placeholder="Testing" aria-label="Break" aria-describedby="basic-addon1" readonly="readonly">
+                      </div>
+                    </div>
+                    <div class="col-lg-3 left">
+                      <div class="input-group">
+                        <span class="input-group-addon radioSelectMe">
+                          <input class="toggleRadio" type="radio" aria-label="Radio button for following text input" name="secondoption">
+                        </span>
+                        <input class="form-control transparent inputFocused2 radioSelect studentSelect" placeholder="First Step" aria-label="Student" aria-describedby="basic-addon1" readonly="readonly">
+                      </div>
+                    </div>
+                    <div class="col-lg-3 left">
+                      <div class="input-group">
+                        <span class="input-group-addon radioSelectMe">
+                          <input class="toggleRadio" type="radio" aria-label="Radio button for following text input" name="secondoption">
+                        </span>
+                        <input class="form-control transparent inputFocused2 radioSelect partSelect" placeholder="Experienced" aria-label="Part Time" aria-describedby="basic-addon1" readonly="readonly">
+                      </div>
+                    </div>
+                    <div class="col-lg-3 left">
+                      <div class="input-group">
+                        <span class="input-group-addon radioSelectMe">
+                          <input class="toggleRadio" type="radio" aria-label="Radio button for following text input" name="secondoption">
+                        </span>
+                        <input class="form-control transparent inputFocused2 radioSelect fullSelect" placeholder="Profession" aria-label="Full Time" aria-describedby="basic-addon1" readonly="readonly">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="finDesignDetailsContainer2a col-md-12">
+                    <div class="col-lg-3 left">
+                      <div class="input-group">
+                        <span class="input-group-addon radioSelectMe">
+                          <input class="toggleRadio" type="radio" aria-label="Radio button for following text input" name="secondoption">
+                        </span>
+                        <input class="form-control transparent inputFocused2 radioSelect breakSelect" placeholder="Intern" aria-label="Break" aria-describedby="basic-addon1" readonly="readonly">
+                      </div>
+                    </div>
+                    <div class="col-lg-3 left">
+                      <div class="input-group">
+                        <span class="input-group-addon radioSelectMe">
+                          <input class="toggleRadio" type="radio" aria-label="Radio button for following text input" name="secondoption">
+                        </span>
+                        <input class="form-control transparent inputFocused2 radioSelect studentSelect" placeholder="New Hire" aria-label="Student" aria-describedby="basic-addon1" readonly="readonly">
+                      </div>
+                    </div>
+                    <div class="col-lg-3 left">
+                      <div class="input-group">
+                        <span class="input-group-addon radioSelectMe">
+                          <input class="toggleRadio" type="radio" aria-label="Radio button for following text input" name="secondoption">
+                        </span>
+                        <input class="form-control transparent inputFocused2 radioSelect partSelect" placeholder="Experienced" aria-label="Part Time" aria-describedby="basic-addon1" readonly="readonly">
+                      </div>
+                    </div>
+                    <div class="col-lg-3 left">
+                      <div class="input-group">
+                        <span class="input-group-addon radioSelectMe">
+                          <input class="toggleRadio" type="radio" aria-label="Radio button for following text input" name="secondoption">
+                        </span>
+                        <input class="form-control transparent inputFocused2 radioSelect fullSelect" placeholder="Professional" aria-label="Full Time" aria-describedby="basic-addon1" readonly="readonly">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="finDesignDetailsContainer3 col-md-12">
+                      <div class="col-lg-3 left">
+                        <div class="input-group">
+                          <span class="input-group-addon radioSelectMe">
+                            <input class="toggleRadio" type="radio" aria-label="Radio button for following text input" name="secondoption">
+                          </span>
+                          <input class="form-control transparent inputFocused2 radioSelect breakSelect" placeholder="Envisioning" aria-label="Break" aria-describedby="basic-addon1" readonly="readonly">
+                        </div>
+                      </div>
+                      <div class="col-lg-3 left">
+                        <div class="input-group">
+                          <span class="input-group-addon radioSelectMe">
+                            <input class="toggleRadio" type="radio" aria-label="Radio button for following text input" name="secondoption">
+                          </span>
+                          <input class="form-control transparent inputFocused2 radioSelect studentSelect" placeholder="New Organization" aria-label="Student" aria-describedby="basic-addon1" readonly="readonly">
+                        </div>
+                      </div>
+                      <div class="col-lg-3 left">
+                        <div class="input-group">
+                          <span class="input-group-addon radioSelectMe">
+                            <input class="toggleRadio" type="radio" aria-label="Radio button for following text input" name="secondoption">
+                          </span>
+                          <input class="form-control transparent inputFocused2 radioSelect partSelect" placeholder="Established" aria-label="Part Time" aria-describedby="basic-addon1" readonly="readonly">
+                        </div>
+                      </div>
+                      <div class="col-lg-3 left">
+                        <div class="input-group">
+                          <span class="input-group-addon radioSelectMe">
+                            <input class="toggleRadio" type="radio" aria-label="Radio button for following text input" name="secondoption">
+                          </span>
+                          <input class="form-control transparent inputFocused2 radioSelect fullSelect" placeholder="Society" aria-label="Full Time" aria-describedby="basic-addon1" readonly="readonly">
+                        </div>
+                      </div>
+                  </div>
+                  <div class="finDesignDetailsContainer3a col-md-12">
+                      <div class="col-lg-3 left">
+                        <div class="input-group">
+                          <span class="input-group-addon radioSelectMe">
+                            <input class="toggleRadio" type="radio" aria-label="Radio button for following text input" name="secondoption">
+                          </span>
+                          <input class="form-control transparent inputFocused2 radioSelect breakSelect" placeholder="Attendee" aria-label="Break" aria-describedby="basic-addon1" readonly="readonly">
+                        </div>
+                      </div>
+                      <div class="col-lg-3 left">
+                        <div class="input-group">
+                          <span class="input-group-addon radioSelectMe">
+                            <input class="toggleRadio" type="radio" aria-label="Radio button for following text input" name="secondoption">
+                          </span>
+                          <input class="form-control transparent inputFocused2 radioSelect studentSelect" placeholder="Member" aria-label="Student" aria-describedby="basic-addon1" readonly="readonly">
+                        </div>
+                      </div>
+                      <div class="col-lg-3 left">
+                        <div class="input-group">
+                          <span class="input-group-addon radioSelectMe">
+                            <input class="toggleRadio" type="radio" aria-label="Radio button for following text input" name="secondoption">
+                          </span>
+                          <input class="form-control transparent inputFocused2 radioSelect partSelect" placeholder="Chair Member" aria-label="Part Time" aria-describedby="basic-addon1" readonly="readonly">
+                        </div>
+                      </div>
+                      <div class="col-lg-3 left">
+                        <div class="input-group">
+                          <span class="input-group-addon radioSelectMe">
+                            <input class="toggleRadio" type="radio" aria-label="Radio button for following text input" name="secondoption">
+                          </span>
+                          <input class="form-control transparent inputFocused2 radioSelect fullSelect" placeholder="Board Member" aria-label="Full Time" aria-describedby="basic-addon1" readonly="readonly">
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <a class="carousel-control-prev w05" href="#carouselExampleIndicators" role="button" data-slide="prev">
