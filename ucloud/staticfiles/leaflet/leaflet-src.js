@@ -12558,11 +12558,8 @@ L.Control.Zoom = L.Control.extend({
 // @option zoomControl: Boolean = true
 // Whether a [zoom control](#control-zoom) is added to the map by default.
 L.Map.mergeOptions({
-	zoomControl: false
+	zoomControl: true
 });
-
-var zoomHome = L.Control.zoomHome({position: 'bottomright'});
-zoomHome.addTo(map);
 
 L.Map.addInitHook(function () {
 	if (this.options.zoomControl) {
@@ -12596,7 +12593,7 @@ L.Control.Attribution = L.Control.extend({
 
 		// @option prefix: String = 'Leaflet'
 		// The HTML text shown before the attributions. Pass `false` to disable.
-		prefix: ''
+		prefix: '<a href="http://leafletjs.com" title="A JS library for interactive maps">Leaflet</a>'
 	},
 
 	initialize: function (options) {

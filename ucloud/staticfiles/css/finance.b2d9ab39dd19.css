@@ -1,0 +1,60 @@
+.financeBanner {
+  background-image: url("../images/tsquare.390cdab98f4e.jpg");
+}
+
+.financeBanner2 {
+  background-image: url("../images/stardust.81bd6cdf3df8.png");
+}
+
+.finDesignGroupContainer1 {
+  display:none;
+}
+
+.finDesignGroupContainer2 {
+  display:none;
+}
+
+.finDesignGroupContainer2a {
+  display:none;
+}
+
+.finDesignGroupContainer3 {
+  display:none;
+}
+
+.finDesignGroupContainer3a {
+  display:none;
+}
+
+.finDesignDetailsContainer1 {
+  display:none;
+}
+
+.finDesignDetailsContainer2 {
+  display:none;
+}
+
+.finDesignDetailsContainer2a {
+  display:none;
+}
+
+.finDesignDetailsContainer3 {
+  display:none;
+}
+
+.finDesignDetailsContainer3a {
+  display:none;
+}
+
+input[type='radio']:checked:after {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    left: -1px;
+    position: relative;
+    background-color: #000;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+}

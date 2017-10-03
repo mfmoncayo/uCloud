@@ -1,162 +1,60 @@
-body {
-  background-position: center bottom;
+.financeBanner {
+  background-image: url("../images/tsquare.jpg");
 }
 
-.correctNav {
-  margin-left:-25px;
+.financeBanner2 {
+  background-image: url("../images/stardust.png");
 }
 
-.correctDrop {
-  left:auto;
-  margin-left:-50px;
-}
-
-.finLeft {
-  color:#FFF;
-  text-align:left;
-  margin: 0px;
-  text-shadow: 0 5px 10px rgba(0,0,0,.9);
-  font-weight:bold;
-}
-
-.finCenter {
-  color:#FFF;
-  text-align:center;
-  margin: 0px;
-  text-shadow: 0 5px 10px rgba(0,0,0,.9);
-  font-weight:bold;
-}
-
-.finRight {
-  color:#FFF;
-  text-align:right;
-  margin: 0px;
-  text-shadow: 0 5px 10px rgba(0,0,0,.9);
-  font-weight:bold;
-}
-
-.finBar {
-  height:1%;
-  min-height:6px;
-  width:83%;
-  min-width:830px;
-  margin-top:2%;
-  margin-left:5%;
-  margin-right: 5%;
-  border-radius: 0px 0px 0px 0px;
-  border-top: 3px solid white;
-}
-
-.finBar2 {
-  height:1%;
-  min-height:6px;
-  width:20%;
-  min-width:200px;
-  margin-top:2%;
-  margin-left:33%;
-  margin-right: 40%;
-  border-radius: 0px 0px 0px 0px;
-  border-top: 3px solid white;
-}
-
-.borderWhite {
-  border: 1px solid white;
-}
-
-.float {
-  float:left;
-}
-
-.navbar .nav > li > .dropdown-menu::after,
-.navbar .nav > li > .dropdown-menu::before {
+.finDesignGroupContainer1 {
   display:none;
 }
 
-.correctSecNav {
-  margin-left:25px;
+.finDesignGroupContainer2 {
+  display:none;
 }
 
-.appCenterCorrect {
-  margin-left:30px;
+.finDesignGroupContainer2a {
+  display:none;
 }
 
-.formFix {
-  background:inherit;
+.finDesignGroupContainer3 {
+  display:none;
 }
 
-.btnFix {
-  margin-top:-20px;
+.finDesignGroupContainer3a {
+  display:none;
 }
 
-#clearColor {
-  background-color:transparent;
+.finDesignDetailsContainer1 {
+  display:none;
 }
 
-#leftColumn {
-  height: 95%;
-  overflow: auto;
-  box-sizing: border-box;
+.finDesignDetailsContainer2 {
+  display:none;
 }
 
-  .planCollapseHead {
-    background-color:#222;
-    border-radius: 4px 4px 0px 0px;
-  }
+.finDesignDetailsContainer2a {
+  display:none;
+}
 
-  .collapseAdmin {
-    padding: .75rem 1.25rem;
-    margin-bottom: 0;
-    border-bottom: 1px solid rgba(0, 0, 0, .125);
-    font-size:1.2rem;
-    font-weight:normal;
-  }
+.finDesignDetailsContainer3 {
+  display:none;
+}
 
-  .planCollapseFoot {
-    background-color:#222;
-    border-radius: 0px 0px 4px 4px;
-  }
+.finDesignDetailsContainer3a {
+  display:none;
+}
 
-  .FixCollapseItem {
-    padding:.25rem;
-    background-color:#dcdcdc;
-  }
-
-  .FixCollapseItem2 {
-    padding:0rem;
-    border:none;
-  }
-
-  .fixATag {
-    border:none;
-    margin-bottom:-1px;
-    border-radius:0px;
-  }
-
-  .financebanner {
-    background-image: url("../images/porsche.jpeg");
-    background-position: center bottom;
-    background-size: 100% 100%;
-    border-radius: 5px;
-    border:2px solid black;
-    margin-top:3px;
-    max-width:700px;
-  }
-
-  .noRadius {
-    border-radius:0px;
-  }
-
-  .middleLC {
-    background-color:grey;
-    height:75%;
-  }
-
-  .bottomLC {
-    background-color:black;
-    height:15%;
-  }
-
-.rightColumn {
-  background-color:blue;
-  height:100%;
+input[type='radio']:checked:after {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    left: -1px;
+    position: relative;
+    background-color: #000;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
 }
