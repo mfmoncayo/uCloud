@@ -9,4 +9,9 @@ urlpatterns = [
     url(r'^education/', include('ucloud.apps.education.urls')),
     url(r'^health/', include('ucloud.apps.health.urls')),
     url(r'^journey/', include('ucloud.apps.journey.urls')),
+    url(r'^d/', include('ucloud.apps.discover.urls')),
+    url(r'^f/', include('ucloud.apps.finance.urls')),
+    url(r'^e/', include('ucloud.apps.education.urls')),
+    url(r'^h/', include('ucloud.apps.health.urls')),
+    url(r'^j/', include('ucloud.apps.journey.urls')),
 ]
