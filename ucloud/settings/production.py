@@ -1,6 +1,11 @@
 # -*- coding: utf-8 -*-
 from .base import *
 
+# Required function for Heroku to parse the DB variables
+db_from_env = dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(db_from_env)
+# DATABASES['default'] =  dj_database_url.config()
+
 ALLOWED_HOSTS = [
                 '127.0.0.1',
                 'www.u.live',
@@ -35,7 +40,3 @@ STATICFILES_DIRS = [
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-
-# Required function for Heroku to parse the DB variables
-db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES['default'] =  dj_database_url.config()

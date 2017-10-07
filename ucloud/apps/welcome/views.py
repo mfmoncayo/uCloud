@@ -2,6 +2,7 @@
 from django.views import View
 from django.shortcuts import render, redirect
 from django.contrib.auth import login, authenticate, logout
+from django_hosts.resolvers import reverse
 
 from custom_user.forms import EmailUserCreationForm, LoginUserForm, ResetPasswordForm
 
@@ -33,7 +34,8 @@ class HomeView(View):
 
             if user is not None:
                 login(request, user)
-                return redirect('dashboard')
+                discover = reverse('d', host='d')
+                return render(request, 'discover.html', {'d': discover})
 
             context = {
                 "loginform": loginform,
@@ -52,7 +54,8 @@ class HomeView(View):
             if registerform.is_valid():
                 registerform.save()
 
-                return redirect('dashboard')
+                discover = reverse('d', host='d')
+                return render(request, 'discover.html', {'d': discover})
 
             context = {
                 "loginform": loginform,
@@ -68,7 +71,7 @@ class HomeView(View):
             forgotform = ResetPasswordForm(request.POST)
 
             if forgotform.is_valid():
-                return redirect('dashboard')
+                return redirect('index.html')
 
             context = {
                 "loginform": loginform,
