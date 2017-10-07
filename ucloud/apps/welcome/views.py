@@ -34,8 +34,8 @@ class HomeView(View):
 
             if user is not None:
                 login(request, user)
-                discover = reverse('d', host='d')
-                return render(request, 'journey.html', {'d': discover})
+                journey = reverse('j', host='j')
+                return render(request, 'journey.html', {'j': journey})
 
             context = {
                 "loginform": loginform,
@@ -54,8 +54,8 @@ class HomeView(View):
             if registerform.is_valid():
                 registerform.save()
 
-                discover = reverse('d', host='d')
-                return render(request, 'journey.html', {'d': discover})
+                journey = reverse('j', host='j')
+                return render(request, 'journey.html', {'j': journety})
 
             context = {
                 "loginform": loginform,
