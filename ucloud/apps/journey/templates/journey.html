@@ -144,96 +144,10 @@ uCloud
                     </div>
                   </div>
                   <div class="finDesignGroupContainer1 col-md-12">
-                    <div class="col-md-6 pr-0 pl-0 left">
-                      <div class="input-group">
-                        <span class="input-group-addon" id="basic-addon1"><i class="fal fa-user-alt" aria-hidden="true"></i></span>
-                        <input type="text" class="form-control transparent inputFocused inputRadiusFix" placeholder="Personal Name" aria-label="First Name" aria-describedby="basic-addon1">
-                      </div>
-                    </div>
-                    <div class="col-md-6 pr-0 pl-0 pb-2 left">
-                      <div class="input-group">
-                        <input type="text" class="form-control transparent inputFocused inputRadiusFix3" placeholder="Family Name" aria-label="Last Name" aria-describedby="basic-addon1">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="finDesignGroupContainer2 col-md-12">
-                    <div class="col-md-10 pr-0 pl-0 left">
-                      <div class="input-group">
-                        <span class="input-group-addon" id="basic-addon1"><i class="fal fa-building" aria-hidden="true"></i></span>
-                        <input type="text" class="form-control transparent inputFocused inputRadiusFix" placeholder="Doing Business As" aria-label="Doing Business As" aria-describedby="basic-addon1">
-                      </div>
-                    </div>
-                    <div class="col-md-2 pr-0 pl-0 pb-2 left">
-                      <div class="input-group">
-                        <input type="text" class="form-control transparent inputFocused inputRadiusFix3" placeholder="Entity Type" aria-label="Entity Type" aria-describedby="basic-addon1">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="finDesignGroupContainer2a col-md-12">
-                    <div class="col-md-6 pr-0 pl-0 left">
-                      <div class="input-group">
-                        <span class="input-group-addon" id="basic-addon1"><i class="fal fa-id-badge" aria-hidden="true"></i></span>
-                        <input type="text" class="form-control transparent inputFocused inputRadiusFix" placeholder="First Name" aria-label="First Name" aria-describedby="basic-addon1">
-                      </div>
-                    </div>
-                    <div class="col-md-6 pr-0 pl-0 pb-2 left">
-                      <div class="input-group">
-                        <input type="text" class="form-control transparent inputFocused inputRadiusFix3" placeholder="Last Name" aria-label="Last Name" aria-describedby="basic-addon1">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="finDesignGroupContainer3 col-md-12">
-                    <div class="col-md-8 pr-0 pl-0 left">
-                      <div class="input-group">
-                        <span class="input-group-addon" id="basic-addon1"><i class="fal fa-sitemap" aria-hidden="true"></i></span>
-                        <input type="text" class="form-control transparent inputFocused inputRadiusFix" placeholder="Organized As" aria-label="Organized As" aria-describedby="basic-addon1">
-                      </div>
-                    </div>
-                    <div class="col-md-4 pr-0 pl-0 left pb-2">
-                      <div class="input-group">
-                        <input type="text" class="form-control transparent inputFocused inputRadiusFix3" placeholder="Organization Type" aria-label="Organization Type" aria-describedby="basic-addon1">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="finDesignGroupContainer3a col-md-12">
-                    <div class="col-md-6 pr-0 pl-0 left">
-                      <div class="input-group">
-                        <span class="input-group-addon" id="basic-addon1"><i class="fal fa-user-plus" aria-hidden="true"></i></span>
-                        <input type="text" class="form-control transparent inputFocused inputRadiusFix" placeholder="First Name" aria-label="First Name" aria-describedby="basic-addon1">
-                      </div>
-                    </div>
-                    <div class="col-md-6 pr-0 pl-0 pb-2 left">
-                      <div class="input-group">
-                        <input type="text" class="form-control transparent inputFocused inputRadiusFix3" placeholder="Last Name" aria-label="Last Name" aria-describedby="basic-addon1">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-1 pb-2">
-                  </div>
-                  <div class="col-md-3 pr-0">
-                    <div class="input-group">
-                      <span class="input-group-addon" id="basic-addon1"><i class="fal fa-location-arrow" aria-hidden="true"></i></span>
-                      <input type="text" class="form-control transparent inputFocused inputRadiusFix" placeholder="Country" aria-label="Country" aria-describedby="basic-addon1">
-                    </div>
-                  </div>
-                  <div class="col-md-4 p-0">
-                    <div class="input-group">
-                      <input type="text" class="form-control transparent inputFocused inputRadiusFix2" placeholder="City, State" aria-label="City, State" aria-describedby="basic-addon1">
-                    </div>
-                  </div>
-                  <div class="col-md-3 pl-0 pb-2">
-                    <div class="input-group">
-                      <input type="text" class="form-control transparent inputFocused inputRadiusFix3" placeholder="Town" aria-label="Town" aria-describedby="basic-addon1">
-                    </div>
-                  </div>
-                  <div class="col-md-1 pb-2">
-                  </div>
-                  <div class="col-md-3 pb-2">
-                  </div>
-                  <div class="col-md-6 pb-2 text-center otherColor">
-                    <p>Leave empty to inherit location from Group upon approval</p>
-                  </div>
-                  <div class="col-md-3 pb-2">
+                    <form class="form-signin storyForm" role="form" method="POST">
+                      {% csrf_token %}
+                      {{ storyform.as_p }}
+                    </form>
                   </div>
                 </div>
               </div>

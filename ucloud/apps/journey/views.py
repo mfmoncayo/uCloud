@@ -1,9 +1,15 @@
-from django.shortcuts import render
+from django.views import View
+from django.shortcuts import render, redirect
+from django_hosts.resolvers import reverse
 from django.http import HttpResponse
+from .forms import StoryForm
 
 # Create your views here.
-def journey(request):
-    return render(request, 'journey.html')
+class JourneyView(View):
+    def get(self, request, *args, **kwargs):
+        start_storyform = StoryForm()
 
-def j(request):
-    return render(request, 'journey.html')
+        context = {
+            "storyform": start_storyform,
+        }
+        return render(request, 'journey.html', context)

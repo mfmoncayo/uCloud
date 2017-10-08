@@ -1,8 +1,8 @@
 from django.conf.urls import url
 
-from . import views
+from .views import JourneyView
 
 urlpatterns = [
-    url(r'^$', views.journey, name='journey'),
-    url(r'^$', views.journey, name='j'),
+    url(r'^$', JourneyView.as_view(), name='journey'),
+    url(r'^$', JourneyView.as_view(), name='j'),
 ]

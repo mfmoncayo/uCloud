@@ -55,7 +55,7 @@ class HomeView(View):
                 registerform.save()
 
                 journey = reverse('j', host='j')
-                return render(request, 'journey.html', {'j': journety})
+                return render(request, 'journey.html', {'j': journey})
 
             context = {
                 "loginform": loginform,
