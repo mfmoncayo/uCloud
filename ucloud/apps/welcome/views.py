@@ -34,7 +34,7 @@ class HomeView(View):
 
             if user is not None:
                 login(request, user)
-                return redirect(reverse('JourneyView', host='journey'))
+                return redirect('journey', host='journey')
 
             context = {
                 "loginform": loginform,
