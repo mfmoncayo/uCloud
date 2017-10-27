@@ -6,7 +6,7 @@ $(document).ready(function() {
     $(this).attr('src', '../../static/dist/images/logo.png');
   });
 
-  $(".logo").click(function(e) {
+  $(".glogo").click(function(e) {
       e.stopPropagation();
       if($('.worldView').hasClass('dead')) {
         $("#earth_div2").css('visibility','visible');
@@ -17,6 +17,10 @@ $(document).ready(function() {
         $(".worldView2").css('opacity','1');
         $(".worldView").addClass('alive');
         $(".worldView").removeClass('dead');
+        $(".bookView").css('visibility','hidden');
+        $(".bookView").css('opacity','0');
+        $(".bookView").addClass('dead');
+        $(".bookView").removeClass('alive');
       }
       else {
         $("#earth_div2").css('visibility','hidden');
@@ -27,6 +31,30 @@ $(document).ready(function() {
         $(".worldView2").css('opacity','0');
         $(".worldView").removeClass('alive');
         $(".worldView").addClass('dead');
+      }
+  });
+
+  $(".blogo").click(function(e) {
+      e.stopPropagation();
+      if($('.bookView').hasClass('dead')) {
+        $(".bookView").css('visibility','visible');
+        $(".bookView").css('opacity','1');
+        $(".bookView").addClass('alive');
+        $(".bookView").removeClass('dead');
+        $("#earth_div2").css('visibility','hidden');
+        $(".worldView").css('visibility','hidden');
+        $(".worldView2").css('visibility','hidden');
+        $("#earth_div2").css('opacity','0');
+        $(".worldView").css('opacity','0');
+        $(".worldView2").css('opacity','0');
+        $(".worldView").addClass('dead');
+        $(".worldView").removeClass('alive');
+      }
+      else {
+        $(".bookView").css('visibility','hidden');
+        $(".bookView").css('opacity','0');
+        $(".bookView").addClass('dead');
+        $(".bookView").removeClass('alive');
       }
   });
 

@@ -17,11 +17,12 @@ uCloud
    integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ=="
    crossorigin=""/>
 <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"
- integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
- crossorigin=""></script>
+   integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
+   crossorigin=""></script>
 <script src="https://use.fontawesome.com/7a4ad4218b.js"></script>
 <link rel="stylesheet" href="../../static/dist/css/ucloud.css">
 <link rel="stylesheet" href="../../static/dist/css/offcanvas.css">
+<link rel="stylesheet" href="../static/css/discover.css">
 <script src="../../static/dist/js/offcanvas.js"></script>
 <script src="../static/js/discover.js"></script>
 <link rel="stylesheet" href="../../static/dist/css/leaflet.zoomhome.css"/>
@@ -149,12 +150,6 @@ uCloud
         L.marker([41.8781, -87.6298]).addTo(map)
             .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
             .openPopup();
-
-          var zoomHome = L.Control.zoomHome();
-          zoomHome.addTo(map);
-
-          var zoomHome2 = L.Control.zoomHome2();
-          zoomHome2.addTo(map);
         </script>
       </div>
 
