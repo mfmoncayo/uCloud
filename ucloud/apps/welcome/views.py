@@ -36,7 +36,7 @@ class HomeView(View):
             if user is not None:
                 login(request, user)
                 journey = reverse('j', host='j')
-                return HttpResponseRedirect("journey.ucloud.live")
+                return redirect(reverse('j', host='journey.ucloud.live'))
 
             context = {
                 "loginform": loginform,
