@@ -7,9 +7,13 @@ from .forms import StoryForm
 # Create your views here.
 class JourneyView(View):
     def get(self, request, *args, **kwargs):
-        start_storyform = StoryForm()
+        if 'id' in request.session:
+            email = request.session['id']
 
-        context = {
-            "storyform": start_storyform,
-        }
-        return render(request, 'journey.html', context)
+            start_storyform = StoryForm()
+
+            context = {
+                "user": email,
+                "storyform": start_storyform,
+            }
+            return render(request, 'journey.html', context)

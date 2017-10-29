@@ -38,6 +38,7 @@ class HomeView(View):
 
             if user is not None:
                 login(request, user)
+                request.session['id'] = user.email
                 return HttpResponseRedirect('http://journey.ucloud.live')
 
             context = {
