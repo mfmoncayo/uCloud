@@ -10,10 +10,9 @@ from .forms import StoryForm
 class JourneyView(View):
     def get(self, request, *args, **kwargs):]
         start_storyform = StoryForm()
-        user = get_user_model()._default_manager.get(email=email)
 
         context = {
             "storyform": start_storyform,
-            "user": user.email
+            "user": "Jeff"
         }
         return render(request, 'journey.html', context)
