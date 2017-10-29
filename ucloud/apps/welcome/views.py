@@ -5,7 +5,6 @@ from django.utils.decorators import method_decorator
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect
 from django_hosts.resolvers import reverse
-from django.contrib import auth
 from django.views import View
 
 from custom_user.forms import EmailUserCreationForm, LoginUserForm, ResetPasswordForm
@@ -35,10 +34,10 @@ class HomeView(View):
 
             email = request.POST['email']
             password = request.POST['password']
-            user = auth.authenticate(email=email, password=password)
+            user = authenticate(email=email, password=password)
 
             if user is not None:
-                auth.login(request, user)
+                login(request, user)
                 return HttpResponseRedirect('http://journey.ucloud.live')
 
             context = {
