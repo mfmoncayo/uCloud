@@ -8,9 +8,10 @@ from .forms import StoryForm
 class JourneyView(View):
     def get(self, request, *args, **kwargs):
         start_storyform = StoryForm()
+        bond = "Mike"
 
         context = {
-            "user": "bond",
+            "user": bond,
             "storyform": start_storyform,
         }
         return render(request, 'journey.html', context)
