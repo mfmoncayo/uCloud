@@ -2,10 +2,10 @@
 from django.contrib.auth import login, authenticate, logout
 from django.views.decorators.csrf import csrf_protect
 from django.utils.decorators import method_decorator
-from django.template import RequestContext, Template
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect
 from django_hosts.resolvers import reverse
+from django.contrib import auth
 from django.views import View
 
 from custom_user.forms import EmailUserCreationForm, LoginUserForm, ResetPasswordForm
@@ -36,7 +36,6 @@ class HomeView(View):
             email = request.POST['email']
             password = request.POST['password']
             user = auth.authenticate(email=email, password=password)
-            m = Member.objects.get(username=request.POST['username'])
 
             if user is not None:
                 auth.login(request, user)
