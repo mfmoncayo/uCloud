@@ -169,7 +169,9 @@ uCloud
                 <div class="row">
                   <div class="col-md-12">
                     <div class="otherTitle">
-                      <h1>Journey</h1>
+                      {% if user.is_authenticated %}
+                        <h1>Welcome, {{ user.username }}.</h1>
+                      {% endif %}
                     </div>
                   </div>
                 </div>
@@ -179,7 +181,7 @@ uCloud
                 <div class="row">
                   <div class="col-md-5">
                     <div class="otherSubTitle">
-                      <h2>with the uCloud</h2>
+                      <h2>Journey with the uCloud</h2>
                     </div>
                   </div>
 

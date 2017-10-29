@@ -1,3 +1,4 @@
+from django.contrib.auth.decorators import login_required
 from django.conf.urls import include, url
 from django.contrib import admin
 
@@ -13,5 +14,5 @@ urlpatterns = [
     url(r'^f/', include('ucloud.apps.finance.urls')),
     url(r'^e/', include('ucloud.apps.education.urls')),
     url(r'^h/', include('ucloud.apps.health.urls')),
-    url(r'^j/', include('ucloud.apps.journey.urls')),
+    url(r'^j/', login_required(include('ucloud.apps.journey.urls'))),
 ]

@@ -8,52 +8,6 @@ from django.utils.translation import ugettext_lazy as _
 
 class EmailUserCreationForm(forms.ModelForm):
 
-    """A form for creating new users.
-
-    Includes all the required fields, plus a repeated password.
-
-    """
-
-    error_messages = {
-        'duplicate_email': _("A user with that email already exists."),
-        'password_mismatch': _("The two password fields didn't match."),
-    }
-
-    email = forms.EmailField(
-        widget=forms.TextInput(
-            attrs={
-            'id':'inputWelcome',
-            'class':'form-control email2',
-            'placeholder':'Email Address',
-            }
-        )
-    )
-
-    password1 = forms.CharField(
-        label=_("Password"),
-        widget=forms.PasswordInput(
-            attrs={
-            'id':'inputWelcome',
-            'class':'form-control password2',
-            'placeholder':'Password',
-            }
-        )
-    )
-    password2 = forms.CharField(
-        label=_("Password confirmation"),
-        widget=forms.PasswordInput(
-            attrs={
-            'id':'inputWelcome',
-            'class':'form-control password3',
-            'placeholder':'Re-Enter Password',
-            }
-        )
-    )
-
-    class Meta:  # noqa: D101
-        model = get_user_model()
-        fields = ('email',)
-
     def clean_email(self):
         email = self.cleaned_data["email"]
         try:
