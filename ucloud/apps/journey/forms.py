@@ -1,32 +1,41 @@
 import django
-from django import forms
+from django.forms import ModelForm, TextInput
 from .models import Story
 from django.utils.translation import ugettext_lazy as _
 
 """
 New user form for creating personal Story
 """
-class StoryForm(forms.ModelForm):
+class StoryForm(ModelForm):
+
     class Meta:  # noqa: D101
         model = Story
         fields = ('fname', 'mname', 'lname')
-        widget={
-            'fname': forms.TextInput(
+        labels = {
+            'fname': _(''),
+            'mname': _(''),
+            'lname': _(''),
+        }
+        widgets = {
+            'fname': TextInput(
                 attrs={
                 'id':'inputWelcome',
-                'class':'form-control email1',
+                'class':'form-control transparent inputFocused inputRadiusFix',
                 'placeholder':'First Name',
-                }),
-            'mname': forms.TextInput(
+                }
+            ),
+            'mname': TextInput(
                 attrs={
                 'id':'inputWelcome',
-                'class':'form-control',
+                'class':'form-control transparent inputFocused inputRadiusFix2',
                 'placeholder':'Middle Name',
-                }),
-            'lname': forms.TextInput(
+                }
+            ),
+            'lname': TextInput(
                 attrs={
                 'id':'inputWelcome',
-                'class':'form-control password1',
+                'class':'form-control transparent inputFocused inputRadiusFix3',
                 'placeholder':'Last Name',
-                })
+                }
+            ),
         }

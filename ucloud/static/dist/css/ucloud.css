@@ -732,6 +732,26 @@ input[type="text"]::-webkit-input-placeholder {
   position:fixed;
 }
 
+  .rounded-top {
+      border-top-left-radius:5px;
+      border-top-right-radius:5px;
+  }
+
+  .rounded-left {
+      border-top-left-radius:5px;
+      border-bottom-left-radius:5px;
+  }
+
+  .rounded-right {
+      border-top-right-radius:5px;
+      border-bottom-right-radius:5px;
+  }
+
+  .rounded-bottom {
+      border-bottom-left-radius:5px;
+      border-bottom-right-radius:5px;
+  }
+
   .rounded-tl {
     border-radius: 25px 0px 0px 0px;
   }

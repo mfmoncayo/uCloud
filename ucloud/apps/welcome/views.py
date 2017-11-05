@@ -1,10 +1,7 @@
 # -*- coding: utf-8 -*-
 from django.contrib.auth import login, authenticate, logout
-from django.views.decorators.csrf import csrf_protect
-from django.utils.decorators import method_decorator
-from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect
-from django_hosts.resolvers import reverse
+from subdomains.utils import reverse
 from django.views import View
 
 from custom_user.forms import EmailUserCreationForm, LoginUserForm, ResetPasswordForm
@@ -23,7 +20,6 @@ class HomeView(View):
 
         return render(request, 'index.html', context)
 
-    @method_decorator(csrf_protect)
     def post(self, request, *args, **kwargs):
 
         if 'login' in request.POST:
@@ -38,8 +34,9 @@ class HomeView(View):
 
             if user is not None:
                 login(request, user)
-                request.session['id'] = user.email
-                return HttpResponseRedirect('http://journey.ucloud.live')
+                request.session['id'] = user.id
+                journey = reverse('j', subdomain='j')
+                return redirect(journey)
 
             context = {
                 "loginform": loginform,

@@ -6,5 +6,4 @@ $(document).ready(function() {
     $(this).css("color","rgba(255,255,255,.4)");
   });
 
-
 });

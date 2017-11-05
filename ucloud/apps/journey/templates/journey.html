@@ -1,5 +1,4 @@
 {% extends "base.html" %}
-{% load hosts %}
 {% load i18n %}
 {% load l10n %}
 {% load tz %}
@@ -169,7 +168,7 @@ uCloud
                 <div class="row">
                   <div class="col-md-12">
                     <div class="otherTitle">
-                        <h1>Welcome, {{ user.as_p }}.</h1>
+                        <h1>Journey</h1>
                     </div>
                   </div>
                 </div>
@@ -179,7 +178,7 @@ uCloud
                 <div class="row">
                   <div class="col-md-5">
                     <div class="otherSubTitle">
-                      <h2>Journey with the uCloud</h2>
+                      <h2>with the uCloud</h2>
                     </div>
                   </div>
 
@@ -203,75 +202,41 @@ uCloud
                 <div class="row">
                   <div class="col-md-12">
                     <div class="financeTitle">
-                      <h1>Design</h1>
+                      <h1>Welcome, {{ user.email }}.</h1>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div class="otherDesignContainer container-fluid d-block">
+              <div class="otherDesignContainer container-fluid d-block otherDesignSidePad">
                 <div class="row">
                   <div class="col-md-12">
-                    <div class="financeTitle text-center">
-                      <h3>Group Details</h3>
+                    <div class="financeTitle text-left">
+                      <h3>Start your Journey:</h3>
                       <br />
-                    </div>
-                  </div>
-                  <div class="col-lg-4 pb-3">
-                    <div class="input-group">
-                      <span class="input-group-addon radioSelectMe">
-                        <input class="toggleRadio" type="radio" aria-label="Radio button for following text input" name="oneoption">
-                      </span>
-                      <input class="form-control transparent inputFocused2 radioSelect famSelect" placeholder="Family" aria-label="Family" aria-describedby="basic-addon1" readonly="readonly">
-                    </div>
-                  </div>
-                  <div class="col-lg-4 pb-3">
-                    <div class="input-group">
-                      <span class="input-group-addon radioSelectMe">
-                        <input class="toggleRadio" type="radio" aria-label="Radio button for following text input" name="oneoption">
-                      </span>
-                      <input class="form-control transparent inputFocused2 radioSelect bizSelect" placeholder="Business" aria-label="Business" aria-describedby="basic-addon1" readonly="readonly">
-                      <div class="input-group-btn">
-                        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        </button>
-                        <div class="dropdown-menu dropdown-menu-right">
-                          <a class="dropdown-item firmSelect" href="#">Firm</a>
-                          <a class="dropdown-item employeeSelect" href="#">Employee</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-4 pb-3">
-                    <div class="input-group">
-                      <span class="input-group-addon radioSelectMe">
-                        <input class="toggleRadio" type="radio" aria-label="Radio button for following text input" name="oneoption">
-                      </span>
-                      <input class="form-control transparent inputFocused2 radioSelect orgSelect" placeholder="Organization" aria-label="Organization" aria-describedby="basic-addon1" readonly="readonly">
-                      <div class="input-group-btn">
-                        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        </button>
-                        <div class="dropdown-menu dropdown-menu-right">
-                          <a class="dropdown-item groupSelect" href="#">Group</a>
-                          <a class="dropdown-item memberSelect" href="#">Member</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="otherDesignRelatedContainer container-fluid d-block otherDesignSidePad">
-                <div class="row">
-                  <div class="col-md-12 pb-2">
-                    <div class="input-group">
-                      <span class="input-group-addon" id="basic-addon1"><i class="fal fa-at" aria-hidden="true"></i></span>
-                      <input type="text" class="form-control transparent iconColor inputFocused" placeholder="Join an existing group" aria-label="Username" aria-describedby="basic-addon1">
                     </div>
                   </div>
                   <div class="finDesignGroupContainer1 col-md-12">
                     <form class="form-signin storyForm" role="form" method="POST">
                       {% csrf_token %}
-                      {{ storyform.as_p }}
+                      <div class="col-md-12 pb-2">
+                        <div class="input-group">
+                          <span class="input-group-addon" id="basic-addon1"><i class="fal fa-at" aria-hidden="true"></i></span>
+                          <input type="text" class="form-control transparent iconColor inputFocused" placeholder="Join an existing group" aria-label="Username" aria-describedby="basic-addon1">
+                        </div>
+                      </div>
+                      <div class="finDesignGroupContainer1 col-md-12">
+                        <div class="col-md-12 pr-0 pl-0 left">
+                          <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon1"><i class="fal fa-user-alt" aria-hidden="true"></i></span>
+                            {{ storyform.fname }}
+                            {{ storyform.mname }}
+                            {{ storyform.lname }}
+                          </div>
+                        </div>
+                      </div>
+
+
                     </form>
                   </div>
                 </div>

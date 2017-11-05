@@ -1,5 +1,5 @@
 {% extends "ucloud/explore.html" %}
-{% load hosts %}
+{% load subdomainurls %}
 {% block navexplore %}
       <div class="col-1 navWidthLeft3 bg-inverse2 hoveringBtn colorHolder">
         <div class="btn-group text-right fixLocation cino">
@@ -25,7 +25,7 @@
 
       <div class="col-2 floatBox bg-inverse2 hoveringBtn logoHeight exploreBtnCenter">
         <button class="navbar-toggler explore" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
-            <a class="" href="http://discover.ucloud.live"><img class="logo" src="../../static/dist/images/logo.png"alt="" data-toggle="collapse" data-target="#collapsingNavbar2"></a>
+            <a class="" href="{% url 'w' 'd' %}"><img class="logo" src="../../static/dist/images/logo.png"alt="" data-toggle="collapse" data-target="#collapsingNavbar2"></a>
         </button>
       </div>
 
@@ -71,16 +71,16 @@
         <div class="navbar-collapse collapse exploreRightBtn2" id="collapsingNavbar">
           <ul class="nav justify-content-center">
             <li class="nav-item">
-              <a class="nav-link iconColor" href="http://journey.ucloud.live"><i class="fal fa-location-arrow fa-lg" title="Entertainment"></i></a>
+              <a class="nav-link iconColor" href="{% url 'j' 'j' %}"><i class="fal fa-location-arrow fa-lg" title="Entertainment"></i></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link iconColor" href="http://finance.ucloud.live"><i class="fal fa-credit-card fa-lg" title="Finance"></i></a>
+              <a class="nav-link iconColor" href="{% url 'f' 'f' %}"><i class="fal fa-credit-card fa-lg" title="Finance"></i></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link iconColor" href="http://health.ucloud.live"><i class="fal fa-heartbeat fa-lg" title="Health"></i></a>
+              <a class="nav-link iconColor" href="{% url 'h' 'h' %}"><i class="fal fa-heartbeat fa-lg" title="Health"></i></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link iconColor" href="http://education.ucloud.live"><i class="fal fa-graduation-cap fa-lg" title="Education"></i></a>
+              <a class="nav-link iconColor" href="{% url 'e' 'e' %}"><i class="fal fa-graduation-cap fa-lg" title="Education"></i></a>
             </li>
           </ul>
         </div>

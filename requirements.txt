@@ -1,10 +1,10 @@
 dj-database-url==0.4.1
 Django==1.10.4
+django-subdomains==2.1.0
 gunicorn==19.6.0
 psycopg2==2.6.2
 whitenoise==3.2
 django-leaflet==0.22.0
-django-hosts==2.0
 sendgrid==5.2.0
 django-sendgrid-v5==0.6.7
 -e git+http://git@github.com/montebond/pyp#egg=pyp
