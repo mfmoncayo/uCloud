@@ -8,15 +8,14 @@ DATABASES['default'].update(db_from_env)
 
 ALLOWED_HOSTS = [
                 '127.0.0.1',
-                'www.u.live',
-                'u.live',
+                'www.ucloud.live',
+                'ucloud.live',
                 'ucloud-live.herokuapp.com',
-                'w.u.live',
-                'd.u.live',
-                'j.u.live',
-                'f.u.live',
-                'h.u.live',
-                'e.u.live',
+                'discover.ucloud.live',
+                'journey.ucloud.live',
+                'finance.ucloud.live',
+                'health.ucloud.live',
+                'education.ucloud.live',
                 ]
 
 LANGUAGE_CODE = 'en-us'
